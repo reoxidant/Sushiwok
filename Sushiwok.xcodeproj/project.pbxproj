@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		449CB71E25BB4A190064DCC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB71D25BB4A190064DCC8 /* AppDelegate.swift */; };
 		449CB72025BB4A190064DCC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */; };
-		449CB72225BB4A190064DCC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB72125BB4A190064DCC8 /* ViewController.swift */; };
 		449CB72525BB4A190064DCC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449CB72325BB4A190064DCC8 /* Main.storyboard */; };
 		449CB72725BB4A1C0064DCC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449CB72625BB4A1C0064DCC8 /* Assets.xcassets */; };
 		449CB72A25BB4A1C0064DCC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449CB72825BB4A1C0064DCC8 /* LaunchScreen.storyboard */; };
+		449CB73225BB51EE0064DCC8 /* SushiListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73125BB51EE0064DCC8 /* SushiListScreen.swift */; };
+		449CB73425BB597C0064DCC8 /* SushiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73325BB597C0064DCC8 /* SushiCell.swift */; };
+		449CB73625BB5B2B0064DCC8 /* Sushi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73525BB5B2B0064DCC8 /* Sushi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		449CB71A25BB4A190064DCC8 /* Sushiwok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sushiwok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449CB71D25BB4A190064DCC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		449CB72125BB4A190064DCC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		449CB72425BB4A190064DCC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		449CB72625BB4A1C0064DCC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		449CB72925BB4A1C0064DCC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		449CB72B25BB4A1C0064DCC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		449CB73125BB51EE0064DCC8 /* SushiListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiListScreen.swift; sourceTree = "<group>"; };
+		449CB73325BB597C0064DCC8 /* SushiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiCell.swift; sourceTree = "<group>"; };
+		449CB73525BB5B2B0064DCC8 /* Sushi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sushi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				449CB71D25BB4A190064DCC8 /* AppDelegate.swift */,
 				449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */,
-				449CB72125BB4A190064DCC8 /* ViewController.swift */,
+				449CB73525BB5B2B0064DCC8 /* Sushi.swift */,
+				449CB73125BB51EE0064DCC8 /* SushiListScreen.swift */,
+				449CB73325BB597C0064DCC8 /* SushiCell.swift */,
 				449CB72325BB4A190064DCC8 /* Main.storyboard */,
 				449CB72625BB4A1C0064DCC8 /* Assets.xcassets */,
 				449CB72825BB4A1C0064DCC8 /* LaunchScreen.storyboard */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				449CB72225BB4A190064DCC8 /* ViewController.swift in Sources */,
 				449CB71E25BB4A190064DCC8 /* AppDelegate.swift in Sources */,
 				449CB72025BB4A190064DCC8 /* SceneDelegate.swift in Sources */,
+				449CB73425BB597C0064DCC8 /* SushiCell.swift in Sources */,
+				449CB73625BB5B2B0064DCC8 /* Sushi.swift in Sources */,
+				449CB73225BB51EE0064DCC8 /* SushiListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
