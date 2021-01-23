@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dh9-dW-slW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dh0-xK-MUm">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,8 +10,8 @@
         <!--Sushi List Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SushiListScreen" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Sushi">
+                <viewController storyboardIdentifier="SushiList" id="BYZ-38-t0r" customClass="SushiListScreen" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -73,7 +73,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ERv-rm-Q5c">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="lRr-th-rUa"/>
+                        <barButtonItem key="leftBarButtonItem" image="list.dash" catalog="system" id="lRr-th-rUa">
+                            <connections>
+                                <action selector="tappedMenu:" destination="BYZ-38-t0r" id="TYV-Ws-foW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Rpe-lm-aif" id="3cR-MN-Cyi"/>
@@ -81,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+            <point key="canvasLocation" x="2862.3188405797105" y="138.61607142857142"/>
         </scene>
         <!--Detail Sushi-->
         <scene sceneID="ALp-b3-yLn">
@@ -162,27 +166,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJC-2k-wQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="139"/>
-        </scene>
-        <!--Home Controller-->
-        <scene sceneID="pS6-gg-M53">
-            <objects>
-                <viewController id="dh9-dW-slW" customClass="HomeController" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QAq-Gh-lbb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="AKE-cY-xns"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GOf-Gw-jXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-712" y="139"/>
+            <point key="canvasLocation" x="3626.0869565217395" y="138.61607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7eB-LN-zr0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dh0-xK-MUm" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SushiNavigator" automaticallyAdjustsScrollViewInsets="NO" id="Dh0-xK-MUm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="52G-ZY-BVl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -195,7 +184,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8F-Ax-0ZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1961" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+    </resources>
 </document>
