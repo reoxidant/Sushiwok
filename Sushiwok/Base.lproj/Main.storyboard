@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dh0-xK-MUm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dh9-dW-slW">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -33,7 +33,7 @@
                                                         <constraint firstAttribute="width" constant="130" id="i7M-rA-mwL"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="J3H-2j-xb3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="J3H-2j-xb3">
                                                     <rect key="frame" x="162" y="32.666666666666664" width="220" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="CTN-4l-oWb"/>
@@ -72,7 +72,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ERv-rm-Q5c"/>
+                    <navigationItem key="navigationItem" id="ERv-rm-Q5c">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="lRr-th-rUa"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Rpe-lm-aif" id="3cR-MN-Cyi"/>
                     </connections>
@@ -161,6 +163,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJC-2k-wQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1807" y="139"/>
+        </scene>
+        <!--Home Controller-->
+        <scene sceneID="pS6-gg-M53">
+            <objects>
+                <viewController id="dh9-dW-slW" customClass="HomeController" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QAq-Gh-lbb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="AKE-cY-xns"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOf-Gw-jXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-712" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7eB-LN-zr0">

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		44429AAB25BBF51400400332 /* DetailSushi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44429AAA25BBF51400400332 /* DetailSushi.swift */; };
+		44429AB025BC20F900400332 /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44429AAF25BC20F900400332 /* ContainerController.swift */; };
+		44429AB225BC228A00400332 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44429AB125BC228A00400332 /* HomeController.swift */; };
 		449CB71E25BB4A190064DCC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB71D25BB4A190064DCC8 /* AppDelegate.swift */; };
 		449CB72025BB4A190064DCC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */; };
 		449CB72525BB4A190064DCC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449CB72325BB4A190064DCC8 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		44429AAA25BBF51400400332 /* DetailSushi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSushi.swift; sourceTree = "<group>"; };
+		44429AAF25BC20F900400332 /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
+		44429AB125BC228A00400332 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		449CB71A25BB4A190064DCC8 /* Sushiwok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sushiwok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449CB71D25BB4A190064DCC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44429AAC25BC1CD400400332 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				449CB73525BB5B2B0064DCC8 /* Sushi.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44429AAD25BC1D4A00400332 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				449CB73125BB51EE0064DCC8 /* SushiListScreen.swift */,
+				449CB73325BB597C0064DCC8 /* SushiCell.swift */,
+				44429AAA25BBF51400400332 /* DetailSushi.swift */,
+				44429AAF25BC20F900400332 /* ContainerController.swift */,
+				44429AB125BC228A00400332 /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		44429AAE25BC1D7C00400332 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		449CB71125BB4A190064DCC8 = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +95,10 @@
 			children = (
 				449CB71D25BB4A190064DCC8 /* AppDelegate.swift */,
 				449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */,
-				449CB73525BB5B2B0064DCC8 /* Sushi.swift */,
-				449CB73125BB51EE0064DCC8 /* SushiListScreen.swift */,
-				449CB73325BB597C0064DCC8 /* SushiCell.swift */,
+				44429AAD25BC1D4A00400332 /* Controller */,
+				44429AAC25BC1CD400400332 /* Model */,
+				44429AAE25BC1D7C00400332 /* View */,
 				449CB72325BB4A190064DCC8 /* Main.storyboard */,
-				44429AAA25BBF51400400332 /* DetailSushi.swift */,
 				449CB72625BB4A1C0064DCC8 /* Assets.xcassets */,
 				449CB72825BB4A1C0064DCC8 /* LaunchScreen.storyboard */,
 				449CB72B25BB4A1C0064DCC8 /* Info.plist */,
@@ -151,6 +181,8 @@
 				44429AAB25BBF51400400332 /* DetailSushi.swift in Sources */,
 				449CB72025BB4A190064DCC8 /* SceneDelegate.swift in Sources */,
 				449CB73425BB597C0064DCC8 /* SushiCell.swift in Sources */,
+				44429AB225BC228A00400332 /* HomeController.swift in Sources */,
+				44429AB025BC20F900400332 /* ContainerController.swift in Sources */,
 				449CB73625BB5B2B0064DCC8 /* Sushi.swift in Sources */,
 				449CB73225BB51EE0064DCC8 /* SushiListScreen.swift in Sources */,
 			);
