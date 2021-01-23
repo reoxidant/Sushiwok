@@ -12,9 +12,11 @@ import UIKit
 class Sushi{
     var image:UIImage
     var title:String
+    var description:String
     
-    init(image:UIImage, title:String){
+    init(image:UIImage, title:String, description:String){
         self.image = image
         self.title = title
+        self.description = description
     }
 }
