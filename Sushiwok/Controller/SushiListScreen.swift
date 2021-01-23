@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol SushiListScreenDelegate {
+    func toggleMenu()
+}
+
 class SushiListScreen: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     var sushi = [Sushi]()
+    var delegate: SushiListScreenDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +46,12 @@ class SushiListScreen: UIViewController {
         tempArray.append(sushi5)
         
         return tempArray
+    }
+    
+    @IBAction func tappedMenu(_ sender: UIBarButtonItem) {
+        if let delegateVC = delegate{
+             delegateVC.toggleMenu()
+        }
     }
 }
 
