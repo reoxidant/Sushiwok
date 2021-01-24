@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailSushi: UIViewController {
-
+    
     @IBOutlet weak var detailImageView: UIImageView!
     
     @IBOutlet weak var detailTitleLabel: UILabel!

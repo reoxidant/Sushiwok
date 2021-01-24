@@ -8,54 +8,62 @@
 
 import UIKit
 
-protocol SushiListScreenDelegate {
-    func toggleMenu()
-}
-
 class SushiListScreen: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let transition = SlideInTransition()
+    
     var sushi = [Sushi]()
-    var delegate: SushiListScreenDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sushi = createSushiArray()
+        sushi = Sushi.createSushiArray()
         
         tableView.delegate = self
         tableView.dataSource = self
-
+        
         // Do any additional setup after loading the view.
     }
     
-    func createSushiArray() -> [Sushi]{
-        var tempArray = [Sushi]()
-        
-        let sushi1 = Sushi(image: #imageLiteral(resourceName: "sushi1"), title: "Фила Бум", description: "ролл Филадельфия 2 шт., ролл Филадельфия в угре, ролл Филадельфия в масаго, ролл Фудживара 1031 г")
-        let sushi2 = Sushi(image: #imageLiteral(resourceName: "sushi2"), title: "Умка", description: "ролл Фиеста, ролл Сэнсей, ролл Калифорния в кунжуте 653 г")
-        let sushi3 = Sushi(image: #imageLiteral(resourceName: "sushi1"), title: "Филомания", description: "ролл Филадельфия в масаго, ролл Филадельфия, ролл Калифорния в кунжуте, ролл с огурцом 707 г")
-        let sushi4 = Sushi(image: #imageLiteral(resourceName: "sushi4"), title: "Уикенд", description: "ролл Сочная креветка, ролл Хатамото, запеч. ролл Окунь-гриль, запеч. ролл Крабик Хот, ролл Калифорния с креветкой, ролл Марокко, запеч. ролл Румяный, запеч. ролл Сырный, ролл Фудживара 1707 г")
-        let sushi5 = Sushi(image: #imageLiteral(resourceName: "sushi3"), title: "Набор Искушение", description: "ролл Ореховый рай, ролл Берри, ролл Сочный фрукт 438 г")
-        
-        tempArray.append(sushi1)
-        tempArray.append(sushi2)
-        tempArray.append(sushi3)
-        tempArray.append(sushi4)
-        tempArray.append(sushi5)
-        
-        return tempArray
+    @IBAction func tappedMenu(_ sender: UIBarButtonItem) {
+        guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController
+            else {return}
+        menuViewController.didTapMenuType = {menuType in
+            self.transitionToNew(menuType)
+        }
+        menuViewController.modalPresentationStyle = .overCurrentContext
+        menuViewController.transitioningDelegate = self
+        present(menuViewController, animated: true, completion: nil)
     }
     
-    @IBAction func tappedMenu(_ sender: UIBarButtonItem) {
-        if let delegateVC = delegate{
-             delegateVC.toggleMenu()
+    func transitionToNew(_ menuType: MenuType){
+        let title = String(describing: menuType).capitalized
+        self.title = title
+        
+        switch menuType {
+        case .profile:
+            //            let view = UIView()
+            //            view.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
+            //            view.frame = self.view.bounds
+            //            self.view.addSubview(view)
+            print(menuType)
+        case .camera:
+            //            let view = UIView()
+            //            view.backgroundColor = UIColor.yellow.withAlphaComponent(0.5)
+            //            view.frame = self.view.bounds
+            //            self.view.addSubview(view)
+            print(menuType)
+        default:
+            break
         }
+        
+        
     }
 }
 
-extension SushiListScreen:UITableViewDataSource, UITableViewDelegate{
+extension SushiListScreen:UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sushi.count
     }
@@ -72,10 +80,20 @@ extension SushiListScreen:UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sushiItem = sushi[indexPath.row]
-
+        
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailSushi") as? DetailSushi {
             vc.setDetailSushi(sushi: sushiItem)
             self.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = true
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = false
+        return transition
     }
 }
