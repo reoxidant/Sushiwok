@@ -22,7 +22,7 @@ class SushiListScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sushi = createSushiArray()
+        sushi = Sushi.createSushiArray()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -30,28 +30,8 @@ class SushiListScreen: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func createSushiArray() -> [Sushi]{
-        var tempArray = [Sushi]()
-        
-        let sushi1 = Sushi(image: #imageLiteral(resourceName: "sushi1"), title: "Фила Бум", description: "ролл Филадельфия 2 шт., ролл Филадельфия в угре, ролл Филадельфия в масаго, ролл Фудживара 1031 г")
-        let sushi2 = Sushi(image: #imageLiteral(resourceName: "sushi2"), title: "Умка", description: "ролл Фиеста, ролл Сэнсей, ролл Калифорния в кунжуте 653 г")
-        let sushi3 = Sushi(image: #imageLiteral(resourceName: "sushi1"), title: "Филомания", description: "ролл Филадельфия в масаго, ролл Филадельфия, ролл Калифорния в кунжуте, ролл с огурцом 707 г")
-        let sushi4 = Sushi(image: #imageLiteral(resourceName: "sushi4"), title: "Уикенд", description: "ролл Сочная креветка, ролл Хатамото, запеч. ролл Окунь-гриль, запеч. ролл Крабик Хот, ролл Калифорния с креветкой, ролл Марокко, запеч. ролл Румяный, запеч. ролл Сырный, ролл Фудживара 1707 г")
-        let sushi5 = Sushi(image: #imageLiteral(resourceName: "sushi3"), title: "Набор Искушение", description: "ролл Ореховый рай, ролл Берри, ролл Сочный фрукт 438 г")
-        
-        tempArray.append(sushi1)
-        tempArray.append(sushi2)
-        tempArray.append(sushi3)
-        tempArray.append(sushi4)
-        tempArray.append(sushi5)
-        
-        return tempArray
-    }
-    
     @IBAction func tappedMenu(_ sender: UIBarButtonItem) {
-        if let delegateVC = delegate{
-             delegateVC.toggleMenu()
-        }
+        self.delegate?.toggleMenu()
     }
 }
 

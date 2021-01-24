@@ -10,7 +10,7 @@ import UIKit
 
 class ContainerViewController: UIViewController, SushiListScreenDelegate {
     
-    var controller: UIViewController!
+    var controller: SushiListScreen!
     var menuViewController: UIViewController!
 
     override func viewDidLoad() {
@@ -23,6 +23,9 @@ class ContainerViewController: UIViewController, SushiListScreenDelegate {
     
     func configureSushiListScreen(){
         let sushiViewController = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "SushiList") as! SushiListScreen
+        if let nc = self.navigationController {
+            nc.setViewControllers([sushiViewController], animated: true)
+        }
         sushiViewController.delegate = self
         controller = sushiViewController
         view.addSubview(controller.view)
