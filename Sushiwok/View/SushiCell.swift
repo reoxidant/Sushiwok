@@ -9,7 +9,6 @@
 import UIKit
 
 class SushiCell: UITableViewCell {
-
     
     @IBOutlet weak var sushiImageView: UIImageView!
     
