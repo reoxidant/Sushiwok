@@ -8,15 +8,15 @@
 
 import UIKit
 
-class SushiCell: UITableViewCell {
+class ListItemCell: UITableViewCell {
     
     @IBOutlet weak var sushiImageView: UIImageView!
     
     @IBOutlet weak var sushiTitleLabel: UILabel!
     
-    func setSushi(sushi: Sushi){
-        sushiImageView.image = sushi.image
-        sushiTitleLabel.text = sushi.title
+    func setListItem(item: ListItem){
+        sushiImageView.image = item.image
+        sushiTitleLabel.text = item.title
     }
     
 }

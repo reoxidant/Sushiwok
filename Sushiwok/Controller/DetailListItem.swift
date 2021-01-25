@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailSushi: UIViewController {
+class DetailListItem: UIViewController {
     
     @IBOutlet weak var detailImageView: UIImageView!
     
@@ -49,9 +49,9 @@ class DetailSushi: UIViewController {
         
     }
     
-    func setDetailSushi(sushi: Sushi){
-        selectedImageView = sushi.image
-        selectedTitleLabel = sushi.title
-        selectedDescriptionLabel = sushi.description
+    func setDetailListItem(item: ListItem){
+        selectedImageView = item.image
+        selectedTitleLabel = item.title
+        selectedDescriptionLabel = item.description
     }
 }
