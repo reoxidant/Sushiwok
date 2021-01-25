@@ -13,12 +13,12 @@ class MenuListScreen: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
-    var sushi = [Sushi]()
+    var items = [ListItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sushi = Sushi.createSushiArray()
+        items = ListItem.createSushiArray()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,24 +39,24 @@ class MenuListScreen: UIViewController {
 
 extension MenuListScreen:UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sushi.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sushiItem = sushi[indexPath.row]
+        let sushiItem = items[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SushiCell") as! SushiCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListItemCell") as! ListItemCell
         
-        cell.setSushi(sushi: sushiItem)
+        cell.setListItem(item: sushiItem)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sushiItem = sushi[indexPath.row]
+        let sushiItem = items[indexPath.row]
         
-        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailSushi") as? DetailSushi {
-            vc.setDetailSushi(sushi: sushiItem)
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailSushi") as? DetailListItem {
+            vc.setDetailListItem(item: sushiItem)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

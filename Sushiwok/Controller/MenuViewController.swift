@@ -2,33 +2,34 @@
 //  MenuViewController.swift
 //  Sushiwok
 //
-//  Created by Виталий Шаповалов on 23.01.2021.
+//  Created by Виталий Шаповалов on 25.01.2021.
 //  Copyright © 2021 Виталий Шаповалов. All rights reserved.
 //
 
 import UIKit
 
-enum MenuType: Int{
-    case home
-    case camera
-    case profile
-}
+class MenuViewController: UIViewController {
 
-class MenuViewController: UITableViewController {
-    
-    var didTapMenuType: ((MenuType) -> Void)?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let menuType = MenuType(rawValue: indexPath.row) else {return}
-        dismiss(animated: true){
-            [weak self] in
-            self?.didTapMenuType?(menuType)
-        }
+    @IBAction func MenuActionBtn(_ sender: Any) {
+        performSegue(withIdentifier: "menu_segue", sender: nil)
     }
+    
+    @IBAction func ShareActionBtn(_ sender: Any) {
+        performSegue(withIdentifier: "share_segue", sender: nil)
+    }
+    
+    @IBAction func FavoriteActionBtn(_ sender: Any) {
+        performSegue(withIdentifier: "favorite_segue", sender: nil)
+    }
+    
+    @IBAction func MapActionBtn(_ sender: Any) {
+        performSegue(withIdentifier: "map_segue", sender: nil)
+    }
+    
 }
