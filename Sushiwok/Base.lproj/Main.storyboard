@@ -52,8 +52,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="sushiImageView" destination="VR9-xa-Fpa" id="5A2-Cd-68I"/>
-                                            <outlet property="sushiTitleLabel" destination="J3H-2j-xb3" id="uTm-OG-BdV"/>
+                                            <outlet property="itemImageView" destination="VR9-xa-Fpa" id="5A2-Cd-68I"/>
+                                            <outlet property="itemTitleLabel" destination="J3H-2j-xb3" id="uTm-OG-BdV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -209,53 +209,73 @@
         <!--Menu View Controller-->
         <scene sceneID="Xa8-68-XMF">
             <objects>
-                <viewController id="Y8r-uf-tau" customClass="MenuViewController" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y8r-uf-tau" customClass="MenuViewController" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kqw-3q-tJr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rUC-RK-IvF">
-                                <rect key="frame" x="40" y="64" width="242" height="252"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bry-4r-zwS">
-                                        <rect key="frame" x="0.0" y="0.0" width="74" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Menu"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ycz-Xk-taw">
+                                <rect key="frame" x="0.0" y="184" width="414" height="712"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuViewController" rowHeight="60" id="LDf-Bf-lnk" customClass="MenuTableViewCell" customModule="Sushiwok" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LDf-Bf-lnk" id="i3C-0X-I3O">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5uP-m5-hTa">
+                                                    <rect key="frame" x="20" y="12" width="40" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="WiJ-on-lqP"/>
+                                                        <constraint firstAttribute="width" constant="40" id="yTh-c9-tCM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ja2-c2-xKB">
+                                                    <rect key="frame" x="80" y="16.333333333333336" width="294" height="27.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ja2-c2-xKB" secondAttribute="trailing" constant="20" id="DWZ-Dh-vTe"/>
+                                                <constraint firstItem="ja2-c2-xKB" firstAttribute="centerY" secondItem="i3C-0X-I3O" secondAttribute="centerY" id="PKk-vP-2dT"/>
+                                                <constraint firstItem="ja2-c2-xKB" firstAttribute="leading" secondItem="5uP-m5-hTa" secondAttribute="trailing" constant="20" id="ab1-vt-aRr"/>
+                                                <constraint firstItem="5uP-m5-hTa" firstAttribute="centerY" secondItem="i3C-0X-I3O" secondAttribute="centerY" id="rum-Fs-6o0"/>
+                                                <constraint firstItem="5uP-m5-hTa" firstAttribute="leading" secondItem="i3C-0X-I3O" secondAttribute="leading" constant="20" id="wb2-ia-FZ5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <action selector="MenuActionBtn:" destination="Y8r-uf-tau" eventType="touchUpInside" id="Pth-Bw-k4K"/>
+                                            <outlet property="menuImageView" destination="5uP-m5-hTa" id="U7n-2A-gGe"/>
+                                            <outlet property="menuTitleLabel" destination="ja2-c2-xKB" id="0NW-x2-Tls"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAw-Py-hVy">
-                                        <rect key="frame" x="0.0" y="68" width="75" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Share"/>
-                                        <connections>
-                                            <action selector="ShareActionBtn:" destination="Y8r-uf-tau" eventType="touchUpInside" id="19F-Rg-9j3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1J-IT-5mx">
-                                        <rect key="frame" x="0.0" y="136" width="117" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Favorites"/>
-                                        <connections>
-                                            <action selector="FavoriteActionBtn:" destination="Y8r-uf-tau" eventType="touchUpInside" id="eHO-Rc-vjV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqx-0G-LUg">
-                                        <rect key="frame" x="0.0" y="204" width="242" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Shops on The Map"/>
-                                        <connections>
-                                            <action selector="MapActionBtn:" destination="Y8r-uf-tau" eventType="touchUpInside" id="ieh-GJ-tEx"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y8r-uf-tau" id="C0l-Xv-N8V"/>
+                                    <outlet property="delegate" destination="Y8r-uf-tau" id="SEv-uo-CM8"/>
+                                </connections>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="UdP-sJ-DuG">
+                                <rect key="frame" x="0.0" y="64" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="cgR-YK-eDK"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rUC-RK-IvF" firstAttribute="top" secondItem="Xh8-tw-fOg" secondAttribute="top" constant="20" id="g2N-OJ-zoH"/>
-                            <constraint firstItem="rUC-RK-IvF" firstAttribute="leading" secondItem="Xh8-tw-fOg" secondAttribute="leading" constant="40" id="xfA-Yj-Wii"/>
+                            <constraint firstItem="ycz-Xk-taw" firstAttribute="trailing" secondItem="Xh8-tw-fOg" secondAttribute="trailing" id="18L-kH-iqA"/>
+                            <constraint firstItem="UdP-sJ-DuG" firstAttribute="trailing" secondItem="Xh8-tw-fOg" secondAttribute="trailing" id="28t-pq-MwW"/>
+                            <constraint firstItem="UdP-sJ-DuG" firstAttribute="leading" secondItem="Xh8-tw-fOg" secondAttribute="leading" id="7dL-Fx-tym"/>
+                            <constraint firstItem="ycz-Xk-taw" firstAttribute="centerX" secondItem="kqw-3q-tJr" secondAttribute="centerX" id="Ch8-S9-0dx"/>
+                            <constraint firstItem="ycz-Xk-taw" firstAttribute="leading" secondItem="Xh8-tw-fOg" secondAttribute="leading" id="Ot8-YJ-WpK"/>
+                            <constraint firstAttribute="bottom" secondItem="ycz-Xk-taw" secondAttribute="bottom" id="ZvD-jI-xFK"/>
+                            <constraint firstItem="UdP-sJ-DuG" firstAttribute="top" secondItem="Xh8-tw-fOg" secondAttribute="top" constant="20" id="eNu-Gv-RhO"/>
+                            <constraint firstItem="ycz-Xk-taw" firstAttribute="top" secondItem="UdP-sJ-DuG" secondAttribute="bottom" constant="20" id="jZG-gs-Zbw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xh8-tw-fOg"/>
                     </view>
@@ -269,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8W-nw-9GJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="918"/>
+            <point key="canvasLocation" x="1111.5942028985507" y="917.41071428571422"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="IL0-eV-FSY">
@@ -448,6 +468,8 @@
         <segue reference="00h-y5-WbD"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="logo" width="900" height="900"/>
     </resources>
 </document>

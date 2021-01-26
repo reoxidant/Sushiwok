@@ -10,13 +10,13 @@ import UIKit
 
 class ListItemCell: UITableViewCell {
     
-    @IBOutlet weak var sushiImageView: UIImageView!
+    @IBOutlet weak var itemImageView: UIImageView!
     
-    @IBOutlet weak var sushiTitleLabel: UILabel!
+    @IBOutlet weak var itemTitleLabel: UILabel!
     
     func setListItem(item: ListItem){
-        sushiImageView.image = item.image
-        sushiTitleLabel.text = item.title
+        itemImageView.image = item.image
+        itemTitleLabel.text = item.title
     }
     
 }

@@ -21,6 +21,8 @@
 		449CB73225BB51EE0064DCC8 /* MenuListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73125BB51EE0064DCC8 /* MenuListScreen.swift */; };
 		449CB73425BB597C0064DCC8 /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73325BB597C0064DCC8 /* ListItemCell.swift */; };
 		449CB73625BB5B2B0064DCC8 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73525BB5B2B0064DCC8 /* ListItem.swift */; };
+		44C55ABB25C0BEF40013B76E /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C55ABA25C0BEF40013B76E /* MenuTableViewCell.swift */; };
+		44C55ABD25C0C4E50013B76E /* MenuTableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C55ABC25C0C4E50013B76E /* MenuTableList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		449CB73125BB51EE0064DCC8 /* MenuListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListScreen.swift; sourceTree = "<group>"; };
 		449CB73325BB597C0064DCC8 /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
 		449CB73525BB5B2B0064DCC8 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		44C55ABA25C0BEF40013B76E /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		44C55ABC25C0C4E50013B76E /* MenuTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				449CB73525BB5B2B0064DCC8 /* ListItem.swift */,
+				44C55ABC25C0C4E50013B76E /* MenuTableList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -79,6 +84,7 @@
 		44429AAE25BC1D7C00400332 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44C55ABA25C0BEF40013B76E /* MenuTableViewCell.swift */,
 				449CB73325BB597C0064DCC8 /* ListItemCell.swift */,
 			);
 			path = View;
@@ -193,6 +199,8 @@
 			files = (
 				449CB71E25BB4A190064DCC8 /* AppDelegate.swift in Sources */,
 				4453B30E25BF5D3A00D35952 /* MenuViewController.swift in Sources */,
+				44C55ABD25C0C4E50013B76E /* MenuTableList.swift in Sources */,
+				44C55ABB25C0BEF40013B76E /* MenuTableViewCell.swift in Sources */,
 				44429AAB25BBF51400400332 /* DetailListItem.swift in Sources */,
 				449CB72025BB4A190064DCC8 /* SceneDelegate.swift in Sources */,
 				449CB73425BB597C0064DCC8 /* ListItemCell.swift in Sources */,

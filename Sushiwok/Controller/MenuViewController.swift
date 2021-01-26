@@ -14,6 +14,9 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //MARK: STOP HERE, NEED TO DO UITableView
+        let menuItems = createMenuItems()
     }
     
     @IBAction func MenuActionBtn(_ sender: Any) {
