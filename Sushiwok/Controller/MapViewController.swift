@@ -25,6 +25,5 @@ class MapViewController: UIViewController {
     func setMenuBtn(_ menuBar: UIBarButtonItem){
         menuBar.target = revealViewController()
         menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
-        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 }

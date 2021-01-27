@@ -12,6 +12,5 @@ class MenuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var menuImageView: UIImageView!
     @IBOutlet weak var menuTitleLabel: UILabel!
-    
-    
+
 }
