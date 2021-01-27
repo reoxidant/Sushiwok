@@ -11,11 +11,6 @@ import UIKit
 struct MenuTableList {
     var menuItemArray = [String]()
     var menuIconsArray = [UIImage]()
-    
-    init(menuItemArray:[String], menuIconsArray:[UIImage]) {
-        self.menuItemArray = menuItemArray
-        self.menuIconsArray = menuIconsArray
-    }
 }
 
 func createMenuItems()->MenuTableList{
