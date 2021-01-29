@@ -12,13 +12,19 @@ class MenuListScreen: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuBtn: UIBarButtonItem!
-    
-    var items = [ListItem]()
+    var tableViewPage:Int?
+    @IBAction func switchTableView(_ sender: UISegmentedControl) {
+        tableViewPage = sender.selectedSegmentIndex
+        tableView.reloadData()
+    }
+
+    var itemCategories = [[ListItem]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableViewPage = 0
         
-        items = ListItem.createSushiArray()
+        itemCategories = ListItem.createSushiArray()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -37,13 +43,13 @@ class MenuListScreen: UIViewController {
     }
 }
 
-extension MenuListScreen:UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate{
+extension MenuListScreen:UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return itemCategories[tableViewPage!].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sushiItem = items[indexPath.row]
+        let sushiItem = itemCategories[tableViewPage!][indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListItemCell") as! ListItemCell
         
@@ -53,7 +59,7 @@ extension MenuListScreen:UITableViewDataSource, UITableViewDelegate, UIViewContr
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sushiItem = items[indexPath.row]
+        let sushiItem = itemCategories[tableViewPage!][indexPath.row]
         
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailSushi") as? DetailListItem {
             vc.setDetailListItem(item: sushiItem)
