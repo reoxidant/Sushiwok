@@ -28,8 +28,8 @@
 /* Begin PBXFileReference section */
 		44429AAA25BBF51400400332 /* DetailListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListItem.swift; sourceTree = "<group>"; };
 		4453B30525BF53B200D35952 /* Sushiwok-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sushiwok-Bridging-Header.h"; sourceTree = "<group>"; };
-		4453B30625BF53B200D35952 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/drive-download-20210125T192833Z-001/SWRevealViewController.m"; sourceTree = "<group>"; };
-		4453B30725BF53B200D35952 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/drive-download-20210125T192833Z-001/SWRevealViewController.h"; sourceTree = "<group>"; };
+		4453B30625BF53B200D35952 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		4453B30725BF53B200D35952 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = /Users/vitalijsapovalov/Developer/XcodeProjects/Sushiwok/Sushiwok/SWRevealViewController.h; sourceTree = "<absolute>"; };
 		4453B30925BF5D1500D35952 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		4453B30B25BF5D2000D35952 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4453B30D25BF5D3A00D35952 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
