@@ -21,6 +21,9 @@
 		449CB73225BB51EE0064DCC8 /* MenuListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73125BB51EE0064DCC8 /* MenuListScreen.swift */; };
 		449CB73425BB597C0064DCC8 /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73325BB597C0064DCC8 /* ListItemCell.swift */; };
 		449CB73625BB5B2B0064DCC8 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73525BB5B2B0064DCC8 /* ListItem.swift */; };
+		44AF45B525D5C4690085B395 /* CategoryMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF45B425D5C4690085B395 /* CategoryMenuViewController.swift */; };
+		44AF45BB25D5C55C0085B395 /* CategoryMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF45BA25D5C55C0085B395 /* CategoryMenuViewCell.swift */; };
+		44AF45BD25D5C5660085B395 /* CategoryMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44AF45BC25D5C5660085B395 /* CategoryMenuViewCell.xib */; };
 		44C55ABB25C0BEF40013B76E /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C55ABA25C0BEF40013B76E /* MenuTableViewCell.swift */; };
 		44C55ABD25C0C4E50013B76E /* MenuTableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C55ABC25C0C4E50013B76E /* MenuTableList.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,9 @@
 		449CB73125BB51EE0064DCC8 /* MenuListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListScreen.swift; sourceTree = "<group>"; };
 		449CB73325BB597C0064DCC8 /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
 		449CB73525BB5B2B0064DCC8 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		44AF45B425D5C4690085B395 /* CategoryMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryMenuViewController.swift; sourceTree = "<group>"; };
+		44AF45BA25D5C55C0085B395 /* CategoryMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryMenuViewCell.swift; sourceTree = "<group>"; };
+		44AF45BC25D5C5660085B395 /* CategoryMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryMenuViewCell.xib; sourceTree = "<group>"; };
 		44C55ABA25C0BEF40013B76E /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		44C55ABC25C0C4E50013B76E /* MenuTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +77,7 @@
 		44429AAD25BC1D4A00400332 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				44AF45B325D5C4220085B395 /* CategoryMenuController */,
 				449CB73125BB51EE0064DCC8 /* MenuListScreen.swift */,
 				44429AAA25BBF51400400332 /* DetailListItem.swift */,
 				4453B30D25BF5D3A00D35952 /* MenuViewController.swift */,
@@ -123,6 +130,16 @@
 				4453B30525BF53B200D35952 /* Sushiwok-Bridging-Header.h */,
 			);
 			path = Sushiwok;
+			sourceTree = "<group>";
+		};
+		44AF45B325D5C4220085B395 /* CategoryMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				44AF45B425D5C4690085B395 /* CategoryMenuViewController.swift */,
+				44AF45BA25D5C55C0085B395 /* CategoryMenuViewCell.swift */,
+				44AF45BC25D5C5660085B395 /* CategoryMenuViewCell.xib */,
+			);
+			path = CategoryMenuController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +203,7 @@
 			files = (
 				449CB72A25BB4A1C0064DCC8 /* LaunchScreen.storyboard in Resources */,
 				449CB72725BB4A1C0064DCC8 /* Assets.xcassets in Resources */,
+				44AF45BD25D5C5660085B395 /* CategoryMenuViewCell.xib in Resources */,
 				449CB72525BB4A190064DCC8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +219,8 @@
 				4453B30E25BF5D3A00D35952 /* MenuViewController.swift in Sources */,
 				44C55ABD25C0C4E50013B76E /* MenuTableList.swift in Sources */,
 				44C55ABB25C0BEF40013B76E /* MenuTableViewCell.swift in Sources */,
+				44AF45B525D5C4690085B395 /* CategoryMenuViewController.swift in Sources */,
+				44AF45BB25D5C55C0085B395 /* CategoryMenuViewCell.swift in Sources */,
 				44429AAB25BBF51400400332 /* DetailListItem.swift in Sources */,
 				449CB72025BB4A190064DCC8 /* SceneDelegate.swift in Sources */,
 				449CB73425BB597C0064DCC8 /* ListItemCell.swift in Sources */,
