@@ -13,12 +13,17 @@ class MenuListScreen: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     var tableViewPage:Int?
-    @IBAction func switchTableView(_ sender: UISegmentedControl) {
-        tableViewPage = sender.selectedSegmentIndex
-        tableView.reloadData()
-    }
 
     var itemCategories = [[ListItem]]()
+    
+//    var categoryMenuViewController:CategoryMenuViewController
+    
+//    private let collectionView: UICollectionView = {
+//        let viewLayout = UICollectionViewFlowLayout()
+//        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
+//        collectionView.backgroundColor = .white
+//        return collectionView
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,5 +70,12 @@ extension MenuListScreen:UITableViewDataSource, UITableViewDelegate{
             vc.setDetailListItem(item: sushiItem)
             self.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 60))
+        headerView.backgroundColor = .orange
+//        headerView.addSubview()
+        return headerView
     }
 }
