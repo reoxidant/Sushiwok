@@ -13,6 +13,8 @@ class MenuListScreen: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     var tableViewPage:Int?
+    
+    private var categoryManuViewCollection = CategoryMenuCollectionView()
 
     var itemCategories = [[ListItem]]()
     
@@ -61,17 +63,5 @@ extension MenuListScreen:UITableViewDataSource, UITableViewDelegate{
             vc.setDetailListItem(item: sushiItem)
             self.navigationController?.pushViewController(vc, animated: true)
         }
-    }
-    
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 60))
-        headerView.backgroundColor = .orange
-    
-        let categoryMenuCollectionView = CategoryMenuCollectionView()
-        
-        headerView.addSubview(categoryMenuCollectionView)
-        
-        return headerView
     }
 }
