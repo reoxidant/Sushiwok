@@ -16,15 +16,6 @@ class MenuListScreen: UIViewController {
 
     var itemCategories = [[ListItem]]()
     
-//    var categoryMenuViewController:CategoryMenuViewController
-    
-//    private let collectionView: UICollectionView = {
-//        let viewLayout = UICollectionViewFlowLayout()
-//        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
-//        collectionView.backgroundColor = .white
-//        return collectionView
-//    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewPage = 0
@@ -72,10 +63,15 @@ extension MenuListScreen:UITableViewDataSource, UITableViewDelegate{
         }
     }
     
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 60))
         headerView.backgroundColor = .orange
-//        headerView.addSubview()
+    
+        let categoryMenuCollectionView = CategoryMenuCollectionView()
+        
+        headerView.addSubview(categoryMenuCollectionView)
+        
         return headerView
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class CategoryMenuViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    private let nameLabel = UILabel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
