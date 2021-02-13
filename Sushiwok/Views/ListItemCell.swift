@@ -11,7 +11,6 @@ import UIKit
 class ListItemCell: UITableViewCell {
     
     @IBOutlet weak var itemImageView: UIImageView!
-    
     @IBOutlet weak var itemTitleLabel: UILabel!
     
     func setListItem(item: ListItem){

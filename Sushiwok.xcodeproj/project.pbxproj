@@ -63,19 +63,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		44429AAC25BC1CD400400332 /* Model */ = {
+		44429AAC25BC1CD400400332 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				449CB73525BB5B2B0064DCC8 /* ListItem.swift */,
 				44C55ABC25C0C4E50013B76E /* MenuTableList.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		44429AAD25BC1D4A00400332 /* Controller */ = {
+		44429AAD25BC1D4A00400332 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				44AF45B325D5C4220085B395 /* CategoryCollectionViewCell */,
 				449CB73125BB51EE0064DCC8 /* MenuListScreen.swift */,
 				44429AAA25BBF51400400332 /* DetailListItem.swift */,
 				4453B30D25BF5D3A00D35952 /* MenuViewController.swift */,
@@ -83,16 +82,18 @@
 				4453B31525BF712600D35952 /* FavoritesViewController.swift */,
 				4453B30B25BF5D2000D35952 /* MapViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		44429AAE25BC1D7C00400332 /* View */ = {
+		44429AAE25BC1D7C00400332 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				44AF45BA25D5C55C0085B395 /* CategoryViewCell.swift */,
+				44ABB00425D72DA50087F330 /* CategoryViewCell.xib */,
 				44C55ABA25C0BEF40013B76E /* MenuTableViewCell.swift */,
 				449CB73325BB597C0064DCC8 /* ListItemCell.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		449CB71125BB4A190064DCC8 = {
@@ -118,9 +119,9 @@
 				449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */,
 				4453B30725BF53B200D35952 /* SWRevealViewController.h */,
 				4453B30625BF53B200D35952 /* SWRevealViewController.m */,
-				44429AAD25BC1D4A00400332 /* Controller */,
-				44429AAC25BC1CD400400332 /* Model */,
-				44429AAE25BC1D7C00400332 /* View */,
+				44429AAD25BC1D4A00400332 /* Controllers */,
+				44429AAC25BC1CD400400332 /* Models */,
+				44429AAE25BC1D7C00400332 /* Views */,
 				449CB72325BB4A190064DCC8 /* Main.storyboard */,
 				449CB72625BB4A1C0064DCC8 /* Assets.xcassets */,
 				449CB72825BB4A1C0064DCC8 /* LaunchScreen.storyboard */,
@@ -128,15 +129,6 @@
 				4453B30525BF53B200D35952 /* Sushiwok-Bridging-Header.h */,
 			);
 			path = Sushiwok;
-			sourceTree = "<group>";
-		};
-		44AF45B325D5C4220085B395 /* CategoryCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				44AF45BA25D5C55C0085B395 /* CategoryViewCell.swift */,
-				44ABB00425D72DA50087F330 /* CategoryViewCell.xib */,
-			);
-			path = CategoryCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
