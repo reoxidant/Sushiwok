@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CategoryMenuViewCell: UICollectionViewCell {
-
-    var nameLabel = UILabel()
+class CategoryViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,9 +23,9 @@ class CategoryMenuViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet{
-            self.contentView.backgroundColor = isSelected ? .red : .clear
+            self.contentView.backgroundColor = isSelected ? #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1) : .clear
             self.nameLabel.textColor = isSelected ? .white : .black
-            self.layer.borderColor = isSelected ? UIColor.clear.cgColor : UIColor.black.cgColor
+            self.layer.borderColor = isSelected ? UIColor.clear.cgColor : UIColor.black.withAlphaComponent(0.3).cgColor
         }
     }
 }
