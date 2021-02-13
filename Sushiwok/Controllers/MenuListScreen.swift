@@ -16,7 +16,7 @@ class MenuListScreen: UIViewController {
     
     var tableViewPage:Int?
     var itemCategories = [[ListItem]]()
-    var names = ["Попробуй!", "Наборы и комбо", "Роллы", "Запеченные роллы", "Wok", "Вегетаринские блюда", "Суши", "Пицца", "Салаты и закуски", "Супы", "Горячее", "Десерты и напитки", "Дополнительно"]
+    var categoryMenuList = ["Наборы и комбо", "Роллы", "Wok", "Суши", "Pizza"]
     
     var reuseIdentifier:String = "CategoryViewCellReuseIdentifier"
     
@@ -86,6 +86,8 @@ extension MenuListScreen:UITableViewDataSource, UITableViewDelegate{
     }
 }
 
+//MARK: Implements a Protocols for UICollectionView
+
 extension MenuListScreen: UICollectionViewDelegateFlowLayout{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -98,7 +100,7 @@ extension MenuListScreen: UICollectionViewDelegateFlowLayout{
                 return .zero
         }
         
-        cell.configureCell(name: names[indexPath.row])
+        cell.configureCell(name: categoryMenuList[indexPath.row])
         cell.setNeedsLayout()
         cell.layoutIfNeeded()
         
@@ -109,6 +111,12 @@ extension MenuListScreen: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CategoryViewCell{
             cell.isSelected = true
+            if itemCategories[tableViewPage!].count == categoryMenuList.count{
+                tableViewPage = indexPath.row
+                tableView.reloadData()
+            } else {
+                print("count menu category don't equal the count section item category")
+            }
         }
     }
     
@@ -121,12 +129,12 @@ extension MenuListScreen: UICollectionViewDelegateFlowLayout{
 
 extension MenuListScreen: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        names.count
+        categoryMenuList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CategoryViewCell{
-            let name = names[indexPath.row]
+            let name = categoryMenuList[indexPath.row]
             cell.configureCell(name: name)
             cell.layer.cornerRadius = 10
             cell.layer.borderColor = UIColor.black.withAlphaComponent(0.3).cgColor

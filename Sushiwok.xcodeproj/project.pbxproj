@@ -126,6 +126,7 @@
 			children = (
 				449CB71D25BB4A190064DCC8 /* AppDelegate.swift */,
 				449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */,
+				4453B30525BF53B200D35952 /* Sushiwok-Bridging-Header.h */,
 				4440820525D82A2A0090B8BB /* SWReveal */,
 				44429AAD25BC1D4A00400332 /* Controllers */,
 				44429AAC25BC1CD400400332 /* Models */,
@@ -134,7 +135,6 @@
 				449CB72625BB4A1C0064DCC8 /* Assets.xcassets */,
 				449CB72825BB4A1C0064DCC8 /* LaunchScreen.storyboard */,
 				449CB72B25BB4A1C0064DCC8 /* Info.plist */,
-				4453B30525BF53B200D35952 /* Sushiwok-Bridging-Header.h */,
 			);
 			path = Sushiwok;
 			sourceTree = "<group>";
