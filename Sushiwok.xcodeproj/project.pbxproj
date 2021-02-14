@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A6A95427023DF77A242AFAC /* Pods_Sushiwok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2ADD44CC6F4803A3949701 /* Pods_Sushiwok.framework */; };
 		44429AAB25BBF51400400332 /* DetailListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44429AAA25BBF51400400332 /* DetailListItem.swift */; };
-		4453B30825BF53B200D35952 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453B30625BF53B200D35952 /* SWRevealViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4453B30A25BF5D1500D35952 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4453B30925BF5D1500D35952 /* ShareViewController.swift */; };
 		4453B30C25BF5D2000D35952 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4453B30B25BF5D2000D35952 /* MapViewController.swift */; };
 		4453B30E25BF5D3A00D35952 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4453B30D25BF5D3A00D35952 /* MenuViewController.swift */; };
@@ -30,8 +30,6 @@
 /* Begin PBXFileReference section */
 		44429AAA25BBF51400400332 /* DetailListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListItem.swift; sourceTree = "<group>"; };
 		4453B30525BF53B200D35952 /* Sushiwok-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sushiwok-Bridging-Header.h"; sourceTree = "<group>"; };
-		4453B30625BF53B200D35952 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		4453B30725BF53B200D35952 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = /Users/vitalijsapovalov/Developer/XcodeProjects/Sushiwok/Sushiwok/SWRevealViewController.h; sourceTree = "<absolute>"; };
 		4453B30925BF5D1500D35952 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		4453B30B25BF5D2000D35952 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4453B30D25BF5D3A00D35952 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +48,9 @@
 		44AF45BA25D5C55C0085B395 /* CategoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		44C55ABA25C0BEF40013B76E /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		44C55ABC25C0C4E50013B76E /* MenuTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableList.swift; sourceTree = "<group>"; };
+		4E2ADD44CC6F4803A3949701 /* Pods_Sushiwok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sushiwok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E695AE9C38D1D480D9D4EB4 /* Pods-Sushiwok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sushiwok.release.xcconfig"; path = "Target Support Files/Pods-Sushiwok/Pods-Sushiwok.release.xcconfig"; sourceTree = "<group>"; };
+		72D0344B647913D76D649FAF /* Pods-Sushiwok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sushiwok.debug.xcconfig"; path = "Target Support Files/Pods-Sushiwok/Pods-Sushiwok.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,21 +58,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6A95427023DF77A242AFAC /* Pods_Sushiwok.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4440820525D82A2A0090B8BB /* SWReveal */ = {
-			isa = PBXGroup;
-			children = (
-				4453B30725BF53B200D35952 /* SWRevealViewController.h */,
-				4453B30625BF53B200D35952 /* SWRevealViewController.m */,
-			);
-			path = SWReveal;
-			sourceTree = "<group>";
-		};
 		44429AAC25BC1CD400400332 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +103,8 @@
 			children = (
 				449CB71C25BB4A190064DCC8 /* Sushiwok */,
 				449CB71B25BB4A190064DCC8 /* Products */,
+				A795CBE8EFBD386A124D4E33 /* Pods */,
+				C7D3143EAA97D0E999CE43F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,7 +122,6 @@
 				449CB71D25BB4A190064DCC8 /* AppDelegate.swift */,
 				449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */,
 				4453B30525BF53B200D35952 /* Sushiwok-Bridging-Header.h */,
-				4440820525D82A2A0090B8BB /* SWReveal */,
 				44429AAD25BC1D4A00400332 /* Controllers */,
 				44429AAC25BC1CD400400332 /* Models */,
 				44429AAE25BC1D7C00400332 /* Views */,
@@ -139,6 +133,23 @@
 			path = Sushiwok;
 			sourceTree = "<group>";
 		};
+		A795CBE8EFBD386A124D4E33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72D0344B647913D76D649FAF /* Pods-Sushiwok.debug.xcconfig */,
+				6E695AE9C38D1D480D9D4EB4 /* Pods-Sushiwok.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C7D3143EAA97D0E999CE43F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E2ADD44CC6F4803A3949701 /* Pods_Sushiwok.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 449CB72E25BB4A1C0064DCC8 /* Build configuration list for PBXNativeTarget "Sushiwok" */;
 			buildPhases = (
+				7514FB512A0CE080BE431C0B /* [CP] Check Pods Manifest.lock */,
 				449CB71625BB4A190064DCC8 /* Sources */,
 				449CB71725BB4A190064DCC8 /* Frameworks */,
 				449CB71825BB4A190064DCC8 /* Resources */,
+				E92FB7474438B8F8C5CD0189 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +220,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7514FB512A0CE080BE431C0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sushiwok-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E92FB7474438B8F8C5CD0189 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sushiwok/Pods-Sushiwok-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sushiwok/Pods-Sushiwok-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sushiwok/Pods-Sushiwok-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		449CB71625BB4A190064DCC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -223,7 +278,6 @@
 				4453B30A25BF5D1500D35952 /* ShareViewController.swift in Sources */,
 				4453B31625BF712600D35952 /* FavoritesViewController.swift in Sources */,
 				449CB73625BB5B2B0064DCC8 /* ListItem.swift in Sources */,
-				4453B30825BF53B200D35952 /* SWRevealViewController.m in Sources */,
 				4453B30C25BF5D2000D35952 /* MapViewController.swift in Sources */,
 				449CB73225BB51EE0064DCC8 /* MenuListScreen.swift in Sources */,
 			);
@@ -367,6 +421,7 @@
 		};
 		449CB72F25BB4A1C0064DCC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72D0344B647913D76D649FAF /* Pods-Sushiwok.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -388,6 +443,7 @@
 		};
 		449CB73025BB4A1C0064DCC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E695AE9C38D1D480D9D4EB4 /* Pods-Sushiwok.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
