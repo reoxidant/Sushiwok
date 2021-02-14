@@ -6,5 +6,4 @@ target 'Sushiwok' do
   use_frameworks!
 
   pod 'SWRevealViewController', '~> 2.3', :inhibit_warnings => true
-  pod 'ScrollableSegmentedControl', '~> 1.5.0'
 end

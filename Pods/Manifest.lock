@@ -1,20 +1,16 @@
 PODS:
-  - ScrollableSegmentedControl (1.5.0)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
-  - ScrollableSegmentedControl (~> 1.5.0)
   - SWRevealViewController (~> 2.3)
 
 SPEC REPOS:
   trunk:
-    - ScrollableSegmentedControl
     - SWRevealViewController
 
 SPEC CHECKSUMS:
-  ScrollableSegmentedControl: 2e64bbe8968a7fcd8aae5014434481464fcdfe60
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: fc1618d3bd5f6d29e8eb8adc4f87041e1c4d8464
+PODFILE CHECKSUM: 10b4635dd80c3c0498302e6816acd590f8ebb280
 
 COCOAPODS: 1.10.1

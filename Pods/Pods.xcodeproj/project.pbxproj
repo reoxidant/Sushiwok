@@ -7,82 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0354A681BEADFCE1FF405D4BEB13CAD6 /* Pods-Sushiwok-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BC6ABDF436BCC9766C9FECB6A20BB /* Pods-Sushiwok-dummy.m */; };
-		16335A3B4153380EC4BBAF4AF40D02AB /* ScrollableSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DB6BE7034D28D8D64D94DB9621EB53 /* ScrollableSegmentedControl-dummy.m */; };
-		212DEBEBEC975056D8C1BC71A19910E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59040624F92B050B2ECF8FA644B47678 /* Foundation.framework */; };
-		2301033DBB1788E69F3C28E1FC4FACA0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C887B5CF0670A08A4531FB40660A1 /* SWRevealViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3335EB2DACFAE3A31573EA7CE9F69FCB /* ScrollableSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE57DB225B66F5CF50C182A31F19898 /* ScrollableSegmentedControl.swift */; };
-		3A2D45D7486D9CA726E984F52147838B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59040624F92B050B2ECF8FA644B47678 /* Foundation.framework */; };
-		4F1B38B62BAE2BE7FF0ED19C8E13309E /* Pods-Sushiwok-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83866817223B929B55D8B278FBD21A7E /* Pods-Sushiwok-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2301033DBB1788E69F3C28E1FC4FACA0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 591174F0C7C0E50D2819EFB3247B1380 /* SWRevealViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		363599DFA21110DDD56B7A8A15E8750A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59040624F92B050B2ECF8FA644B47678 /* Foundation.framework */; };
+		632BF5749BDF21A132CCAAAC81B4A5D4 /* Pods-Sushiwok-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BC6ABDF436BCC9766C9FECB6A20BB /* Pods-Sushiwok-dummy.m */; };
 		6346C6F70171E838EF779ACAF0F05F60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59040624F92B050B2ECF8FA644B47678 /* Foundation.framework */; };
-		6C3269E89E7A65DF3890E5E910FCBA11 /* SWRevealViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7376C3AB986A55296770E5B4B0993156 /* SWRevealViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		862C763636CAADCF75D8211BD21D4AC0 /* SWRevealViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 225896198C93830906B0DD613E4E0AE5 /* SWRevealViewController-dummy.m */; };
-		87E324053D8BEE1277EB13746BEAD2DE /* ScrollableSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4041E9A57B38DAF0ACC739A9EBE1C37F /* ScrollableSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C3269E89E7A65DF3890E5E910FCBA11 /* SWRevealViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A84196E7CD1CB8C76B7B46B2FB500F /* SWRevealViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82D71665848EC295397FBE12F777083E /* Pods-Sushiwok-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83866817223B929B55D8B278FBD21A7E /* Pods-Sushiwok-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		862C763636CAADCF75D8211BD21D4AC0 /* SWRevealViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD39C4598C0DB16DD90F6566578BE4F /* SWRevealViewController-dummy.m */; };
 		AFC7578ED04A8C27E1AAF0B27EF86D42 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B68540C55CA43970CDF0C24725F02FA /* CoreGraphics.framework */; };
-		C921606B4B7940C97BB7982909DB35CC /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DBF5E5BA4E9A707FA2BD57F4419A835 /* SWRevealViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C921606B4B7940C97BB7982909DB35CC /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D42B50B0A80146D2C00655F293C604D9 /* SWRevealViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		546A0073C7C428A8B1573BB563B299AB /* PBXContainerItemProxy */ = {
+		C8DD0BF52242CB13568D07335118C7A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A54C3C20DA76528607950189DA743CA4;
 			remoteInfo = SWRevealViewController;
 		};
-		DF9DB1846278E09F4668C4292D4F176D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EF03FFDDD4B9017D2CBE7F1C431A022;
-			remoteInfo = ScrollableSegmentedControl;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		062863B66996D2FBF0571CCA06EF2624 /* SWRevealViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SWRevealViewController.modulemap; sourceTree = "<group>"; };
-		2188079B24DB11BCF09B601855310C9F /* SWRevealViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWRevealViewController.release.xcconfig; sourceTree = "<group>"; };
-		225896198C93830906B0DD613E4E0AE5 /* SWRevealViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWRevealViewController-dummy.m"; sourceTree = "<group>"; };
-		25D9C3FED177A461C656418C9D9FA583 /* SWRevealViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SWRevealViewController-Info.plist"; sourceTree = "<group>"; };
-		2748BCA90D1EFD810E43B2008D67BCBF /* ScrollableSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScrollableSegmentedControl.framework; path = ScrollableSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C4C887B5CF0670A08A4531FB40660A1 /* SWRevealViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
-		4041E9A57B38DAF0ACC739A9EBE1C37F /* ScrollableSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScrollableSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
 		4B68540C55CA43970CDF0C24725F02FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		55EE8B7062C4560CDA124827A30A9850 /* SWRevealViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SWRevealViewController.modulemap; sourceTree = "<group>"; };
 		59040624F92B050B2ECF8FA644B47678 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5CE57DB225B66F5CF50C182A31F19898 /* ScrollableSegmentedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableSegmentedControl.swift; path = ScrollableSegmentedControl/ScrollableSegmentedControl.swift; sourceTree = "<group>"; };
+		591174F0C7C0E50D2819EFB3247B1380 /* SWRevealViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
 		5E539D9A34CA37752C5D1045AE0691E5 /* Pods-Sushiwok.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Sushiwok.modulemap"; sourceTree = "<group>"; };
-		6CD91CAC0EAEFD17558C7E0BF90703B1 /* ScrollableSegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScrollableSegmentedControl.modulemap; sourceTree = "<group>"; };
-		6DBF5E5BA4E9A707FA2BD57F4419A835 /* SWRevealViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
-		7376C3AB986A55296770E5B4B0993156 /* SWRevealViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-umbrella.h"; sourceTree = "<group>"; };
-		74B466E59BF3AE109FB234C046E8BE55 /* SWRevealViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-prefix.pch"; sourceTree = "<group>"; };
 		7C2BC6ABDF436BCC9766C9FECB6A20BB /* Pods-Sushiwok-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sushiwok-dummy.m"; sourceTree = "<group>"; };
 		7C3D0095BA3B2821331C63B949C3E785 /* Pods-Sushiwok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sushiwok.debug.xcconfig"; sourceTree = "<group>"; };
-		82DB6BE7034D28D8D64D94DB9621EB53 /* ScrollableSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScrollableSegmentedControl-dummy.m"; sourceTree = "<group>"; };
 		83866817223B929B55D8B278FBD21A7E /* Pods-Sushiwok-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sushiwok-umbrella.h"; sourceTree = "<group>"; };
 		8B570882ADA1002BD6FA75F535F97214 /* Pods-Sushiwok-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sushiwok-Info.plist"; sourceTree = "<group>"; };
-		9104CC91A59CB7C2FDF7EDBCD1B1B11E /* ScrollableSegmentedControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScrollableSegmentedControl.debug.xcconfig; sourceTree = "<group>"; };
-		96227F8B25BAEB449C19E552682119B6 /* ScrollableSegmentedControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScrollableSegmentedControl-Info.plist"; sourceTree = "<group>"; };
+		9A09E30E75226F8A208B3BE55028BF12 /* SWRevealViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SWRevealViewController-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AD47773CA9242FBBC4C547C0D886BF0D /* SWRevealViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWRevealViewController.debug.xcconfig; sourceTree = "<group>"; };
+		CB48098CA1BC0EB5D120724BDF1008D5 /* SWRevealViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-prefix.pch"; sourceTree = "<group>"; };
 		CB8468006C4D6D6ED8382165936EF639 /* Pods_Sushiwok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sushiwok.framework; path = "Pods-Sushiwok.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBF95328121E99355592317BBB3B1723 /* ScrollableSegmentedControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScrollableSegmentedControl.release.xcconfig; sourceTree = "<group>"; };
 		D334B9CDEC21015DD48358DB94CB1CFA /* SWRevealViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWRevealViewController.framework; path = SWRevealViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42B50B0A80146D2C00655F293C604D9 /* SWRevealViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
 		D435766798AE13F6641922FCE275D0D8 /* Pods-Sushiwok-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sushiwok-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E6E31C7A6B15A3AC9B74A2AB9DCBBD7E /* ScrollableSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScrollableSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
+		D8A84196E7CD1CB8C76B7B46B2FB500F /* SWRevealViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-umbrella.h"; sourceTree = "<group>"; };
+		DF62E0B1FF863DF9A5546FF02F0CCA43 /* SWRevealViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWRevealViewController.release.xcconfig; sourceTree = "<group>"; };
+		DF71E17C0A7C7750C4D34212A158CF2A /* SWRevealViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWRevealViewController.debug.xcconfig; sourceTree = "<group>"; };
 		E90FAFF215F123D3CBB969F5E890C71C /* Pods-Sushiwok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sushiwok.release.xcconfig"; sourceTree = "<group>"; };
 		EAD91AF1A8674AE375487C2EC9B641E5 /* Pods-Sushiwok-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sushiwok-acknowledgements.plist"; sourceTree = "<group>"; };
 		FB98512F1DECCADC27E45C095EB5454A /* Pods-Sushiwok-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sushiwok-frameworks.sh"; sourceTree = "<group>"; };
+		FBD39C4598C0DB16DD90F6566578BE4F /* SWRevealViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWRevealViewController-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00EF2AF3775E48F527C165F61BA0F064 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				212DEBEBEC975056D8C1BC71A19910E2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2ECDD55896FAA3BD1CC364B39DC04454 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,17 +64,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C669C8342183FD14BB199D53291CEB0A /* Frameworks */ = {
+		829A7477CD61FAF04B1C3FF87B7AAF40 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2D45D7486D9CA726E984F52147838B /* Foundation.framework in Frameworks */,
+				363599DFA21110DDD56B7A8A15E8750A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EF0866FF577B4A4A1BD38025EFF8402 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				55EE8B7062C4560CDA124827A30A9850 /* SWRevealViewController.modulemap */,
+				FBD39C4598C0DB16DD90F6566578BE4F /* SWRevealViewController-dummy.m */,
+				9A09E30E75226F8A208B3BE55028BF12 /* SWRevealViewController-Info.plist */,
+				CB48098CA1BC0EB5D120724BDF1008D5 /* SWRevealViewController-prefix.pch */,
+				D8A84196E7CD1CB8C76B7B46B2FB500F /* SWRevealViewController-umbrella.h */,
+				DF71E17C0A7C7750C4D34212A158CF2A /* SWRevealViewController.debug.xcconfig */,
+				DF62E0B1FF863DF9A5546FF02F0CCA43 /* SWRevealViewController.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SWRevealViewController";
+			sourceTree = "<group>";
+		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,30 +98,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		32F4A9AEDF64025400A5635DD42CCACF /* Support Files */ = {
+		2B096CDF161AFF43220ADE97A72F852C /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				062863B66996D2FBF0571CCA06EF2624 /* SWRevealViewController.modulemap */,
-				225896198C93830906B0DD613E4E0AE5 /* SWRevealViewController-dummy.m */,
-				25D9C3FED177A461C656418C9D9FA583 /* SWRevealViewController-Info.plist */,
-				74B466E59BF3AE109FB234C046E8BE55 /* SWRevealViewController-prefix.pch */,
-				7376C3AB986A55296770E5B4B0993156 /* SWRevealViewController-umbrella.h */,
-				AD47773CA9242FBBC4C547C0D886BF0D /* SWRevealViewController.debug.xcconfig */,
-				2188079B24DB11BCF09B601855310C9F /* SWRevealViewController.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SWRevealViewController";
-			sourceTree = "<group>";
-		};
-		5BE9BBC0D230A079C79A7EF32FD29F2F /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				6DBF5E5BA4E9A707FA2BD57F4419A835 /* SWRevealViewController.h */,
-				2C4C887B5CF0670A08A4531FB40660A1 /* SWRevealViewController.m */,
-				32F4A9AEDF64025400A5635DD42CCACF /* Support Files */,
+				D42B50B0A80146D2C00655F293C604D9 /* SWRevealViewController.h */,
+				591174F0C7C0E50D2819EFB3247B1380 /* SWRevealViewController.m */,
+				0EF0866FF577B4A4A1BD38025EFF8402 /* Support Files */,
 			);
 			name = SWRevealViewController;
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		346471175B85464A646FC1FBF202C002 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B096CDF161AFF43220ADE97A72F852C /* SWRevealViewController */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		60CB2DE171D0DB505FFA8FF75B7ED3FD /* Pods-Sushiwok */ = {
@@ -154,11 +134,10 @@
 			path = "Target Support Files/Pods-Sushiwok";
 			sourceTree = "<group>";
 		};
-		6D0D091967C04E22ADDA7449F1976F36 /* Products */ = {
+		6B6EE7604BF4CB08A1A5AEF6BBF9C9AC /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				CB8468006C4D6D6ED8382165936EF639 /* Pods_Sushiwok.framework */,
-				2748BCA90D1EFD810E43B2008D67BCBF /* ScrollableSegmentedControl.framework */,
 				D334B9CDEC21015DD48358DB94CB1CFA /* SWRevealViewController.framework */,
 			);
 			name = Products;
@@ -181,70 +160,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B31722179211605DF4B1DAEB96F19E96 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CAA0A1A08145266E9BC1A4E055230D61 /* ScrollableSegmentedControl */,
-				5BE9BBC0D230A079C79A7EF32FD29F2F /* SWRevealViewController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		CAA0A1A08145266E9BC1A4E055230D61 /* ScrollableSegmentedControl */ = {
-			isa = PBXGroup;
-			children = (
-				5CE57DB225B66F5CF50C182A31F19898 /* ScrollableSegmentedControl.swift */,
-				D184FAAFC0E46B458E7458626FCFB238 /* Support Files */,
-			);
-			name = ScrollableSegmentedControl;
-			path = ScrollableSegmentedControl;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				B31722179211605DF4B1DAEB96F19E96 /* Pods */,
-				6D0D091967C04E22ADDA7449F1976F36 /* Products */,
+				346471175B85464A646FC1FBF202C002 /* Pods */,
+				6B6EE7604BF4CB08A1A5AEF6BBF9C9AC /* Products */,
 				B19DEC4068F207D42A467485016E596D /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D184FAAFC0E46B458E7458626FCFB238 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6CD91CAC0EAEFD17558C7E0BF90703B1 /* ScrollableSegmentedControl.modulemap */,
-				82DB6BE7034D28D8D64D94DB9621EB53 /* ScrollableSegmentedControl-dummy.m */,
-				96227F8B25BAEB449C19E552682119B6 /* ScrollableSegmentedControl-Info.plist */,
-				E6E31C7A6B15A3AC9B74A2AB9DCBBD7E /* ScrollableSegmentedControl-prefix.pch */,
-				4041E9A57B38DAF0ACC739A9EBE1C37F /* ScrollableSegmentedControl-umbrella.h */,
-				9104CC91A59CB7C2FDF7EDBCD1B1B11E /* ScrollableSegmentedControl.debug.xcconfig */,
-				CBF95328121E99355592317BBB3B1723 /* ScrollableSegmentedControl.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ScrollableSegmentedControl";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		298823739C0413A280AC4A4FB2DA8C5C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F1B38B62BAE2BE7FF0ED19C8E13309E /* Pods-Sushiwok-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA44765F58561FEB8F17A3394A7D342E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				87E324053D8BEE1277EB13746BEAD2DE /* ScrollableSegmentedControl-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FCD3454F36A188568FDFB80FAEEE8FAE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,45 +183,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCF8DA7FA5B77F8A93E1E5501432BADA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82D71665848EC295397FBE12F777083E /* Pods-Sushiwok-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		6688146CE821B15375387DFF58FA1867 /* Pods-Sushiwok */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F00FC4A8E4C3E7F3357AB0B9EF290DF2 /* Build configuration list for PBXNativeTarget "Pods-Sushiwok" */;
+			buildConfigurationList = AFA1E8FDEC8A67DEFA17DCE5BE43ABAD /* Build configuration list for PBXNativeTarget "Pods-Sushiwok" */;
 			buildPhases = (
-				298823739C0413A280AC4A4FB2DA8C5C /* Headers */,
-				3644809E3758A5F367C092A391A0BB94 /* Sources */,
-				00EF2AF3775E48F527C165F61BA0F064 /* Frameworks */,
-				A0FBD464B202520AC92D974321D7931F /* Resources */,
+				FCF8DA7FA5B77F8A93E1E5501432BADA /* Headers */,
+				C9D601E714ECCB3D28A98FEDC5C2FFF6 /* Sources */,
+				829A7477CD61FAF04B1C3FF87B7AAF40 /* Frameworks */,
+				8A65C6E16D14519E397044F6F2F0F70B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				02473E636CB03BAACCA11DD32706142B /* PBXTargetDependency */,
-				F6CE42183508D580ED1338F7CA19D42E /* PBXTargetDependency */,
+				0B9ED8D19AC07B00C9BD9DBE56F70A87 /* PBXTargetDependency */,
 			);
 			name = "Pods-Sushiwok";
 			productName = "Pods-Sushiwok";
 			productReference = CB8468006C4D6D6ED8382165936EF639 /* Pods_Sushiwok.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		8EF03FFDDD4B9017D2CBE7F1C431A022 /* ScrollableSegmentedControl */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 58481F3906A90621C5B2BF5F661477B4 /* Build configuration list for PBXNativeTarget "ScrollableSegmentedControl" */;
-			buildPhases = (
-				DA44765F58561FEB8F17A3394A7D342E /* Headers */,
-				0792BB27A942E5D15B4FA0487A6DD1AE /* Sources */,
-				C669C8342183FD14BB199D53291CEB0A /* Frameworks */,
-				2C4C30809C6E956CD995C3A312E50C1B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ScrollableSegmentedControl;
-			productName = ScrollableSegmentedControl;
-			productReference = 2748BCA90D1EFD810E43B2008D67BCBF /* ScrollableSegmentedControl.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A54C3C20DA76528607950189DA743CA4 /* SWRevealViewController */ = {
@@ -331,25 +249,17 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 6D0D091967C04E22ADDA7449F1976F36 /* Products */;
+			productRefGroup = 6B6EE7604BF4CB08A1A5AEF6BBF9C9AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6688146CE821B15375387DFF58FA1867 /* Pods-Sushiwok */,
-				8EF03FFDDD4B9017D2CBE7F1C431A022 /* ScrollableSegmentedControl */,
 				A54C3C20DA76528607950189DA743CA4 /* SWRevealViewController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C4C30809C6E956CD995C3A312E50C1B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		35F0337C63087010DC67F485D6DEAEE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,7 +267,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0FBD464B202520AC92D974321D7931F /* Resources */ = {
+		8A65C6E16D14519E397044F6F2F0F70B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,23 +277,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0792BB27A942E5D15B4FA0487A6DD1AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				16335A3B4153380EC4BBAF4AF40D02AB /* ScrollableSegmentedControl-dummy.m in Sources */,
-				3335EB2DACFAE3A31573EA7CE9F69FCB /* ScrollableSegmentedControl.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3644809E3758A5F367C092A391A0BB94 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0354A681BEADFCE1FF405D4BEB13CAD6 /* Pods-Sushiwok-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		49ABA9140F069B464C35285BF8D2FBB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,62 +286,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9D601E714ECCB3D28A98FEDC5C2FFF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632BF5749BDF21A132CCAAAC81B4A5D4 /* Pods-Sushiwok-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		02473E636CB03BAACCA11DD32706142B /* PBXTargetDependency */ = {
+		0B9ED8D19AC07B00C9BD9DBE56F70A87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SWRevealViewController;
 			target = A54C3C20DA76528607950189DA743CA4 /* SWRevealViewController */;
-			targetProxy = 546A0073C7C428A8B1573BB563B299AB /* PBXContainerItemProxy */;
-		};
-		F6CE42183508D580ED1338F7CA19D42E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ScrollableSegmentedControl;
-			target = 8EF03FFDDD4B9017D2CBE7F1C431A022 /* ScrollableSegmentedControl */;
-			targetProxy = DF9DB1846278E09F4668C4292D4F176D /* PBXContainerItemProxy */;
+			targetProxy = C8DD0BF52242CB13568D07335118C7A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1D76820A453EE99B4CE68A046AD11CDD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBF95328121E99355592317BBB3B1723 /* ScrollableSegmentedControl.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ScrollableSegmentedControl/ScrollableSegmentedControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ScrollableSegmentedControl/ScrollableSegmentedControl-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ScrollableSegmentedControl/ScrollableSegmentedControl.modulemap";
-				PRODUCT_MODULE_NAME = ScrollableSegmentedControl;
-				PRODUCT_NAME = ScrollableSegmentedControl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		221979333AF62574F48969D837DEB2E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD47773CA9242FBBC4C547C0D886BF0D /* SWRevealViewController.debug.xcconfig */;
+			baseConfigurationReference = DF71E17C0A7C7750C4D34212A158CF2A /* SWRevealViewController.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -480,9 +340,9 @@
 			};
 			name = Debug;
 		};
-		3AEAD9AA60E8784099612EDD7ED4F316 /* Debug */ = {
+		86FFD8A466DA1619949791AD77A8D588 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9104CC91A59CB7C2FDF7EDBCD1B1B11E /* ScrollableSegmentedControl.debug.xcconfig */;
+			baseConfigurationReference = DF62E0B1FF863DF9A5546FF02F0CCA43 /* SWRevealViewController.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -492,59 +352,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ScrollableSegmentedControl/ScrollableSegmentedControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ScrollableSegmentedControl/ScrollableSegmentedControl-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SWRevealViewController/SWRevealViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWRevealViewController/SWRevealViewController-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/ScrollableSegmentedControl/ScrollableSegmentedControl.modulemap";
-				PRODUCT_MODULE_NAME = ScrollableSegmentedControl;
-				PRODUCT_NAME = ScrollableSegmentedControl;
+				MODULEMAP_FILE = "Target Support Files/SWRevealViewController/SWRevealViewController.modulemap";
+				PRODUCT_MODULE_NAME = SWRevealViewController;
+				PRODUCT_NAME = SWRevealViewController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5363B42ED5365F7644E7B57A3D9942C5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E90FAFF215F123D3CBB969F5E890C71C /* Pods-Sushiwok.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Sushiwok/Pods-Sushiwok-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Sushiwok/Pods-Sushiwok.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -552,7 +375,7 @@
 			};
 			name = Release;
 		};
-		793D89B1374A9D02BBA636344583D8A5 /* Debug */ = {
+		8784804EF2CECE32045BBFE8F7BA9BCA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C3D0095BA3B2821331C63B949C3E785 /* Pods-Sushiwok.debug.xcconfig */;
 			buildSettings = {
@@ -588,41 +411,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		86FFD8A466DA1619949791AD77A8D588 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2188079B24DB11BCF09B601855310C9F /* SWRevealViewController.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SWRevealViewController/SWRevealViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWRevealViewController/SWRevealViewController-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SWRevealViewController/SWRevealViewController.modulemap";
-				PRODUCT_MODULE_NAME = SWRevealViewController;
-				PRODUCT_NAME = SWRevealViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		95607A856795A398FFB76177B56DE3A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -752,6 +540,44 @@
 			};
 			name = Release;
 		};
+		F93CCBA129F6DC97EC25BF86DC8E01CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E90FAFF215F123D3CBB969F5E890C71C /* Pods-Sushiwok.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sushiwok/Pods-Sushiwok-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sushiwok/Pods-Sushiwok.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -764,20 +590,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58481F3906A90621C5B2BF5F661477B4 /* Build configuration list for PBXNativeTarget "ScrollableSegmentedControl" */ = {
+		AFA1E8FDEC8A67DEFA17DCE5BE43ABAD /* Build configuration list for PBXNativeTarget "Pods-Sushiwok" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3AEAD9AA60E8784099612EDD7ED4F316 /* Debug */,
-				1D76820A453EE99B4CE68A046AD11CDD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F00FC4A8E4C3E7F3357AB0B9EF290DF2 /* Build configuration list for PBXNativeTarget "Pods-Sushiwok" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				793D89B1374A9D02BBA636344583D8A5 /* Debug */,
-				5363B42ED5365F7644E7B57A3D9942C5 /* Release */,
+				8784804EF2CECE32045BBFE8F7BA9BCA /* Debug */,
+				F93CCBA129F6DC97EC25BF86DC8E01CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
