@@ -1,6 +1,0 @@
-framework module Pods_Sushiwok {
-  umbrella header "Pods-Sushiwok-umbrella.h"
-
-  export *
-  module * { export * }
-}
