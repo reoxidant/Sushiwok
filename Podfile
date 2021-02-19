@@ -6,4 +6,5 @@ target 'Sushiwok' do
   use_frameworks!
 
   pod 'SWRevealViewController', '~> 2.3', :inhibit_warnings => true
+  pod 'SwipeMenuViewController'
 end
