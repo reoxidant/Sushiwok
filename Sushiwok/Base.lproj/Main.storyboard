@@ -399,11 +399,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUj-Ae-D5q" customClass="SwipeMenuView" customModule="SwipeMenuViewController" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DrI-vX-9uH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.74023737850000004" green="0.7843137255" blue="0.60267508390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AjP-fc-xji" firstAttribute="centerY" secondItem="pzA-op-3bO" secondAttribute="centerY" id="4EQ-Nv-00U"/>
+                            <constraint firstItem="NUj-Ae-D5q" firstAttribute="leading" secondItem="Q9I-E6-zEI" secondAttribute="leading" id="BAJ-zf-Q1J"/>
+                            <constraint firstItem="NUj-Ae-D5q" firstAttribute="top" secondItem="Q9I-E6-zEI" secondAttribute="top" id="CeB-9x-pbP"/>
                             <constraint firstItem="AjP-fc-xji" firstAttribute="centerX" secondItem="pzA-op-3bO" secondAttribute="centerX" id="Shw-Yp-RK5"/>
+                            <constraint firstItem="NUj-Ae-D5q" firstAttribute="trailing" secondItem="Q9I-E6-zEI" secondAttribute="trailing" id="dMs-OI-khc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q9I-E6-zEI"/>
                     </view>
@@ -413,12 +423,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuBtn" destination="JiL-gO-hbY" id="kqB-4Y-zje"/>
+                        <outlet property="menuBtn" destination="JiL-gO-hbY" id="thN-Gz-CdA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gqi-of-b3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2861" y="1614"/>
+            <point key="canvasLocation" x="2860.8695652173915" y="1613.8392857142856"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="OY5-fr-5Sh">
