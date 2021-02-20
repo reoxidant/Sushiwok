@@ -28,10 +28,17 @@ class FavoritesViewController: SwipeMenuViewController {
         }
         
         super.viewDidLoad()
+        
+        setMenuBtn(menuBtn)
     }
     
     private func reload(){
         swipeMenuView.reloadData(options: options)
+    }
+    
+    func setMenuBtn(_ menuBar: UIBarButtonItem){
+        menuBar.target = revealViewController()
+        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
     }
     
     // MARK: - SwipeMenuViewDelegate
