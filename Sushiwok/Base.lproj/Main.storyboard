@@ -4,124 +4,9 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="MenuListScreen" id="BYZ-38-t0r" customClass="MenuListScreen" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erM-Ra-Bme">
-                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xKM-Z7-CgV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="61j-5X-Wvx">
-                                            <size key="itemSize" width="128" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryMenuCell" id="YTC-iW-rSx">
-                                                <rect key="frame" x="20" y="10" width="128" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dyX-Om-1EA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </collectionViewCellContentView>
-                                                <size key="customSize" width="128" height="30"/>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="pjF-WE-1Ob"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rpe-lm-aif">
-                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListItemCell" id="oTG-8K-PhP" customClass="ListItemCell" customModule="Sushiwok" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oTG-8K-PhP" id="K3R-eL-MKo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VR9-xa-Fpa">
-                                                    <rect key="frame" x="20" y="8.3333333333333357" width="130" height="73.333333333333314"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="VR9-xa-Fpa" secondAttribute="height" multiplier="16:9" id="hZt-sg-vYh"/>
-                                                        <constraint firstAttribute="width" constant="130" id="i7M-rA-mwL"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="J3H-2j-xb3">
-                                                    <rect key="frame" x="162" y="20" width="220" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="CTN-4l-oWb"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="J3H-2j-xb3" secondAttribute="trailing" constant="12" id="4RS-cM-qZk"/>
-                                                <constraint firstItem="VR9-xa-Fpa" firstAttribute="leading" secondItem="K3R-eL-MKo" secondAttribute="leading" constant="20" id="Fok-nd-nfF"/>
-                                                <constraint firstItem="J3H-2j-xb3" firstAttribute="centerY" secondItem="K3R-eL-MKo" secondAttribute="centerY" id="bqU-P4-vY8"/>
-                                                <constraint firstItem="J3H-2j-xb3" firstAttribute="leading" secondItem="VR9-xa-Fpa" secondAttribute="trailing" constant="12" id="eTh-k7-HPz"/>
-                                                <constraint firstItem="VR9-xa-Fpa" firstAttribute="centerY" secondItem="K3R-eL-MKo" secondAttribute="centerY" id="vVs-8E-mc1"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="itemImageView" destination="VR9-xa-Fpa" id="5A2-Cd-68I"/>
-                                            <outlet property="itemTitleLabel" destination="J3H-2j-xb3" id="uTm-OG-BdV"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="cy8-jl-JPF"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0HZ-I2-zrs"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="erM-Ra-Bme" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AEp-Xx-9Nm"/>
-                            <constraint firstItem="erM-Ra-Bme" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DQ4-7s-SOv"/>
-                            <constraint firstItem="Rpe-lm-aif" firstAttribute="top" secondItem="erM-Ra-Bme" secondAttribute="bottom" id="Kr5-UL-HOA"/>
-                            <constraint firstItem="Rpe-lm-aif" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="edI-Eh-hqz"/>
-                            <constraint firstAttribute="bottom" secondItem="Rpe-lm-aif" secondAttribute="bottom" id="jID-cU-4vl"/>
-                            <constraint firstItem="Rpe-lm-aif" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="piZ-6r-GG6"/>
-                            <constraint firstItem="erM-Ra-Bme" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tOZ-r0-8Bi"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Menu" id="ERv-rm-Q5c">
-                        <barButtonItem key="leftBarButtonItem" title="item" image="line.horizontal.3" catalog="system" id="Mhf-Dr-B85">
-                            <color key="tintColor" red="0.61568627450000002" green="0.80392156859999997" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="categoryCollectionView" destination="xKM-Z7-CgV" id="wRv-4f-ccJ"/>
-                        <outlet property="menuBtn" destination="Mhf-Dr-B85" id="BZI-HC-3n3"/>
-                        <outlet property="tableView" destination="Rpe-lm-aif" id="3cR-MN-Cyi"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2862.3188405797105" y="138.61607142857142"/>
-        </scene>
         <!--Detail List Item-->
         <scene sceneID="ALp-b3-yLn">
             <objects>
@@ -206,7 +91,7 @@
         <!--Navigation Controller-->
         <scene sceneID="7eB-LN-zr0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Dh0-xK-MUm" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Dh0-xK-MUm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="52G-ZY-BVl">
@@ -218,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1KR-6R-r0C"/>
+                        <segue destination="iFg-3W-x3T" kind="relationship" relationship="rootViewController" id="Gse-sQ-Xt2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8F-Ax-0ZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -399,21 +284,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUj-Ae-D5q" customClass="SwipeMenuView" customModule="SwipeMenuViewController" colorLabel="IBBuiltInLabel-Red">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="DrI-vX-9uH"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.74023737850000004" green="0.7843137255" blue="0.60267508390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AjP-fc-xji" firstAttribute="centerY" secondItem="pzA-op-3bO" secondAttribute="centerY" id="4EQ-Nv-00U"/>
-                            <constraint firstItem="NUj-Ae-D5q" firstAttribute="leading" secondItem="Q9I-E6-zEI" secondAttribute="leading" id="BAJ-zf-Q1J"/>
-                            <constraint firstItem="NUj-Ae-D5q" firstAttribute="top" secondItem="Q9I-E6-zEI" secondAttribute="top" id="CeB-9x-pbP"/>
                             <constraint firstItem="AjP-fc-xji" firstAttribute="centerX" secondItem="pzA-op-3bO" secondAttribute="centerX" id="Shw-Yp-RK5"/>
-                            <constraint firstItem="NUj-Ae-D5q" firstAttribute="trailing" secondItem="Q9I-E6-zEI" secondAttribute="trailing" id="dMs-OI-khc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q9I-E6-zEI"/>
                     </view>
@@ -501,9 +376,44 @@
             </objects>
             <point key="canvasLocation" x="1961" y="2314"/>
         </scene>
+        <!--Menu List Screen-->
+        <scene sceneID="lHE-aH-Do3">
+            <objects>
+                <viewController storyboardIdentifier="MenuListScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iFg-3W-x3T" customClass="MenuListScreen" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mkT-Gf-UCm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i35-Gp-q04">
+                                <rect key="frame" x="123.33333333333333" y="424" width="167.33333333333337" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i35-Gp-q04" firstAttribute="centerY" secondItem="mkT-Gf-UCm" secondAttribute="centerY" id="7OI-yN-EOj"/>
+                            <constraint firstItem="i35-Gp-q04" firstAttribute="centerX" secondItem="mkT-Gf-UCm" secondAttribute="centerX" id="wrs-dm-vce"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dR0-b4-hXR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qfs-ym-WHL">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="Ip6-MV-hZf">
+                            <color key="tintColor" red="0.61568627450000002" green="0.80392156859999997" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuBtn" destination="Ip6-MV-hZf" id="YvN-6K-e1m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3K-LX-qLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2861" y="139"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lav-uN-3X6"/>
+        <segue reference="udv-FN-XQA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
