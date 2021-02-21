@@ -23,7 +23,6 @@ class FavoritesViewController: SwipeMenuViewController {
         for menuTitle in menuTitles {
             let vc = ContentMenuViewController()
             vc.title = menuTitle
-            vc.content = menuTitle
             self.addChild(vc)
         }
         

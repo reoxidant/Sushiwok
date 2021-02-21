@@ -19,10 +19,10 @@ class MenuListScreen: SwipeMenuViewController {
     
     override func viewDidLoad() {
         
-        for categoryTitle in categoryMenuList {
+        for (index, categoryTitle) in categoryMenuList.enumerated() {
             let vc = ContentMenuViewController()
+            vc.tableViewPage = index
             vc.title = categoryTitle
-            vc.content = categoryTitle
             self.addChild(vc)
         }
         

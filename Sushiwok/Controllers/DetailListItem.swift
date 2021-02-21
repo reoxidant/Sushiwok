@@ -50,7 +50,7 @@ class DetailListItem: UIViewController {
     }
     
     func setDetailListItem(item: ListItem){
-        selectedImageView = item.image
+        selectedImageView = UIImage(named: item.image!)
         selectedTitleLabel = item.title
         selectedDescriptionLabel = item.description
     }

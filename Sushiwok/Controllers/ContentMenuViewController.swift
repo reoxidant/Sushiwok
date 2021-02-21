@@ -8,36 +8,63 @@
 
 import UIKit
 
-class ContentMenuViewController: UIViewController {
-    
-    
-    var contentLabel: UILabel! {
-        didSet {
-            contentLabel.textColor = .black
-            contentLabel.textAlignment = .center
-            contentLabel.font = UIFont.boldSystemFont(ofSize: 25)
-            contentLabel.text = content
-            view.addSubview(contentLabel)
-            
-            contentLabel.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                contentLabel.topAnchor.constraint(equalTo: self.view.topAnchor),
-                contentLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor),
-                contentLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                contentLabel.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-            ])
+class ContentMenuViewController: UIViewController{
+
+    var tableViewPage:Int?
+    var categoryMenuList = ["Наборы и комбо", "Роллы", "Wok", "Суши", "Pizza"]
+
+    var itemCategories: [[ListItem]]{
+        get{
+            return CategoryItemApi.createListItems()
         }
     }
-    
-    var content: String = ""
+
+    private var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(ListItemCell.self, forCellReuseIdentifier: ListItemCell.cellIdentifier)
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let displayWidht: CGFloat = self.view.frame.width
+//        let displayHeight: CGFloat = self.view.frame.height
+//
+//        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: displayWidht, height: displayHeight))
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.dataSource = self
 
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
-        contentLabel = UILabel(frame: CGRect(x: 0, y: view.center.y - 50, width: view.frame.width, height: 50))
+        view.addSubview(tableView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
+}
+
+extension ContentMenuViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemCategories[tableViewPage!].count
     }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListItemCell.cellIdentifier, for: indexPath) as! ListItemCell
+        cell.categoryItem = itemCategories[tableViewPage!][indexPath.row]
+        return cell
+    }
 
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let sushiItem = itemCategories[tableViewPage!][indexPath.row]
+//
+//        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailSushi") as? DetailListItem {
+//            vc.setDetailListItem(item: sushiItem)
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
+//    }
 }
+
+//extension ContentMenuViewController: UITableViewDelegate{}
