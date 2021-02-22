@@ -50,6 +50,10 @@ extension ContentMenuViewController: UITableViewDataSource, UITableViewDelegate{
         cell.categoryItem = itemCategories[tableViewPage!][indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sushiItem = itemCategories[tableViewPage!][indexPath.row]
