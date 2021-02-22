@@ -27,16 +27,10 @@ class ContentMenuViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let displayWidht: CGFloat = self.view.frame.width
-//        let displayHeight: CGFloat = self.view.frame.height
-//
-//        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: displayWidht, height: displayHeight))
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    
         tableView.dataSource = self
-
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .white
+        tableView.delegate = self
+        
         view.addSubview(tableView)
     }
     
@@ -46,7 +40,7 @@ class ContentMenuViewController: UIViewController{
     }
 }
 
-extension ContentMenuViewController: UITableViewDataSource{
+extension ContentMenuViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemCategories[tableViewPage!].count
     }
@@ -57,14 +51,13 @@ extension ContentMenuViewController: UITableViewDataSource{
         return cell
     }
 
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let sushiItem = itemCategories[tableViewPage!][indexPath.row]
-//
-//        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailSushi") as? DetailListItem {
-//            vc.setDetailListItem(item: sushiItem)
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sushiItem = itemCategories[tableViewPage!][indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "DetailSushi") as? DetailListItem {
+            vc.setDetailListItem(item: sushiItem)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
-
-//extension ContentMenuViewController: UITableViewDelegate{}
