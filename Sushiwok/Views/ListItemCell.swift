@@ -24,31 +24,85 @@ class ListItemCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 15)
-        label.adjustsFontSizeToFitWidth = true
+        label.numberOfLines = 2
+        return label
+    }()
+    
+    private let itemDescription:UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.numberOfLines = 2
+        return label
+    }()
+    
+    private let itemGrams:UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12)
         label.numberOfLines = 0
         return label
+    }()
+    
+    private let itemPrice:UILabel = {
+        let price = UILabel()
+        price.translatesAutoresizingMaskIntoConstraints = false
+        price.font = UIFont.systemFont(ofSize: 18)
+        price.numberOfLines = 0
+        return price
+    }()
+    
+    private let choseButton:UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .red
+        button.frame = CGRect(x: 0, y: 0, width: 60, height: 20)
+        button.setTitle("Выбрать", for: .normal)
+        button.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 14)
+        button.setTitleColor(.white, for: .normal)
+        return button
     }()
     
     var categoryItem:ListItem?{
         didSet{
             guard let item = categoryItem else {return}
+            
             if let title = item.title{
                 itemTitleLabel.text = title
             }
             if let image = item.image{
                 itemImageView.image = UIImage(named: image)
             }
+            if let description = item.description{
+                itemDescription.text = description
+            }
+            if let grams = item.grams{
+                itemGrams.text = "\(grams) г."
+            }
+            if let price = item.price{
+                itemPrice.text = "\(price) ₽"
+            }
         }
     }
     
-    lazy var stackView: UIStackView = {
-        let stackV = UIStackView(arrangedSubviews: [itemTitleLabel])
-
+    lazy var horizontStackView: UIStackView = {
+        let stackH = UIStackView(arrangedSubviews: [itemPrice, choseButton])
+        
+        stackH.translatesAutoresizingMaskIntoConstraints = false
+        stackH.axis = .horizontal
+        stackH.distribution = .equalSpacing
+        
+        return stackH
+    }()
+    
+    lazy var verticalStackView: UIStackView = {
+        let stackV = UIStackView(arrangedSubviews: [itemTitleLabel, itemDescription, itemGrams, horizontStackView])
+        
         stackV.translatesAutoresizingMaskIntoConstraints = false
         stackV.axis = .vertical
         stackV.spacing = 10
         stackV.distribution = .fillEqually
-
+        
         return stackV
     }()
     
@@ -56,7 +110,7 @@ class ListItemCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(itemImageView)
-        contentView.addSubview(stackView)
+        contentView.addSubview(verticalStackView)
     }
     
     required init?(coder: NSCoder) {
@@ -71,10 +125,11 @@ class ListItemCell: UITableViewCell {
             itemImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             itemImageView.widthAnchor.constraint(equalToConstant: 120),
             
-            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            stackView.leadingAnchor.constraint(equalTo: itemImageView.trailingAnchor, constant: 10),
-            stackView.heightAnchor.constraint(equalToConstant: 20),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            verticalStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            verticalStackView.leadingAnchor.constraint(equalTo: itemImageView.trailingAnchor, constant: 10),
+            verticalStackView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
+            verticalStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            verticalStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
     }
 }
