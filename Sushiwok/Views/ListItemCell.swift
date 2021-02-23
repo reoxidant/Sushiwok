@@ -15,7 +15,7 @@ class ListItemCell: UITableViewCell {
     private let itemImageView:UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleToFill
+        image.contentMode = .scaleAspectFit
         image.clipsToBounds = true
         return image
     }()
@@ -23,8 +23,7 @@ class ListItemCell: UITableViewCell {
     private let itemTitleLabel:UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 15)
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 0
         return label
@@ -42,10 +41,22 @@ class ListItemCell: UITableViewCell {
         }
     }
     
+    lazy var stackView: UIStackView = {
+        let stackV = UIStackView(arrangedSubviews: [itemTitleLabel])
+
+        stackV.translatesAutoresizingMaskIntoConstraints = false
+        stackV.axis = .vertical
+        stackV.spacing = 10
+        stackV.distribution = .fillEqually
+
+        return stackV
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier:String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        contentView.addSubview(itemTitleLabel)
+        contentView.addSubview(itemImageView)
+        contentView.addSubview(stackView)
     }
     
     required init?(coder: NSCoder) {
@@ -56,12 +67,14 @@ class ListItemCell: UITableViewCell {
         super.layoutSubviews()
         
         NSLayoutConstraint.activate([
-            itemTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            itemTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            itemTitleLabel.heightAnchor.constraint(equalToConstant: 20),
-            itemTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            itemImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            itemImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            itemImageView.widthAnchor.constraint(equalToConstant: 120),
+            
+            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            stackView.leadingAnchor.constraint(equalTo: itemImageView.trailingAnchor, constant: 10),
+            stackView.heightAnchor.constraint(equalToConstant: 20),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
-        
-        
     }
 }
