@@ -48,6 +48,7 @@ extension ContentMenuViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ListItemCell.cellIdentifier, for: indexPath) as! ListItemCell
         cell.categoryItem = itemCategories[tableViewPage!][indexPath.row]
+        cell.selectionStyle = .none
         return cell
     }
     

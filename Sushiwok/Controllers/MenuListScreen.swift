@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SWRevealViewController
 import SwipeMenuViewController
 
 class MenuListScreen: SwipeMenuViewController {
@@ -27,6 +28,13 @@ class MenuListScreen: SwipeMenuViewController {
         }
         
         super.viewDidLoad()
+        
+        if(revealViewController() != nil){
+            view.addGestureRecognizer(revealViewController().tapGestureRecognizer())
+            view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+            self.navigationItem.leftBarButtonItem?.target = revealViewController()
+            self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
+        }
     }
     
     private func reload(){
