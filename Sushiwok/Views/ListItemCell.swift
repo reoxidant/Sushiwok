@@ -57,10 +57,11 @@ class ListItemCell: UITableViewCell {
         button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .red
-        button.sizeToFit()
         button.setTitle("Выбрать", for: .normal)
         button.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 15)
         button.setTitleColor(.white, for: .normal)
+//        button.frame.size = CGSize(width: 50, height: 10)
+//        button.sizeToFit()
         button.contentEdgeInsets = UIEdgeInsets.init(top: 0, left: 10, bottom: 0, right: 10)
         button.layer.cornerRadius = 5
         return button
@@ -93,7 +94,10 @@ class ListItemCell: UITableViewCell {
         
         stackH.translatesAutoresizingMaskIntoConstraints = false
         stackH.axis = .horizontal
-        stackH.distribution = .equalSpacing
+        stackH.distribution = .equalCentering
+        choseButton.topAnchor.constraint(equalTo: stackH.topAnchor, constant: 10).isActive = true
+        choseButton.bottomAnchor.constraint(equalTo: stackH.bottomAnchor, constant: -10).isActive = true
+        stackH.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         return stackH
     }()
@@ -103,7 +107,8 @@ class ListItemCell: UITableViewCell {
         
         stackV.translatesAutoresizingMaskIntoConstraints = false
         stackV.axis = .vertical
-        stackV.distribution = .fillProportionally
+        stackV.spacing = 8
+        stackV.distribution = .fill
         
         return stackV
     }()
