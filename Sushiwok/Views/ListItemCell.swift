@@ -60,9 +60,7 @@ class ListItemCell: UITableViewCell {
         button.setTitle("Выбрать", for: .normal)
         button.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 15)
         button.setTitleColor(.white, for: .normal)
-//        button.frame.size = CGSize(width: 50, height: 10)
-//        button.sizeToFit()
-        button.contentEdgeInsets = UIEdgeInsets.init(top: 0, left: 10, bottom: 0, right: 10)
+        button.contentEdgeInsets = UIEdgeInsets.init(top: 5, left: 10, bottom: 5, right: 10)
         button.layer.cornerRadius = 5
         return button
     }()
@@ -91,14 +89,9 @@ class ListItemCell: UITableViewCell {
     
     lazy var horizontStackView: UIStackView = {
         let stackH = UIStackView(arrangedSubviews: [itemPrice, choseButton])
-        
         stackH.translatesAutoresizingMaskIntoConstraints = false
         stackH.axis = .horizontal
-        stackH.distribution = .equalCentering
-        choseButton.topAnchor.constraint(equalTo: stackH.topAnchor, constant: 10).isActive = true
-        choseButton.bottomAnchor.constraint(equalTo: stackH.bottomAnchor, constant: -10).isActive = true
-        stackH.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
+        stackH.distribution = .equalSpacing
         return stackH
     }()
     
@@ -107,8 +100,10 @@ class ListItemCell: UITableViewCell {
         
         stackV.translatesAutoresizingMaskIntoConstraints = false
         stackV.axis = .vertical
-        stackV.spacing = 8
-        stackV.distribution = .fill
+        stackV.spacing = 0
+        stackV.distribution = .equalSpacing
+        stackV.layoutMargins = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        stackV.isLayoutMarginsRelativeArrangement = true
         
         return stackV
     }()
