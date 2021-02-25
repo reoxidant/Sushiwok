@@ -34,13 +34,9 @@ class MenuListScreen: SwipeMenuViewController {
             view.addGestureRecognizer(revealViewController().panGestureRecognizer())
             self.navigationItem.leftBarButtonItem?.target = revealViewController()
             self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.revealViewController()?.delegate = self
         }
     }
-    
-    private func reload(){
-        swipeMenuView.reloadData(options: options)
-    }
-    
     
     // MARK: - SwipeMenuViewDelegate
     override func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewWillSetupAt currentIndex: Int) {
@@ -73,5 +69,30 @@ class MenuListScreen: SwipeMenuViewController {
         let vc = children[index]
         vc.didMove(toParent: self)
         return vc
+    }
+}
+
+//MARK: - SWRevealController delegates
+extension MenuListScreen : SWRevealViewControllerDelegate{
+    
+    //varying alpha of overlayView with progress of panGesture to reveal or hide menu view
+    func revealController(_ revealController: SWRevealViewController!, panGestureMovedToLocation location: CGFloat, progress: CGFloat) {
+        print("alpha = progress")
+    }
+    
+    //animating alpha in case user just taps hamburger menu which directly change FrontViewPosition
+    func revealController(_ revealController: SWRevealViewController!, animateTo position: FrontViewPosition) {
+        
+        //menu view is hidden
+        if position == FrontViewPosition.left{
+            revealController.view.alpha = 1
+            print("alpha = 0")
+        }
+
+        //menu view is revealed
+        if position == FrontViewPosition.right{
+            revealController.view.alpha = 0.5
+            print("alpha = 1")
+        }
     }
 }
