@@ -23,6 +23,19 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         menuItems = createMenuItems()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.revealViewController().frontViewController.view.isUserInteractionEnabled = false
+        self.revealViewController().view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.revealViewController().frontViewController.view.isUserInteractionEnabled = true
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 150
     }
