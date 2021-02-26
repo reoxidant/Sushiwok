@@ -29,15 +29,16 @@ class MenuListScreen: SwipeMenuViewController {
         
         var options: SwipeMenuViewOptions = .init()
         
-        options.tabView.style = .flexible
         options.tabView.addition = .circle
-        options.tabView.margin = 10
+        options.tabView.margin = 8
+        options.tabView.height = 30
         options.tabView.itemView.selectedTextColor = .white
         options.tabView.itemView.font = UIFont.systemFont(ofSize: 16)
-        options.tabView.itemView.margin = 10
-        options.tabView.additionView.circle.cornerRadius = 10
+        options.tabView.itemView.margin = 8
+        options.tabView.itemView.textColor = .black
+        options.tabView.additionView.circle.cornerRadius = 8
         options.tabView.additionView.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
-
+        
         swipeMenuView.reloadData(options: options)
         
         if let revealController = self.revealViewController() {
@@ -46,6 +47,11 @@ class MenuListScreen: SwipeMenuViewController {
             self.navigationItem.leftBarButtonItem?.target = revealController
             self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        swipeMenuView.backgroundColor = .red
+        swipeMenuView.layoutMargins = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
     }
     
     // MARK: - SwipeMenuViewDelegate
