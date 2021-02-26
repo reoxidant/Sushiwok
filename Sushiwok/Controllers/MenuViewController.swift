@@ -16,16 +16,13 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        //MARK: STOP HERE, NEED TO DO UITableView
         menuItems = createMenuItems()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         self.revealViewController().frontViewController.view.isUserInteractionEnabled = false
         self.revealViewController().view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
@@ -41,22 +38,23 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    
+        
         if section == 0 {
             
             let imageView: UIImageView = UIImageView()
             imageView.clipsToBounds = true
-            imageView.contentMode = .scaleAspectFit
+            imageView.contentMode = .scaleToFill
             imageView.image = #imageLiteral(resourceName: "logo")
             let headerView = UIView()
             headerView.backgroundColor = .white
             headerView.addSubview(imageView)
             imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.centerXAnchor.constraint(equalTo: headerView.centerXAnchor).isActive = true
-            imageView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
-            imageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-            imageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        
+            NSLayoutConstraint.activate([
+                imageView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 80),
+                imageView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
+                imageView.heightAnchor.constraint(equalToConstant: 100),
+                imageView.widthAnchor.constraint(equalToConstant: 100)
+            ])
             return headerView
         }
         
