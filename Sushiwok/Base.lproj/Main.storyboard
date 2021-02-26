@@ -391,7 +391,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i35-Gp-q04" firstAttribute="centerY" secondItem="mkT-Gf-UCm" secondAttribute="centerY" id="7OI-yN-EOj"/>
                             <constraint firstItem="i35-Gp-q04" firstAttribute="centerX" secondItem="mkT-Gf-UCm" secondAttribute="centerX" id="wrs-dm-vce"/>
@@ -413,7 +413,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="udv-FN-XQA"/>
+        <segue reference="Lav-uN-3X6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>

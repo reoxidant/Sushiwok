@@ -16,8 +16,6 @@ class MenuListScreen: SwipeMenuViewController {
     
     private let categoryMenuList = ["Наборы и комбо", "Роллы", "Wok", "Суши", "Pizza"]
     
-    var options = SwipeMenuViewOptions()
-    
     override func viewDidLoad() {
         
         for (index, categoryTitle) in categoryMenuList.enumerated() {
@@ -28,6 +26,19 @@ class MenuListScreen: SwipeMenuViewController {
         }
         
         super.viewDidLoad()
+        
+        var options: SwipeMenuViewOptions = .init()
+        
+        options.tabView.style = .flexible
+        options.tabView.addition = .circle
+        options.tabView.margin = 10
+        options.tabView.itemView.selectedTextColor = .white
+        options.tabView.itemView.font = UIFont.systemFont(ofSize: 16)
+        options.tabView.itemView.margin = 10
+        options.tabView.additionView.circle.cornerRadius = 10
+        options.tabView.additionView.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
+
+        swipeMenuView.reloadData(options: options)
         
         if let revealController = self.revealViewController() {
             revealController.panGestureRecognizer()
