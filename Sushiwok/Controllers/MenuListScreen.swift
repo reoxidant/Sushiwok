@@ -50,8 +50,7 @@ class MenuListScreen: SwipeMenuViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        swipeMenuView.backgroundColor = .red
-        swipeMenuView.layoutMargins = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        swipeMenuView.bounds = view.frame.insetBy(dx: 0, dy: -10.0)
     }
     
     // MARK: - SwipeMenuViewDelegate
