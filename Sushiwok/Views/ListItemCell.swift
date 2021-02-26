@@ -56,9 +56,9 @@ class ListItemCell: UITableViewCell {
         let button = UIButton()
         button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .red
+        button.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
         button.setTitle("Выбрать", for: .normal)
-        button.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 15)
+        button.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 16)
         button.setTitleColor(.white, for: .normal)
         button.contentEdgeInsets = UIEdgeInsets.init(top: 5, left: 10, bottom: 5, right: 10)
         button.layer.cornerRadius = 5
