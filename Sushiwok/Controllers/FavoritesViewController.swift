@@ -8,9 +8,9 @@
 
 import UIKit
 import SWRevealViewController
-import SwipeMenuViewController
+//import SwipeMenuViewController
 
-class FavoritesViewController: SwipeMenuViewController {
+class FavoritesViewController: UIViewController {
 
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     

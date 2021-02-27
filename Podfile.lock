@@ -1,20 +1,20 @@
 PODS:
-  - SwipeMenuViewController (4.1.0)
+  - Parchment (3.0.1)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
-  - SwipeMenuViewController
+  - Parchment (~> 3.0)
   - SWRevealViewController (~> 2.3)
 
 SPEC REPOS:
   trunk:
-    - SwipeMenuViewController
+    - Parchment
     - SWRevealViewController
 
 SPEC CHECKSUMS:
-  SwipeMenuViewController: 94fac81cc192d9f08f218fe4c0c853569b735e1f
+  Parchment: 466a1cfb6151780db8acb4bbedc2d9c6bfa1e2ff
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: 5a35e4e3530235e51ec1e865786ca07ed81f1e07
+PODFILE CHECKSUM: 4a4c3dfdfc9e771ea48cf89ae0c715d5fe22d775
 
 COCOAPODS: 1.10.1
