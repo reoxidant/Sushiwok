@@ -25,6 +25,7 @@
 		44AF45BB25D5C55C0085B395 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF45BA25D5C55C0085B395 /* CategoryViewCell.swift */; };
 		44C55ABB25C0BEF40013B76E /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C55ABA25C0BEF40013B76E /* MenuTableViewCell.swift */; };
 		44C55ABD25C0C4E50013B76E /* MenuTableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C55ABC25C0C4E50013B76E /* MenuTableList.swift */; };
+		44D3C14125EB05D600A01328 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3C14025EB05D600A01328 /* UIView+constraints.swift */; };
 		44FFD95325E18EE600D8AED8 /* ContentMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FFD95225E18EE600D8AED8 /* ContentMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		44AF45BA25D5C55C0085B395 /* CategoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		44C55ABA25C0BEF40013B76E /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		44C55ABC25C0C4E50013B76E /* MenuTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableList.swift; sourceTree = "<group>"; };
+		44D3C14025EB05D600A01328 /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+constraints.swift"; path = "../Pods/Parchment/Parchment/Extensions/UIView+constraints.swift"; sourceTree = "<group>"; };
 		44FFD95225E18EE600D8AED8 /* ContentMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMenuViewController.swift; sourceTree = "<group>"; };
 		4E2ADD44CC6F4803A3949701 /* Pods_Sushiwok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sushiwok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E695AE9C38D1D480D9D4EB4 /* Pods-Sushiwok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sushiwok.release.xcconfig"; path = "Target Support Files/Pods-Sushiwok/Pods-Sushiwok.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		449CB71C25BB4A190064DCC8 /* Sushiwok */ = {
 			isa = PBXGroup;
 			children = (
+				44D3C14025EB05D600A01328 /* UIView+constraints.swift */,
 				449CB71D25BB4A190064DCC8 /* AppDelegate.swift */,
 				449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */,
 				44429AAD25BC1D4A00400332 /* Controllers */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				449CB71E25BB4A190064DCC8 /* AppDelegate.swift in Sources */,
+				44D3C14125EB05D600A01328 /* UIView+constraints.swift in Sources */,
 				4453B30E25BF5D3A00D35952 /* MenuViewController.swift in Sources */,
 				44C55ABD25C0C4E50013B76E /* MenuTableList.swift in Sources */,
 				44FFD95325E18EE600D8AED8 /* ContentMenuViewController.swift in Sources */,
