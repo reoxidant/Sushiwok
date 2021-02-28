@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Parchment
 import SWRevealViewController
+import Parchment
 
 class MenuListScreen: UIViewController {
     
@@ -25,8 +25,23 @@ class MenuListScreen: UIViewController {
         
         addChild(pagingViewController)
         view.addSubview(pagingViewController.view)
-        view.constrainToEdges(pagingViewController.view)
+        
+        pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            pagingViewController.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            pagingViewController.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            pagingViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            pagingViewController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+        ])
+        
         pagingViewController.didMove(toParent: self)
+        
+        if let revealController = self.revealViewController() {
+            revealController.panGestureRecognizer()
+            revealController.tapGestureRecognizer()
+            self.navigationItem.leftBarButtonItem?.target = revealController
+            self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
+        }
     }
 }
 
