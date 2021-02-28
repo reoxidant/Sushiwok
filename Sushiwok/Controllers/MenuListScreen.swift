@@ -14,18 +14,25 @@ class MenuListScreen: UIViewController {
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
-    private let categoryMenuList = ["Наборы и комбо", "Роллы", "Wok", "Суши", "Pizza"]
+    private let categoryMenuList = [
+        PagingIndexItem(index: 0, title: "Наборы и комбо"),
+        PagingIndexItem(index: 1, title: "Роллы"),
+        PagingIndexItem(index: 2, title: "Wok"),
+        PagingIndexItem(index: 3, title: "Суши"),
+        PagingIndexItem(index: 4, title: "Pizza")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let pagingViewController = PagingViewController()
+        pagingViewController.register(MenuListPagingCell.self, for: PagingIndexItem.self)
         pagingViewController.dataSource = self
         pagingViewController.sizeDelegate = self
         
         addChild(pagingViewController)
         view.addSubview(pagingViewController.view)
-        
+    
         pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             pagingViewController.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -53,12 +60,12 @@ extension MenuListScreen: PagingViewControllerDataSource{
     func pagingViewController(_: PagingViewController, viewControllerAt index: Int) -> UIViewController {
         let vc = ContentMenuViewController()
         vc.tableViewPage = index
-        vc.title = categoryMenuList[index]
+        vc.title = categoryMenuList[index].title
         return vc
     }
     
     func pagingViewController(_: PagingViewController, pagingItemAt index: Int) -> PagingItem {
-        return PagingIndexItem(index: index, title: categoryMenuList[index])
+        return categoryMenuList[index]
     }
 }
 
