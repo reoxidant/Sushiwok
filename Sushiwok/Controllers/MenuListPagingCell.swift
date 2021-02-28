@@ -10,13 +10,15 @@ import UIKit
 import Parchment
 
 class MenuListPagingCell: PagingCell{
-    
     private lazy var titleLabel:UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.semibold)
-        label.textColor = UIColor.white
-        label.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
+        label.textColor = .black
+        label.backgroundColor = .clear
         label.numberOfLines = 0
+        label.layer.borderWidth = 1
+        label.layer.borderColor = UIColor.gray.cgColor
+        label.layer.cornerRadius = 8
         return label
     }()
     
@@ -28,11 +30,17 @@ class MenuListPagingCell: PagingCell{
     }()
     
     func configureTitleLabel(){
-        
+        titleLabel.textColor = .black
+        titleLabel.backgroundColor = .clear
+        titleLabel.layer.borderWidth = 1
+        titleLabel.layer.borderColor = UIColor.gray.cgColor
     }
     
     func configureSelectedTitleLabel(){
-        
+        titleLabel.textColor = .white
+        titleLabel.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
+        titleLabel.layer.borderWidth = 0
+        titleLabel.clipsToBounds = true
     }
     
     override init(frame: CGRect) {
@@ -45,10 +53,9 @@ class MenuListPagingCell: PagingCell{
         NSLayoutConstraint.activate([
             contentView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: titleLabel.bottomAnchor),
-            contentView.topAnchor.constraint(equalTo: titleLabel.topAnchor)
+            contentView.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            titleLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
-        
     }
     
     required init?(coder: NSCoder) {
@@ -58,10 +65,9 @@ class MenuListPagingCell: PagingCell{
     override func setPagingItem(_ pagingItem: PagingItem, selected: Bool, options: PagingOptions) {
         
         if let titleItem = pagingItem as? PagingIndexItem {
-            titleLabel.attributedText = NSAttributedString(
-                string: titleItem.title,
-                attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle]
-            )
+            let attributedString = NSMutableAttributedString(string: titleItem.title)
+            attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attributedString.length))
+            titleLabel.attributedText = attributedString
         }
         
         if selected {
