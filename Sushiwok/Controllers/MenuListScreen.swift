@@ -32,17 +32,29 @@ class MenuListScreen: UIViewController {
         
         addChild(pagingViewController)
         view.addSubview(pagingViewController.view)
-    
-        pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            pagingViewController.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            pagingViewController.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            pagingViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            pagingViewController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
-        ])
+        
+        configurePagingViewController(PVC: pagingViewController)
         
         pagingViewController.didMove(toParent: self)
         
+        setupSWRevealVC()
+    }
+    
+    func configurePagingViewController(PVC: PagingViewController){
+        PVC.indicatorOptions = .hidden
+        PVC.menuInsets = .init(top: 4, left: 8, bottom: 4, right: 8)
+        PVC.menuItemSpacing = 8
+        
+        PVC.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            PVC.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            PVC.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            PVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            PVC.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+        ])
+    }
+    
+    func setupSWRevealVC(){
         if let revealController = self.revealViewController() {
             revealController.panGestureRecognizer()
             revealController.tapGestureRecognizer()
