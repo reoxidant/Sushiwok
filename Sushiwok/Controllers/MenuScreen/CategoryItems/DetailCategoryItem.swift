@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailListItem: UIViewController {
+class DetailCategoryItem: UIViewController {
     
     @IBOutlet weak var detailImageView: UIImageView!
     
@@ -49,7 +49,7 @@ class DetailListItem: UIViewController {
         
     }
     
-    func setDetailListItem(item: ListItem){
+    func setDetailListItem(item: CategoryItem){
         selectedImageView = UIImage(named: item.image!)
         selectedTitleLabel = item.title
         selectedDescriptionLabel = item.description

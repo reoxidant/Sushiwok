@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail List Item-->
+        <!--Detail Category Item-->
         <scene sceneID="ALp-b3-yLn">
             <objects>
-                <viewController storyboardIdentifier="DetailSushi" id="kx3-Pd-kEV" customClass="DetailListItem" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailSushi" id="kx3-Pd-kEV" customClass="DetailCategoryItem" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4JJ-KJ-Eb8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -376,10 +376,10 @@
             </objects>
             <point key="canvasLocation" x="1961" y="2314"/>
         </scene>
-        <!--Menu List Screen-->
+        <!--Menu Categories-->
         <scene sceneID="lHE-aH-Do3">
             <objects>
-                <viewController storyboardIdentifier="MenuListScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iFg-3W-x3T" customClass="MenuListScreen" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuListScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iFg-3W-x3T" customClass="MenuCategories" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mkT-Gf-UCm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
