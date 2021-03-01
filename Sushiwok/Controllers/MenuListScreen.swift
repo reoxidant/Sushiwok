@@ -42,9 +42,9 @@ class MenuListScreen: UIViewController {
     
     func configurePagingViewController(PVC: PagingViewController){
         PVC.indicatorOptions = .hidden
-        PVC.menuInsets = .init(top: 4, left: 8, bottom: 4, right: 8)
+        PVC.menuInsets = .init(top: 0, left: 8, bottom: 0, right: 8)
         PVC.menuItemSpacing = 8
-        
+        PVC.borderColor = .clear
         PVC.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             PVC.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
