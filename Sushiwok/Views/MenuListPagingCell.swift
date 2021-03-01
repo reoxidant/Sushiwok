@@ -45,7 +45,6 @@ class MenuListPagingCell: PagingCell{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.layer.cornerRadius = 6
         contentView.clipsToBounds = true
         contentView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false

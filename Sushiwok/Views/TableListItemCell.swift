@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListItemCell: UITableViewCell {
+class TableListItemCell: UITableViewCell {
     
     static let cellIdentifier = "ListItemCell"
     
