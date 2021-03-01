@@ -8,26 +8,26 @@
 
 import UIKit
 
-class Tab,e: UIViewController{
-
+class TableListItems: UIViewController{
+    
     var tableViewPage:Int?
     var categoryMenuList = ["Наборы и комбо", "Роллы", "Wok", "Суши", "Pizza"]
-
+    
     var itemCategories: [[ListItem]]{
         get{
             return CategoryItemApi.createListItems()
         }
     }
-
+    
     private var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(ListItemCell.self, forCellReuseIdentifier: ListItemCell.cellIdentifier)
+        tableView.register(TableListItemCell.self, forCellReuseIdentifier: TableListItemCell.cellIdentifier)
         return tableView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -40,13 +40,13 @@ class Tab,e: UIViewController{
     }
 }
 
-extension Tab,e: UITableViewDataSource, UITableViewDelegate{
+extension TableListItems: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemCategories[tableViewPage!].count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ListItemCell.cellIdentifier, for: indexPath) as! ListItemCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableListItemCell.cellIdentifier, for: indexPath) as! TableListItemCell
         cell.categoryItem = itemCategories[tableViewPage!][indexPath.row]
         cell.selectionStyle = .none
         return cell
@@ -55,7 +55,7 @@ extension Tab,e: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sushiItem = itemCategories[tableViewPage!][indexPath.row]
         

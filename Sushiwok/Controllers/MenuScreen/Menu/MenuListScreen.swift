@@ -70,7 +70,7 @@ extension MenuListScreen: PagingViewControllerDataSource{
     }
     
     func pagingViewController(_: PagingViewController, viewControllerAt index: Int) -> UIViewController {
-        let vc = ContentMenuViewController()
+        let vc = TableListItems()
         vc.tableViewPage = index
         vc.title = categoryMenuList[index].title
         return vc

@@ -1,5 +1,5 @@
 //
-//  Test2ViewController.swift
+//  Test1ViewController.swift
 //  Sushiwok
 //
 //  Created by Виталий Шаповалов on 25.01.2021.
@@ -9,8 +9,8 @@
 import UIKit
 import SWRevealViewController
 
-class MapViewController: UIViewController {
-
+class ShareScreenViewController: UIViewController {
+    
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     override func viewDidLoad() {

@@ -8,13 +8,13 @@
 
 import UIKit
 
-struct MenuTableList {
+struct SideMenuTableList {
     var menuItemArray = [String]()
     var menuIconsArray = [UIImage]()
 }
 
-func createMenuItems()->MenuTableList{
-    return MenuTableList(
+func createMenuItems()->SideMenuTableList{
+    return SideMenuTableList(
         menuItemArray:["Menu", "Deals and Sales", "Favorites", "Our Shops"],
         menuIconsArray:[
             UIImage(systemName: "book.fill")!,

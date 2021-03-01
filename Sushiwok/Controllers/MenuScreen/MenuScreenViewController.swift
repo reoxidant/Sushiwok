@@ -9,9 +9,9 @@
 import UIKit
 import SWRevealViewController
 
-class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MenuScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var menuItems:MenuTableList?
+    var menuItems:SideMenuTableList?
     var newFrontViewController: UINavigationController?
     
     override func viewDidLoad() {
@@ -68,7 +68,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! MenuTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! SideMenuTableViewCell
         let bgColorView = UIView()
         bgColorView.backgroundColor = #colorLiteral(red: 0.6153318286, green: 0.8027950525, blue: 0.1735557914, alpha: 0.3020753451)
         cell.selectedBackgroundView = bgColorView
@@ -81,7 +81,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let revealViewController:SWRevealViewController = self.revealViewController()
         
-        let cell:MenuTableViewCell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell
+        let cell:SideMenuTableViewCell = tableView.cellForRow(at: indexPath) as! SideMenuTableViewCell
         
         let mainStoryBoard:UIStoryboard = UIStoryboard(name:"Main",bundle: nil)
         
