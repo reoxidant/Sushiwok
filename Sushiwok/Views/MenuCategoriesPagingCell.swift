@@ -9,7 +9,7 @@
 import UIKit
 import Parchment
 
-class MenuListPagingCell: PagingCell{
+class MenuCategoriesPagingCell: PagingCell{
     private lazy var titleLabel:UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.semibold)

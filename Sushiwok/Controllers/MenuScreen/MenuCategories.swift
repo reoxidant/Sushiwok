@@ -10,7 +10,7 @@ import UIKit
 import SWRevealViewController
 import Parchment
 
-class MenuListScreen: UIViewController {
+class MenuCategories: UIViewController {
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
@@ -26,7 +26,7 @@ class MenuListScreen: UIViewController {
         super.viewDidLoad()
         
         let pagingViewController = PagingViewController()
-        pagingViewController.register(MenuListPagingCell.self, for: PagingIndexItem.self)
+        pagingViewController.register(MenuCategoriesPagingCell.self, for: PagingIndexItem.self)
         pagingViewController.dataSource = self
         pagingViewController.sizeDelegate = self
         
@@ -64,13 +64,13 @@ class MenuListScreen: UIViewController {
     }
 }
 
-extension MenuListScreen: PagingViewControllerDataSource{
+extension MenuCategories: PagingViewControllerDataSource{
     func numberOfViewControllers(in pagingViewController: PagingViewController) -> Int {
         return categoryMenuList.count
     }
     
     func pagingViewController(_: PagingViewController, viewControllerAt index: Int) -> UIViewController {
-        let vc = TableListItems()
+        let vc = CategoryItems()
         vc.tableViewPage = index
         vc.title = categoryMenuList[index].title
         return vc
@@ -81,7 +81,7 @@ extension MenuListScreen: PagingViewControllerDataSource{
     }
 }
 
-extension MenuListScreen: PagingViewControllerSizeDelegate{
+extension MenuCategories: PagingViewControllerSizeDelegate{
     func pagingViewController(_ pagingViewController : PagingViewController, widthForPagingItem pagingItem: PagingItem, isSelected: Bool) -> CGFloat {
         guard let item = pagingItem as? PagingIndexItem else {return 0}
         
