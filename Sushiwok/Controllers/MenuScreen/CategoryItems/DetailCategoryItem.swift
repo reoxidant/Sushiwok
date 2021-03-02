@@ -11,9 +11,7 @@ import UIKit
 class DetailCategoryItem: UIViewController {
     
     @IBOutlet weak var detailImageView: UIImageView!
-    
     @IBOutlet weak var detailTitleLabel: UILabel!
-    
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     
     var selectedImageView: UIImage?
