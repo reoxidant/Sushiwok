@@ -79,7 +79,7 @@
                                                                             <action selector="deleteCartItemBtn" destination="kx3-Pd-kEV" eventType="touchUpInside" id="cNa-Z6-mFo"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VD-cO-PAB">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VD-cO-PAB">
                                                                         <rect key="frame" x="30" y="0.0" width="35" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="35" id="IZw-2t-pu7"/>
@@ -449,6 +449,7 @@
                         <viewLayoutGuide key="safeArea" id="dR0-b4-hXR"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qfs-ym-WHL">
+                        <barButtonItem key="backBarButtonItem" id="BMo-hO-2Eg"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="Ip6-MV-hZf">
                             <color key="tintColor" red="0.61568627450000002" green="0.80392156859999997" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>

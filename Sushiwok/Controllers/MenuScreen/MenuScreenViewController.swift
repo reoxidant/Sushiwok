@@ -33,6 +33,31 @@ class MenuScreenViewController: UIViewController, UITableViewDataSource, UITable
         self.revealViewController().frontViewController.view.isUserInteractionEnabled = true
     }
     
+    func initializeSideMenu(cell:SideMenuTableViewCell){
+        let revealViewController:SWRevealViewController = self.revealViewController()
+        
+        let mainStoryBoard:UIStoryboard = UIStoryboard(name:"Main",bundle: nil)
+        
+        switch cell.menuTitleLabel.text! {
+        case "Menu":
+            let menuListScreen = mainStoryBoard.instantiateViewController(withIdentifier: "MenuListScreen")
+            newFrontViewController = UINavigationController.init(rootViewController: menuListScreen)
+        case "Deals and Sales":
+            let shareViewController = mainStoryBoard.instantiateViewController(withIdentifier: "ShareViewController")
+            newFrontViewController = UINavigationController.init(rootViewController:shareViewController)
+        case "Favorites":
+            let favoritesViewController = mainStoryBoard.instantiateViewController(withIdentifier: "FavoritesViewController")
+            newFrontViewController = UINavigationController.init(rootViewController: favoritesViewController)
+        case "Our Shops":
+            let mapViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MapViewController")
+            newFrontViewController = UINavigationController.init(rootViewController: mapViewController)
+        default:
+            break
+        }
+        
+        revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 150
     }
@@ -79,30 +104,8 @@ class MenuScreenViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let revealViewController:SWRevealViewController = self.revealViewController()
-        
         let cell:SideMenuTableViewCell = tableView.cellForRow(at: indexPath) as! SideMenuTableViewCell
-        
-        let mainStoryBoard:UIStoryboard = UIStoryboard(name:"Main",bundle: nil)
-        
-        switch cell.menuTitleLabel.text! {
-        case "Menu":
-            let menuListScreen = mainStoryBoard.instantiateViewController(withIdentifier: "MenuListScreen")
-            newFrontViewController = UINavigationController.init(rootViewController: menuListScreen)
-        case "Deals and Sales":
-            let shareViewController = mainStoryBoard.instantiateViewController(withIdentifier: "ShareViewController")
-            newFrontViewController = UINavigationController.init(rootViewController:shareViewController)
-        case "Favorites":
-            let favoritesViewController = mainStoryBoard.instantiateViewController(withIdentifier: "FavoritesViewController")
-            newFrontViewController = UINavigationController.init(rootViewController: favoritesViewController)
-        case "Our Shops":
-            let mapViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MapViewController")
-            newFrontViewController = UINavigationController.init(rootViewController: mapViewController)
-        default:
-            break
-        }
-        
-        revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        initializeSideMenu(cell: cell)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
