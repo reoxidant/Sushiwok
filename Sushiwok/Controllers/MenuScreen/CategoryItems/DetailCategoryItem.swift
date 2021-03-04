@@ -14,6 +14,24 @@ class DetailCategoryItem: UIViewController {
     @IBOutlet weak var detailTitleLabel: UILabel!
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     
+    @IBOutlet weak var countCartItemsLabel: UILabel!
+    
+    var currentCountItems = 0
+    
+    @IBAction func deleteCartItemBtn(){
+        if currentCountItems != 0 {
+            currentCountItems -= 1
+            countCartItemsLabel.text = "\(currentCountItems)"
+        }
+    }
+    
+    @IBAction func addCartItemBtn(){
+        if currentCountItems < 100 {
+            currentCountItems += 1
+            countCartItemsLabel.text = "\(currentCountItems)"
+        }
+    }
+    
     var selectedImageView: UIImage?
     var selectedTitleLabel: String?
     var selectedDescriptionLabel: String?
