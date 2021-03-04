@@ -19,7 +19,7 @@ class DetailCategoryItem: UIViewController {
     var currentCountItems = 0
     
     @IBAction func deleteCartItemBtn(){
-        if currentCountItems != 0 {
+        if currentCountItems > 1 {
             currentCountItems -= 1
             countCartItemsLabel.text = "\(currentCountItems)"
         }
@@ -57,8 +57,6 @@ class DetailCategoryItem: UIViewController {
         } else {
             detailDescriptionLabel.text = ""
         }
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func votePressed(_ sender: UIButton) {

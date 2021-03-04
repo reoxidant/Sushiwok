@@ -25,6 +25,8 @@ class MenuCategories: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.titleView = createNavLogotypeWithText(text: "SUSHIWOK", image: #imageLiteral(resourceName: "logo"))
+        
         let pagingViewController = PagingViewController()
         pagingViewController.register(MenuCategoriesPagingCell.self, for: PagingIndexItem.self)
         pagingViewController.dataSource = self
@@ -38,6 +40,40 @@ class MenuCategories: UIViewController {
         pagingViewController.didMove(toParent: self)
         
         setupSWRevealVC()
+    }
+    
+    func createNavLogotypeWithText(text:String, image:UIImage)->UIView{
+        
+        let titleView = UIView()
+        
+        let label = UILabel()
+        label.text = text
+        label.sizeToFit()
+        label.center = titleView.center
+        label.textAlignment = NSTextAlignment.center
+        label.textColor = .darkGray
+        
+        let imageView = UIImageView()
+        imageView.image = image
+        
+        let imageAspect = image.size.width / image.size.height
+       
+        let imagePosX = label.frame.origin.x - label.frame.size.height * imageAspect
+        let imagePosY = label.frame.origin.y
+        
+        let imageWidth = label.frame.size.height + imageAspect
+        let imageHeight = label.frame.size.height
+            
+        
+        imageView.frame = CGRect(x: imagePosX - 5, y: imagePosY, width: imageWidth, height: imageHeight)
+        imageView.contentMode = .scaleAspectFill
+        
+        titleView.addSubview(label)
+        titleView.addSubview(imageView)
+        
+        titleView.sizeToFit()
+        
+        return titleView
     }
     
     func configurePagingViewController(PVC: PagingViewController){
