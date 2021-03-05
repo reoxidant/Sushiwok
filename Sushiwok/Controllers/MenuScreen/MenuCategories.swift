@@ -13,6 +13,7 @@ import Parchment
 class MenuCategories: UIViewController {
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
+    @IBOutlet weak var cartButton: UIBarButtonItem!
     
     private let categoryMenuList = [
         PagingIndexItem(index: 0, title: "Наборы и комбо"),
@@ -21,6 +22,9 @@ class MenuCategories: UIViewController {
         PagingIndexItem(index: 3, title: "Суши"),
         PagingIndexItem(index: 4, title: "Pizza")
     ]
+    
+    let badgeSize: CGFloat = 20
+    let badgeTag = 9830384
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +102,8 @@ class MenuCategories: UIViewController {
             self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
         }
     }
+    
+    func badgeLabel(){}
 }
 
 extension MenuCategories: PagingViewControllerDataSource{
