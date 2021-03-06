@@ -13,6 +13,7 @@
 		4453B30C25BF5D2000D35952 /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4453B30B25BF5D2000D35952 /* MapScreenViewController.swift */; };
 		4453B30E25BF5D3A00D35952 /* MenuScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4453B30D25BF5D3A00D35952 /* MenuScreenViewController.swift */; };
 		4453B31625BF712600D35952 /* FavoritesScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4453B31525BF712600D35952 /* FavoritesScreenViewController.swift */; };
+		4476322925F4303C00A93B1E /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4476322825F4303B00A93B1E /* SideMenuHeaderView.swift */; };
 		449CB71E25BB4A190064DCC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB71D25BB4A190064DCC8 /* AppDelegate.swift */; };
 		449CB72025BB4A190064DCC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */; };
 		449CB72525BB4A190064DCC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449CB72325BB4A190064DCC8 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		4453B30B25BF5D2000D35952 /* MapScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
 		4453B30D25BF5D3A00D35952 /* MenuScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenViewController.swift; sourceTree = "<group>"; };
 		4453B31525BF712600D35952 /* FavoritesScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreenViewController.swift; sourceTree = "<group>"; };
+		4476322825F4303B00A93B1E /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
 		449CB71A25BB4A190064DCC8 /* Sushiwok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sushiwok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449CB71D25BB4A190064DCC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		449CB71F25BB4A190064DCC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				44F6171325EBA0D100A186E6 /* MenuCategoriesPagingCell.swift */,
+				4476322825F4303B00A93B1E /* SideMenuHeaderView.swift */,
 				44C55ABA25C0BEF40013B76E /* SideMenuTableViewCell.swift */,
 				449CB73325BB597C0064DCC8 /* CategoryItemsCell.swift */,
 			);
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				449CB71E25BB4A190064DCC8 /* AppDelegate.swift in Sources */,
+				4476322925F4303C00A93B1E /* SideMenuHeaderView.swift in Sources */,
 				4453B30E25BF5D3A00D35952 /* MenuScreenViewController.swift in Sources */,
 				44C55ABD25C0C4E50013B76E /* SideMenuTableList.swift in Sources */,
 				44FFD95325E18EE600D8AED8 /* CategoryItems.swift in Sources */,
