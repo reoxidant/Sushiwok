@@ -64,7 +64,6 @@ extension CategoryItems: UITableViewDataSource, UITableViewDelegate{
             vc.setDetailListItem(item: sushiItem)
             self.navigationController?.pushViewController(vc, animated: true)
             self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
-            self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBarButton)
         }
     }
 }
