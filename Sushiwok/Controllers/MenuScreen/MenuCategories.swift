@@ -13,7 +13,19 @@ import Parchment
 class MenuCategories: UIViewController {
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
-    @IBOutlet weak var cartButton: UIBarButtonItem!
+    
+    private var rightBarButton: UIButton {
+        get{
+            let button = UIButton(frame: CGRect(x:0, y:0, width: 35, height: 35))
+            button.setBackgroundImage(UIImage(systemName:"cart.fill"), for: .normal)
+            button.addTarget(self, action: #selector(self.touchCartButton), for: .touchUpInside)
+            return button
+        }
+    }
+    
+    @objc func touchCartButton(){
+        
+    }
     
     private let categoryMenuList = [
         PagingIndexItem(index: 0, title: "Наборы и комбо"),
@@ -22,9 +34,6 @@ class MenuCategories: UIViewController {
         PagingIndexItem(index: 3, title: "Суши"),
         PagingIndexItem(index: 4, title: "Pizza")
     ]
-    
-    let badgeSize: CGFloat = 20
-    let badgeTag = 9830384
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,8 +111,6 @@ class MenuCategories: UIViewController {
             self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
         }
     }
-    
-    func badgeLabel(){}
 }
 
 extension MenuCategories: PagingViewControllerDataSource{
