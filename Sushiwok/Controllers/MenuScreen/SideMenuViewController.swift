@@ -77,10 +77,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! SideMenuTableViewCell
-        let bgColorView = UIView()
-        bgColorView.backgroundColor = #colorLiteral(red: 0.6153318286, green: 0.8027950525, blue: 0.1735557914, alpha: 0.3020753451)
-        cell.selectedBackgroundView = bgColorView
-        
+        cell.configureCell()
         cell.menuImageView.image = menuItems!.menuIconsArray[indexPath.row]
         cell.menuTitleLabel.text = menuItems!.menuItemArray[indexPath.row]
         return cell
