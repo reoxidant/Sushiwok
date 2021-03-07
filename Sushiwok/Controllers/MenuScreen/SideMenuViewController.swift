@@ -9,7 +9,7 @@
 import UIKit
 import SWRevealViewController
 
-class MenuScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SideMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var menuItems:SideMenuTableList?
     var newFrontViewController: UINavigationController?
@@ -63,28 +63,11 @@ class MenuScreenViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
         if section == 0 {
-            
-            let imageView: UIImageView = UIImageView()
-            imageView.clipsToBounds = true
-            imageView.contentMode = .scaleToFill
-            imageView.image = #imageLiteral(resourceName: "logo")
-            let headerView = UIView()
-            headerView.backgroundColor = .white
-            headerView.addSubview(imageView)
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                imageView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 80),
-                imageView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
-                imageView.heightAnchor.constraint(equalToConstant: 100),
-                imageView.widthAnchor.constraint(equalToConstant: 100)
-            ])
+            let headerView = SideMenuHeaderView()
             return headerView
         }
-        
         return nil
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
