@@ -9,10 +9,10 @@
 import UIKit
 import SWRevealViewController
 
-class MenuScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SideMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var menuItems:SideMenuTableList?
-    var newFrontViewController: UINavigationController?
+    private var menuItems:SideMenuTableList?
+    private var newFrontViewController: UINavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class MenuScreenViewController: UIViewController, UITableViewDataSource, UITable
         self.revealViewController().frontViewController.view.isUserInteractionEnabled = true
     }
     
-    func initializeSideMenu(cell:SideMenuTableViewCell){
+    private func initializeSideMenu(cell:SideMenuTableViewCell){
         let revealViewController:SWRevealViewController = self.revealViewController()
         
         let mainStoryBoard:UIStoryboard = UIStoryboard(name:"Main",bundle: nil)
@@ -63,28 +63,11 @@ class MenuScreenViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
         if section == 0 {
-            
-            let imageView: UIImageView = UIImageView()
-            imageView.clipsToBounds = true
-            imageView.contentMode = .scaleToFill
-            imageView.image = #imageLiteral(resourceName: "logo")
-            let headerView = UIView()
-            headerView.backgroundColor = .white
-            headerView.addSubview(imageView)
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                imageView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 80),
-                imageView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
-                imageView.heightAnchor.constraint(equalToConstant: 100),
-                imageView.widthAnchor.constraint(equalToConstant: 100)
-            ])
+            let headerView = SideMenuHeaderView()
             return headerView
         }
-        
         return nil
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,10 +77,7 @@ class MenuScreenViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! SideMenuTableViewCell
-        let bgColorView = UIView()
-        bgColorView.backgroundColor = #colorLiteral(red: 0.6153318286, green: 0.8027950525, blue: 0.1735557914, alpha: 0.3020753451)
-        cell.selectedBackgroundView = bgColorView
-        
+        cell.configureCell()
         cell.menuImageView.image = menuItems!.menuIconsArray[indexPath.row]
         cell.menuTitleLabel.text = menuItems!.menuItemArray[indexPath.row]
         return cell

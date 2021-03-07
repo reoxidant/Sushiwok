@@ -10,22 +10,9 @@ import UIKit
 import SWRevealViewController
 import Parchment
 
-class CategoryScreen: UIViewController {
+class CategoryScreenViewController: UIViewController {
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
-    
-    private var rightBarButton: UIButton {
-        get{
-            let button = UIButton(frame: CGRect(x:0, y:0, width: 35, height: 35))
-            button.setBackgroundImage(UIImage(systemName:"cart.fill"), for: .normal)
-            button.addTarget(self, action: #selector(self.touchCartButton), for: .touchUpInside)
-            return button
-        }
-    }
-    
-    @objc func touchCartButton(){
-        
-    }
     
     private let categoryMenuList = [
         PagingIndexItem(index: 0, title: "Наборы и комбо"),
@@ -38,10 +25,10 @@ class CategoryScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.titleView = createNavLogotypeWithText(text: "SUSHIWOK", image: #imageLiteral(resourceName: "logo"))
+        navigationItem.titleView = createNavLogotypeWithText2(text: "SUSHIWOK", image: #imageLiteral(resourceName: "logo"))
         
         let pagingViewController = PagingViewController()
-        pagingViewController.register(MenuCategoriesPagingCell.self, for: PagingIndexItem.self)
+        pagingViewController.register(CategoryMenuPagingCell.self, for: PagingIndexItem.self)
         pagingViewController.dataSource = self
         pagingViewController.sizeDelegate = self
         
@@ -55,7 +42,7 @@ class CategoryScreen: UIViewController {
         setupSWRevealVC()
     }
     
-    private func createNavLogotypeWithText(text:String, image:UIImage)->UIView{
+    private func createNavLogotypeWithText1(text:String, image:UIImage)->UIView{
         
         let titleView = UIView()
         
@@ -70,13 +57,13 @@ class CategoryScreen: UIViewController {
         imageView.image = image
         
         let imageAspect = image.size.width / image.size.height
-       
-        let imagePosX = label.frame.origin.x - label.frame.size.height * imageAspect
-        let imagePosY = label.frame.origin.y
+        
+        let imagePosX = label.frame.origin.x - label.frame.size.height * imageAspect //-61.66
+        let imagePosY = label.frame.origin.y //-10.16
         
         let imageWidth = label.frame.size.height + imageAspect
         let imageHeight = label.frame.size.height
-            
+        
         
         imageView.frame = CGRect(x: imagePosX - 5, y: imagePosY, width: imageWidth, height: imageHeight)
         imageView.contentMode = .scaleAspectFill
@@ -86,6 +73,21 @@ class CategoryScreen: UIViewController {
         
         titleView.sizeToFit()
         
+        return titleView
+    }
+    
+//    private func configureImageTitle(view:CategoryTitleView){
+//        let imageAspect = view.imageView.image!.size.width / view.imageView.image!.size.height
+//        view.frame = CGRect(
+//            x: view.title.frame.origin.x-view.title.frame.size.height*imageAspect,
+//            y: view.title.frame.origin.y,
+//            width: view.title.frame.size.height*imageAspect,
+//            height: view.title.frame.size.height)
+//    }
+    
+    private func createNavLogotypeWithText2(text:String, image:UIImage)->UIView{
+        let titleView = CategoryTitleView(image: image, title: text)
+//        configureImageTitle(view:titleView)
         return titleView
     }
     
@@ -113,7 +115,7 @@ class CategoryScreen: UIViewController {
     }
 }
 
-extension CategoryScreen: PagingViewControllerDataSource{
+extension CategoryScreenViewController: PagingViewControllerDataSource{
     func numberOfViewControllers(in pagingViewController: PagingViewController) -> Int {
         return categoryMenuList.count
     }
@@ -130,7 +132,7 @@ extension CategoryScreen: PagingViewControllerDataSource{
     }
 }
 
-extension CategoryScreen: PagingViewControllerSizeDelegate{
+extension CategoryScreenViewController: PagingViewControllerSizeDelegate{
     func pagingViewController(_ pagingViewController : PagingViewController, widthForPagingItem pagingItem: PagingItem, isSelected: Bool) -> CGFloat {
         guard let item = pagingItem as? PagingIndexItem else {return 0}
         

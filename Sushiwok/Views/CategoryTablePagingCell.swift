@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryItemsCell: UITableViewCell {
+class CategoryTablePagingCell: UITableViewCell {
     
     static let cellIdentifier = "ListItemCell"
     
@@ -65,7 +65,7 @@ class CategoryItemsCell: UITableViewCell {
         return button
     }()
     
-    var categoryItem:CategoryItem?{
+    var categoryItem:Product?{
         didSet{
             guard let item = categoryItem else {return}
             

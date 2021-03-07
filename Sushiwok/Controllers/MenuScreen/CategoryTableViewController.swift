@@ -12,15 +12,15 @@ class CategoryTableViewController: UIViewController{
     
     var tableViewPage:Int?
     
-    var itemCategories: [[CategoryItem]]{
+    private var products: [[Product]]{
         get{
-            return CategoryItemApi.createListItems()
+            return ProductApi.createProductList()
         }
     }
     
     private var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(CategoryItemsCell.self, forCellReuseIdentifier: CategoryItemsCell.cellIdentifier)
+        tableView.register(CategoryTablePagingCell.self, forCellReuseIdentifier: CategoryTablePagingCell.cellIdentifier)
         return tableView
     }()
     
@@ -41,12 +41,12 @@ class CategoryTableViewController: UIViewController{
 
 extension CategoryTableViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemCategories[tableViewPage!].count
+        return products[tableViewPage!].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CategoryItemsCell.cellIdentifier, for: indexPath) as! CategoryItemsCell
-        cell.categoryItem = itemCategories[tableViewPage!][indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTablePagingCell.cellIdentifier, for: indexPath) as! CategoryTablePagingCell
+        cell.categoryItem = products[tableViewPage!][indexPath.row]
         cell.selectionStyle = .none
         return cell
     }
@@ -56,11 +56,11 @@ extension CategoryTableViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sushiItem = itemCategories[tableViewPage!][indexPath.row]
+        let sushiItem = products[tableViewPage!][indexPath.row]
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyboard.instantiateViewController(withIdentifier: "DetailSushi") as? DetailCategoryItem {
-            vc.setDetailListItem(item: sushiItem)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "DetailSushi") as? ProductViewController {
+            vc.setProductItem(item: sushiItem)
             self.navigationController?.pushViewController(vc, animated: true)
             self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
         }

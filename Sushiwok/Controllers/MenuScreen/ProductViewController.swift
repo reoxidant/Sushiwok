@@ -8,15 +8,15 @@
 
 import UIKit
 
-class DetailCategoryItem: UIViewController {
+class ProductViewController: UIViewController {
     
-    @IBOutlet weak var detailImageView: UIImageView!
-    @IBOutlet weak var detailTitleLabel: UILabel!
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productTitleLabel: UILabel!
+    @IBOutlet weak var productDescriptionLabel: UILabel!
     
     @IBOutlet weak var countCartItemsLabel: UILabel!
     
-    var currentCountItems = 0
+    private var currentCountItems = 0
     
     @IBAction func deleteCartItemBtn(){
         if currentCountItems > 1 {
@@ -32,30 +32,29 @@ class DetailCategoryItem: UIViewController {
         }
     }
     
-    var selectedImageView: UIImage?
-    var selectedTitleLabel: String?
-    var selectedDescriptionLabel: String?
-    
+    private var selectedImageView: UIImage?
+    private var selectedTitleLabel: String?
+    private var selectedDescriptionLabel: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let imageToLoad = selectedImageView{
-            detailImageView.image = imageToLoad
+            productImageView.image = imageToLoad
         } else {
-            detailImageView.image = UIImage()
+            productImageView.image = UIImage()
         }
         
         if let titleLabelToLoad = selectedTitleLabel{
-            detailTitleLabel.text = titleLabelToLoad
+            productTitleLabel.text = titleLabelToLoad
         } else {
-            detailTitleLabel.text = ""
+            productTitleLabel.text = ""
         }
         
         if let descriptionLabelToLoad = selectedDescriptionLabel{
-            detailDescriptionLabel.text = descriptionLabelToLoad
+            productDescriptionLabel.text = descriptionLabelToLoad
         } else {
-            detailDescriptionLabel.text = ""
+            productDescriptionLabel.text = ""
         }
     }
     
@@ -63,7 +62,7 @@ class DetailCategoryItem: UIViewController {
         
     }
     
-    func setDetailListItem(item: CategoryItem){
+    func setProductItem(item: Product){
         selectedImageView = UIImage(named: item.image!)
         selectedTitleLabel = item.title
         selectedDescriptionLabel = item.description

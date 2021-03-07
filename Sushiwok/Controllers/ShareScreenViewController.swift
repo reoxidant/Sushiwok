@@ -23,7 +23,7 @@ class ShareScreenViewController: UIViewController {
     
     // MARK: Create function for menu Action
     
-    func setMenuBtn(_ menuBar: UIBarButtonItem){
+    private func setMenuBtn(_ menuBar: UIBarButtonItem){
         menuBar.target = revealViewController()
         menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
     }
