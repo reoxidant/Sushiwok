@@ -10,7 +10,7 @@ import UIKit
 import SWRevealViewController
 import Parchment
 
-class CategoryScreen: UIViewController {
+class CategoryScreenViewController: UIViewController {
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
@@ -100,7 +100,7 @@ class CategoryScreen: UIViewController {
     }
 }
 
-extension CategoryScreen: PagingViewControllerDataSource{
+extension CategoryScreenViewController: PagingViewControllerDataSource{
     func numberOfViewControllers(in pagingViewController: PagingViewController) -> Int {
         return categoryMenuList.count
     }
@@ -117,7 +117,7 @@ extension CategoryScreen: PagingViewControllerDataSource{
     }
 }
 
-extension CategoryScreen: PagingViewControllerSizeDelegate{
+extension CategoryScreenViewController: PagingViewControllerSizeDelegate{
     func pagingViewController(_ pagingViewController : PagingViewController, widthForPagingItem pagingItem: PagingItem, isSelected: Bool) -> CGFloat {
         guard let item = pagingItem as? PagingIndexItem else {return 0}
         

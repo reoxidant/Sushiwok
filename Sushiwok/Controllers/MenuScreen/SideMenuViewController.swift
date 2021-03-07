@@ -11,8 +11,8 @@ import SWRevealViewController
 
 class SideMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var menuItems:SideMenuTableList?
-    var newFrontViewController: UINavigationController?
+    private var menuItems:SideMenuTableList?
+    private var newFrontViewController: UINavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         self.revealViewController().frontViewController.view.isUserInteractionEnabled = true
     }
     
-    func initializeSideMenu(cell:SideMenuTableViewCell){
+    private func initializeSideMenu(cell:SideMenuTableViewCell){
         let revealViewController:SWRevealViewController = self.revealViewController()
         
         let mainStoryBoard:UIStoryboard = UIStoryboard(name:"Main",bundle: nil)
