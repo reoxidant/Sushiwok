@@ -14,6 +14,19 @@ class CategoryScreen: UIViewController {
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
+    private var rightBarButton: UIButton {
+        get{
+            let button = UIButton(frame: CGRect(x:0, y:0, width: 35, height: 35))
+            button.setBackgroundImage(UIImage(systemName:"cart.fill"), for: .normal)
+            button.addTarget(self, action: #selector(self.touchCartButton), for: .touchUpInside)
+            return button
+        }
+    }
+    
+    @objc func touchCartButton(){
+        
+    }
+    
     private let categoryMenuList = [
         PagingIndexItem(index: 0, title: "Наборы и комбо"),
         PagingIndexItem(index: 1, title: "Роллы"),
