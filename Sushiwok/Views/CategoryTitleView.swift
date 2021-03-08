@@ -8,11 +8,10 @@
 
 import UIKit
 
-class CategoryTitleView: UIView {
+class CategoryTitleView: UIStackView {
     
     lazy var imageView:UIImageView = {
         let image = UIImageView()
-        image.frame = CGRect.init(x: 0, y: 0, width: 25, height: 25)
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -28,30 +27,26 @@ class CategoryTitleView: UIView {
         self.init(frame: .zero)
         self.title.text = title
         self.imageView.image = image
-        configureTitle()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
+        setupViews()
+        setupLayouts()
     }
     
-    required init?(coder: NSCoder) {
+    required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupView(){
-        addSubview(title)
-//        addSubview(imageView)
+    private func setupViews(){
+        addArrangedSubview(imageView)
+        addArrangedSubview(title)
+        axis = .horizontal
+        spacing = 5
     }
     
-    private func configureTitle(){
-        title.sizeToFit()
-        title.center = center
+    private func setupLayouts(){
+        imageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
     }
-
-
-//    func setSizeImageFrame(size: (x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat)){
-//        imageView.frame = CGRect(x: size.x, y: size.y, width: size.width, height: size.height)
-//    }
 }

@@ -76,18 +76,8 @@ class CategoryScreenViewController: UIViewController {
         return titleView
     }
     
-//    private func configureImageTitle(view:CategoryTitleView){
-//        let imageAspect = view.imageView.image!.size.width / view.imageView.image!.size.height
-//        view.frame = CGRect(
-//            x: view.title.frame.origin.x-view.title.frame.size.height*imageAspect,
-//            y: view.title.frame.origin.y,
-//            width: view.title.frame.size.height*imageAspect,
-//            height: view.title.frame.size.height)
-//    }
-    
     private func createNavLogotypeWithText2(text:String, image:UIImage)->UIView{
         let titleView = CategoryTitleView(image: image, title: text)
-//        configureImageTitle(view:titleView)
         return titleView
     }
     
