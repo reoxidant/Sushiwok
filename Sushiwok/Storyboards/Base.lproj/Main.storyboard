@@ -468,8 +468,12 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="Ip6-MV-hZf">
                             <color key="tintColor" red="0.61568627450000002" green="0.80392156859999997" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="ErU-Pu-Gos" userLabel="Cart Button">
+                            <color key="tintColor" red="0.61568627450000002" green="0.80392156859999997" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cartButton" destination="ErU-Pu-Gos" id="ZHN-HP-YJj"/>
                         <outlet property="menuBtn" destination="Ip6-MV-hZf" id="YvN-6K-e1m"/>
                     </connections>
                 </viewController>
