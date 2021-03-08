@@ -25,9 +25,31 @@ class CategoryScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let titleView = CategoryTitleStackView(image: #imageLiteral(resourceName: "logo"), title:"SUSHIWOK")
+        navigationItem.titleView = CategoryTitleStackView(image: #imageLiteral(resourceName: "logo"), title:"SUSHIWOK")
         
-        navigationItem.titleView = titleView
+        let badgeCount = UILabel(frame: CGRect(x: 22, y: -05, width: 20, height: 20))
+        badgeCount.layer.borderColor = UIColor.clear.cgColor
+        badgeCount.layer.borderWidth = 2
+        badgeCount.layer.cornerRadius = badgeCount.bounds.size.height / 2
+        badgeCount.textAlignment = .center
+        badgeCount.layer.masksToBounds = true
+        badgeCount.textColor = .white
+        badgeCount.font = badgeCount.font.withSize(12)
+        badgeCount.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
+        badgeCount.text = "4"
+
+
+        let rightBarButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 25))
+        rightBarButton.setBackgroundImage(UIImage(systemName: "cart"), for: .normal)
+        rightBarButton.tintColor = .black
+        rightBarButton.addTarget(self, action: #selector(self.cartAction(_:)), for: .touchUpInside)
+        rightBarButton.addSubview(badgeCount)
+        
+        let rightBarButtomItem = UIBarButtonItem(customView: rightBarButton)
+        
+        let cartButton = CartBarButtonItem(systemName: "cart", count: "1")
+        cartButton.rightButton.addTarget(self, action: #selector(cartAction), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = rightBarButtomItem
         
         let pagingViewController = PagingViewController()
         pagingViewController.register(CategoryMenuPagingCell.self, for: PagingIndexItem.self)
@@ -65,6 +87,10 @@ class CategoryScreenViewController: UIViewController {
             self.navigationItem.leftBarButtonItem?.target = revealController
             self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
         }
+    }
+    
+    @objc func cartAction(_ sender:UIBarButtonItem!){
+        print("cart button action")
     }
 }
 

@@ -9,7 +9,8 @@
 import UIKit
 
 class SideMenuHeaderView: UIView{
-    lazy var logoImageView:UIImageView = {
+    
+    private let logoImageView:UIImageView = {
         let image = UIImageView()
         image.clipsToBounds = true
         image.contentMode = .scaleToFill

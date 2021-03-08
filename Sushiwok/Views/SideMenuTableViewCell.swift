@@ -17,7 +17,7 @@ class SideMenuTableViewCell: UITableViewCell {
         configureCell()
     }
     
-    func configureCell(){
+    private func configureCell(){
         if isSelected{
             contentView.backgroundColor = #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 0.8)
         }

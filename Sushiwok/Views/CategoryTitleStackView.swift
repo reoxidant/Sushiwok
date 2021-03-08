@@ -10,13 +10,13 @@ import UIKit
 
 class CategoryTitleStackView: UIStackView {
     
-    lazy var imageView:UIImageView = {
+    private let imageView:UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         return image
     }()
     
-    lazy var title:UILabel = {
+    private let title:UILabel = {
         let label = UILabel()
         label.textAlignment = NSTextAlignment.center
         label.textColor = .darkGray
