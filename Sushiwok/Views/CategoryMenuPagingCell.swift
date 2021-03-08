@@ -10,7 +10,7 @@ import UIKit
 import Parchment
 
 class CategoryMenuPagingCell: PagingCell{
-    private lazy var titleLabel:UILabel = {
+    private let titleLabel:UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.semibold)
         label.textColor = .black
@@ -22,21 +22,21 @@ class CategoryMenuPagingCell: PagingCell{
         return label
     }()
     
-    private lazy var paragraphStyle: NSParagraphStyle = {
+    private let paragraphStyle: NSParagraphStyle = {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.hyphenationFactor = 1
         paragraphStyle.alignment = .center
         return paragraphStyle
     }()
     
-    func configureTitleLabel(){
+    private func configureTitleLabel(){
         titleLabel.textColor = .black
         titleLabel.backgroundColor = .clear
         titleLabel.layer.borderWidth = 1
         titleLabel.layer.borderColor = UIColor.gray.cgColor
     }
     
-    func configureSelectedTitleLabel(){
+    private func configureSelectedTitleLabel(){
         titleLabel.textColor = .white
         titleLabel.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
         titleLabel.layer.borderWidth = 0

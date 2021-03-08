@@ -77,7 +77,6 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! SideMenuTableViewCell
-        cell.configureCell()
         cell.menuImageView.image = menuItems!.menuIconsArray[indexPath.row]
         cell.menuTitleLabel.text = menuItems!.menuItemArray[indexPath.row]
         return cell

@@ -25,7 +25,11 @@ class CategoryScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.titleView = createNavLogotypeWithText2(text: "SUSHIWOK", image: #imageLiteral(resourceName: "logo"))
+        navigationItem.titleView = CategoryTitleStackView(image: #imageLiteral(resourceName: "logo"), title:"SUSHIWOK")
+        
+        let cartButton = CartBarButtonItem(systemName: "cart", count: "")
+        cartButton.rightButton.addTarget(self, action: #selector(cartAction), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = cartButton
         
         let pagingViewController = PagingViewController()
         pagingViewController.register(CategoryMenuPagingCell.self, for: PagingIndexItem.self)
@@ -40,55 +44,6 @@ class CategoryScreenViewController: UIViewController {
         pagingViewController.didMove(toParent: self)
         
         setupSWRevealVC()
-    }
-    
-    private func createNavLogotypeWithText1(text:String, image:UIImage)->UIView{
-        
-        let titleView = UIView()
-        
-        let label = UILabel()
-        label.text = text
-        label.sizeToFit()
-        label.center = titleView.center
-        label.textAlignment = NSTextAlignment.center
-        label.textColor = .darkGray
-        
-        let imageView = UIImageView()
-        imageView.image = image
-        
-        let imageAspect = image.size.width / image.size.height
-        
-        let imagePosX = label.frame.origin.x - label.frame.size.height * imageAspect //-61.66
-        let imagePosY = label.frame.origin.y //-10.16
-        
-        let imageWidth = label.frame.size.height + imageAspect
-        let imageHeight = label.frame.size.height
-        
-        
-        imageView.frame = CGRect(x: imagePosX - 5, y: imagePosY, width: imageWidth, height: imageHeight)
-        imageView.contentMode = .scaleAspectFill
-        
-        titleView.addSubview(label)
-        titleView.addSubview(imageView)
-        
-        titleView.sizeToFit()
-        
-        return titleView
-    }
-    
-//    private func configureImageTitle(view:CategoryTitleView){
-//        let imageAspect = view.imageView.image!.size.width / view.imageView.image!.size.height
-//        view.frame = CGRect(
-//            x: view.title.frame.origin.x-view.title.frame.size.height*imageAspect,
-//            y: view.title.frame.origin.y,
-//            width: view.title.frame.size.height*imageAspect,
-//            height: view.title.frame.size.height)
-//    }
-    
-    private func createNavLogotypeWithText2(text:String, image:UIImage)->UIView{
-        let titleView = CategoryTitleView(image: image, title: text)
-//        configureImageTitle(view:titleView)
-        return titleView
     }
     
     private func configurePagingViewController(PVC: PagingViewController){
@@ -112,6 +67,15 @@ class CategoryScreenViewController: UIViewController {
             self.navigationItem.leftBarButtonItem?.target = revealController
             self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
         }
+    }
+    
+    @objc func cartAction(_ sender:UIBarButtonItem!){
+        showCart()
+    }
+    
+    func showCart() {
+        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
+        navigationController?.pushViewController(cartVC, animated: true)
     }
 }
 
