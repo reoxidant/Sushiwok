@@ -24,8 +24,9 @@ class CartBarButtonItem: UIBarButtonItem {
     }()
     
     let rightButton:UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 25))
         button.setBackgroundImage(UIImage(systemName: "cart.fill"), for: .normal)
+        button.tintColor = .black
         return button
     }()
     
@@ -47,6 +48,6 @@ class CartBarButtonItem: UIBarButtonItem {
     
     func setViews(){
         rightButton.addSubview(badgeCount)
-        customView?.addSubview(rightButton)
+        customView = rightButton
     }
 }
