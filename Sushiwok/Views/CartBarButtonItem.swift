@@ -10,7 +10,7 @@ import UIKit
 
 class CartBarButtonItem: UIBarButtonItem {
     
-    private let badgeCount:UILabel = {
+    lazy var badgeCount:UILabel = {
         let label = UILabel(frame: CGRect(x: 22, y: -0.5, width: 20, height: 20))
         label.layer.borderColor = UIColor.clear.cgColor
         label.layer.borderWidth = 2
@@ -32,9 +32,12 @@ class CartBarButtonItem: UIBarButtonItem {
     
     init(systemName: String, count:String) {
         super.init()
-        badgeCount.text = count
         rightButton.setBackgroundImage(UIImage(systemName: systemName), for: .normal)
-        setViews()
+        if !count.isEmpty {
+            badgeCount.text = count
+            rightButton.addSubview(badgeCount)
+        }
+        customView = rightButton
     }
     
     convenience init(systemName:String?, count:String?) {
@@ -46,8 +49,8 @@ class CartBarButtonItem: UIBarButtonItem {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setViews(){
-        rightButton.addSubview(badgeCount)
-        customView = rightButton
+    func setNewValue(value:Int){
+        badgeCount.text = "\(value)"
+        badgeCount.setNeedsDisplay()
     }
 }

@@ -27,9 +27,9 @@ class CategoryScreenViewController: UIViewController {
         
         navigationItem.titleView = CategoryTitleStackView(image: #imageLiteral(resourceName: "logo"), title:"SUSHIWOK")
         
-        let cartButton = CartBarButtonItem(systemName: "cart", count: "1")
+        let cartButton = CartBarButtonItem(systemName: "cart", count: "")
         cartButton.rightButton.addTarget(self, action: #selector(cartAction), for: .touchUpInside)
-        self.navigationItem.rightBarButtonItem = cartButton
+        navigationItem.rightBarButtonItem = cartButton
         
         let pagingViewController = PagingViewController()
         pagingViewController.register(CategoryMenuPagingCell.self, for: PagingIndexItem.self)
@@ -70,7 +70,12 @@ class CategoryScreenViewController: UIViewController {
     }
     
     @objc func cartAction(_ sender:UIBarButtonItem!){
-        print("cart button action")
+        showCart()
+    }
+    
+    func showCart() {
+        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
+        navigationController?.pushViewController(cartVC, animated: true)
     }
 }
 

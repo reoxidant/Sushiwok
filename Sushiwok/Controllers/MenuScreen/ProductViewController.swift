@@ -18,6 +18,8 @@ class ProductViewController: UIViewController {
     
     private var currentCountItems = 0
     
+    let cartButton = CartBarButtonItem(systemName: "cart", count: "")
+    
     @IBAction func deleteCartItemBtn(){
         if currentCountItems > 1 {
             currentCountItems -= 1
@@ -29,6 +31,7 @@ class ProductViewController: UIViewController {
         if currentCountItems < 100 {
             currentCountItems += 1
             countCartItemsLabel.text = "\(currentCountItems)"
+            cartButton.setNewValue(value: currentCountItems)
         }
     }
     
@@ -38,6 +41,9 @@ class ProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cartButton.rightButton.addTarget(self, action: #selector(cartAction), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = cartButton
         
         if let imageToLoad = selectedImageView{
             productImageView.image = imageToLoad
@@ -66,5 +72,14 @@ class ProductViewController: UIViewController {
         selectedImageView = UIImage(named: item.image!)
         selectedTitleLabel = item.title
         selectedDescriptionLabel = item.description
+    }
+    
+    @objc func cartAction(_ sender:UIBarButtonItem!){
+        showCart()
+    }
+    
+    func showCart() {
+        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
+        navigationController?.pushViewController(cartVC, animated: true)
     }
 }

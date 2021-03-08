@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A6A95427023DF77A242AFAC /* Pods_Sushiwok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2ADD44CC6F4803A3949701 /* Pods_Sushiwok.framework */; };
+		440EE06825F6899D00BEF9E7 /* CartProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440EE06725F6899D00BEF9E7 /* CartProduct.swift */; };
 		44429AAB25BBF51400400332 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44429AAA25BBF51400400332 /* ProductViewController.swift */; };
 		4443FE8725F6002500D2E0BF /* CartBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4443FE8625F6002500D2E0BF /* CartBarButtonItem.swift */; };
 		4453B30A25BF5D1500D35952 /* ShareScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4453B30925BF5D1500D35952 /* ShareScreenViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440EE06725F6899D00BEF9E7 /* CartProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProduct.swift; sourceTree = "<group>"; };
 		44429AAA25BBF51400400332 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		4443FE8625F6002500D2E0BF /* CartBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartBarButtonItem.swift; sourceTree = "<group>"; };
 		4453B30925BF5D1500D35952 /* ShareScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareScreenViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				449CB73525BB5B2B0064DCC8 /* Product.swift */,
 				44C55ABC25C0C4E50013B76E /* SideMenuTableList.swift */,
+				440EE06725F6899D00BEF9E7 /* CartProduct.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440EE06825F6899D00BEF9E7 /* CartProduct.swift in Sources */,
 				449CB71E25BB4A190064DCC8 /* AppDelegate.swift in Sources */,
 				4476322925F4303C00A93B1E /* SideMenuHeaderView.swift in Sources */,
 				4453B30E25BF5D3A00D35952 /* SideMenuViewController.swift in Sources */,
