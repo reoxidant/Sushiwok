@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryTitleView: UIStackView {
+class CategoryTitleStackView: UIStackView {
     
     lazy var imageView:UIImageView = {
         let image = UIImageView()
