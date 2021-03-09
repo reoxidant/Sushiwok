@@ -23,15 +23,12 @@ class ProductViewController: UIViewController {
     @IBAction func deleteCartItemBtn(){
         if currentCountItems > 1 {
             currentCountItems -= 1
-            countCartItemsLabel.text = "\(currentCountItems)"
         }
     }
     
     @IBAction func addCartItemBtn(){
         if currentCountItems < 100 {
             currentCountItems += 1
-            countCartItemsLabel.text = "\(currentCountItems)"
-            cartButton.setNewValue(value: currentCountItems)
         }
     }
     

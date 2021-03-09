@@ -10,10 +10,5 @@ import Foundation
 
 struct CartProduct{
     var count:Int
-    var name:String
-    
-    init(count:Int, name:String){
-        self.count = count
-        self.name = name
-    }
+    var product:Product
 }

@@ -10,4 +10,9 @@ import UIKit
 
 class CartViewController: UIViewController{
     
+    enum CartAction{
+        case add(product: Product)
+        case incrementProductCount(withProductId:Int)
+        case decrementProductCount(withProductId:Int)
+    }
 }
