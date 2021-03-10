@@ -7,17 +7,16 @@
 //
 
 import Foundation
-import UIKit
 
 //"Наборы и комбо", "Роллы", "Wok", "Суши", "Pizza"
 
-struct Product {
-    var id:Int
-    var image:String?
-    var title:String?
-    var description:String?
-    var grams:Int?
-    var price:Int?
+struct Product: Codable {
+    let id: String
+    let image:String?
+    let title:String?
+    let description:String?
+    let grams:Int?
+    let price:Int?
 }
 
 class ProductApi{
@@ -26,7 +25,7 @@ class ProductApi{
             [
                 [
                     Product(
-                        id:1,
+                        id: "1",
                         image: "fila-bum",
                         title: "Фила Бум",
                         description: "ролл Филадельфия 2 шт., ролл Филадельфия в угре, ролл Филадельфия в масаго, ролл Фудживара 1031 г",
@@ -34,7 +33,7 @@ class ProductApi{
                         price: 599
                     ),
                     Product(
-                        id:2,
+                        id: "2",
                         image: "umka",
                         title: "Умка",
                         description: "ролл Фиеста, ролл Сэнсей, ролл Калифорния в кунжуте 653 г",
@@ -42,7 +41,7 @@ class ProductApi{
                         price: 444
                     ),
                     Product(
-                        id:3,
+                        id: "3",
                         image: "filomaniya",
                         title: "Филомания",
                         description: "ролл Филадельфия в масаго, ролл Филадельфия, ролл Калифорния в кунжуте, ролл с огурцом 707 г",
@@ -50,7 +49,7 @@ class ProductApi{
                         price: 777
                     ),
                     Product(
-                        id:4,
+                        id: "4",
                         image: "uikend",
                         title: "Уикенд",
                         description: "ролл Сочная креветка, ролл Хатамото, запеч. ролл Окунь-гриль, запеч. ролл Крабик Хот, ролл Калифорния с креветкой, ролл Марокко, запеч. ролл Румяный, запеч. ролл Сырный, ролл Фудживара 1707 г",
@@ -58,7 +57,7 @@ class ProductApi{
                         price: 1799
                     ),
                     Product(
-                        id:5,
+                        id: "5",
                         image: "iskushenie",
                         title: "Набор Искушение",
                         description: "ролл Ореховый рай, ролл Берри, ролл Сочный фрукт 438 г",
@@ -68,7 +67,7 @@ class ProductApi{
                 ],
                 [
                     Product(
-                        id:6,
+                        id: "6",
                         image: "okitori",
                         title: "Ролл Окитори",
                         description: "лосось, цыпленок, омлет тамаго, масаго, шеф-соус, спайси соус, кунжут 234 г",
@@ -76,7 +75,7 @@ class ProductApi{
                         price: 325
                     ),
                     Product(
-                        id:7,
+                        id: "7",
                         image: "ebi-roru",
                         title: "Ролл Эби Рору",
                         description: "креветка тигровая, краб-крем, огурец, перец болгарский, салат айсберг, масаго, медовый соус 252 г",
@@ -84,7 +83,7 @@ class ProductApi{
                         price: 319
                     ),
                     Product(
-                        id:8,
+                        id: "8",
                         image: "spajsi-krevetka",
                         title: "Ролл Спайси креветка",
                         description: "лосось, сливочный сыр, огурец, масаго, креветки,s спайси соус 217 г",
@@ -92,7 +91,7 @@ class ProductApi{
                         price: 319
                     ),
                     Product(
-                        id:9,
+                        id: "9",
                         image: "dabl-unagi",
                         title: "Ролл Дабл унаги",
                         description: "угорь, цыпленок, краб-крем, сливочный сыр, омлет тамаго, апельсиновый соус, спайси соус, паприка, кунжут 234 г",
@@ -100,7 +99,7 @@ class ProductApi{
                         price: 325
                     ),
                     Product(
-                        id:10,
+                        id: "10",
                         image: "midori",
                         title: "Ролл Мидори",
                         description: "креветка тигровая, краб-крем, чука, масаго, яки соус, спайси соус, медовый соус 237 г",
@@ -110,7 +109,7 @@ class ProductApi{
                 ],
                 [
                     Product(
-                        id:11,
+                        id: "11",
                         image: "wok-ostrij-s-govyadinoj",
                         title:"Wok острый с говядиной",
                         description: "рис, говядина, перец болгарский, капуста, морковь, фасоль стручковая, перец чили, кунжут, терияки соус, устричный соус, соус ширачи 430 г",
@@ -118,7 +117,7 @@ class ProductApi{
                         price: 319
                     ),
                     Product(
-                        id:12,
+                        id: "12",
                         image: "wok-klassicheskij",
                         title: "Wok классический",
                         description: "лапша удон, цыпленок, шампиньоны, капуста, перец болгарский, лук репчатый, огурец, морковь, терияки соус, кунжут 415 г",
@@ -126,7 +125,7 @@ class ProductApi{
                         price: 309
                     ),
                     Product(
-                        id:13,
+                        id: "13",
                         image: "wok-po-kitaisky",
                         title: "Wok по-китайски",
                         description: "лапша удон, цыпленок, перец болгарский, чеснок, лук репчатый, кинза, соус ширачи, соус пикантный, амой соус 320 г",
@@ -134,7 +133,7 @@ class ProductApi{
                         price: 299
                     ),
                     Product(
-                        id:14,
+                        id: "14",
                         image: "wok-sitnij",
                         title: "Wok сытный",
                         description: "лапша удон, бекон, цыпленок, шампиньоны, чеснок, сливочный соус, кунжут 340 г",
@@ -142,7 +141,7 @@ class ProductApi{
                         price: 345
                     ),
                     Product(
-                        id:15,
+                        id: "15",
                         image: "wok-vegetarianskij",
                         title: "Wok вегетарианский",
                         description: "лапша удон, капуста, шампиньоны, морковь, перец болгарский, огурец, томаты черри, лук репчатый, терияки соус, кунжут 370 г",
@@ -152,7 +151,7 @@ class ProductApi{
                 ],
                 [
                     Product(
-                        id:16,
+                        id: "16",
                         image: "sushi-chuka",
                         title:"Суши Чука",
                         description: "водоросли чука, нори, рис 30 г",
@@ -160,7 +159,7 @@ class ProductApi{
                         price: 99
                     ),
                     Product(
-                        id:17,
+                        id: "17",
                         image: "sushi-ostrij-krab",
                         title: "Суши Острый краб",
                         description: "нори, рис, спайси соус, краб-крем 35 г",
@@ -168,7 +167,7 @@ class ProductApi{
                         price: 99
                     ),
                     Product(
-                        id:18,
+                        id: "18",
                         image: "sushi-spaysi-tori",
                         title: "Суши Спайси Тори",
                         description: "цыпленок, нори, рис, спайси соус 35 г",
@@ -176,7 +175,7 @@ class ProductApi{
                         price: 99
                     ),
                     Product(
-                        id:19,
+                        id: "19",
                         image:  "zapechennye-sushi-krab",
                         title: "Запеченные Суши Краб",
                         description: "нори, рис, яки соус, краб-крем 35 г",
@@ -184,7 +183,7 @@ class ProductApi{
                         price: 99
                     ),
                     Product(
-                        id:20,
+                        id: "20",
                         image:"zapechennye-sushi-ugor",
                         title: "Запеченные Суши Угорь",
                         description: "рис, яки соус, угорь, нори 35 г",
@@ -194,7 +193,7 @@ class ProductApi{
                 ],
                 [
                     Product(
-                        id:21,
+                        id: "21",
                         image: "drakon-mini-pitstsa-amer-20sm",
                         title:"Дракон на пышном тесте 20 см",
                         description: "ветчина, пепперони, сыр моцарелла, грибы шампиньоны, перец халапеньо, пицца-соус, пышное тесто, паприка, сыр пармезан, лук красный 330 г",
@@ -202,7 +201,7 @@ class ProductApi{
                         price: 279
                     ),
                     Product(
-                        id:22,
+                        id: "22",
                         image:  "picca-drakon-30-sm",
                         title: "Дракон на пышном тесте 30 см",
                         description: "пепперони, ветчина, сыр моцарелла, грибы шампиньоны, перец болгарский, сыр пармезан, лук красный, перец халапеньо, пицца-соус, пышное тесто 720 г",
@@ -210,7 +209,7 @@ class ProductApi{
                         price: 499
                     ),
                     Product(
-                        id:23,
+                        id: "23",
                         image: "picca-petrovskaya-30-sm",
                         title: "Петровская на пышном тесте 30 см",
                         description: "акция, цыпленок, пепперони, ветчина, сыр моцарелла, грибы шампиньоны, сыр пармезан, томаты, лук красный, пицца-соус, пышное тесто 810 г",
@@ -218,7 +217,7 @@ class ProductApi{
                         price: 499
                     ),
                     Product(
-                        id:24,
+                        id: "24",
                         image: "picca-proshutto-fungi-30-sm",
                         title: "Прошутто фунги на пышном тесте 30 см",
                         description: "грибы шампиньоны, ветчина, сыр моцарелла, пицца-соус, пышное тесто 630 г",
@@ -226,7 +225,7 @@ class ProductApi{
                         price: 499
                     ),
                     Product(
-                        id:25,
+                        id: "25",
                         image: "picca-zhyulen-30-sm",
                         title: "Жюльен на пышном тесте 30 см",
                         description: "акция, цыпленок копченый, сыр моцарелла, яйцо, лук репчатый, соус грибной, пышное тесто 780 г",

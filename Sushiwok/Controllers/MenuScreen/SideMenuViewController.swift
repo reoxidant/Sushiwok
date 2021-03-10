@@ -43,7 +43,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
         switch cell.menuTitleLabel.text! {
         case "Menu":
-            let menuListScreen = mainStoryBoard.instantiateViewController(withIdentifier: "MenuListScreen")
+            let menuListScreen = mainStoryBoard.instantiateViewController(withIdentifier: "CategoryScreenViewController")
             newFrontViewController = UINavigationController.init(rootViewController: menuListScreen)
         case "Deals and Sales":
             let shareViewController = shareStoryBoard.instantiateViewController(withIdentifier: "ShareViewController")

@@ -58,7 +58,7 @@ extension CategoryTableViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let product = products[tableViewPage!][indexPath.row]
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Product", bundle: nil)
         if let vc = storyboard.instantiateViewController(withIdentifier: "DetailSushi") as? ProductViewController {
             vc.setProductItem(item: product)
             self.navigationController?.pushViewController(vc, animated: true)
