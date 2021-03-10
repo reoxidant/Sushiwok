@@ -139,13 +139,13 @@
         <!--Category Screen View Controller-->
         <scene sceneID="lHE-aH-Do3">
             <objects>
-                <viewController storyboardIdentifier="MenuListScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iFg-3W-x3T" customClass="CategoryScreenViewController" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iFg-3W-x3T" customClass="CategoryScreenViewController" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mkT-Gf-UCm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i35-Gp-q04">
-                                <rect key="frame" x="123.5" y="424" width="167" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i35-Gp-q04">
+                                <rect key="frame" x="64.5" y="424" width="285.5" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lav-uN-3X6"/>
+        <segue reference="udv-FN-XQA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
