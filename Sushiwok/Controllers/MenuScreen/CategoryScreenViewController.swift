@@ -22,13 +22,15 @@ class CategoryScreenViewController: UIViewController {
         PagingIndexItem(index: 4, title: "Pizza")
     ]
     
+    private var addProductArray = [Product]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.titleView = CategoryTitleStackView(image: #imageLiteral(resourceName: "logo"), title:"SUSHIWOK")
         
-        let cartButton = CartBarButtonItem(systemName: "cart", count: "")
-        cartButton.rightButton.addTarget(self, action: #selector(cartAction), for: .touchUpInside)
+        let cartButton = CartBarButtonItem(systemName: "cart", count: 0)
+        cartButton.rightButton.addTarget(self, action: #selector(tappedCartButton), for: .touchUpInside)
         navigationItem.rightBarButtonItem = cartButton
         
         let pagingViewController = PagingViewController()
@@ -67,15 +69,6 @@ class CategoryScreenViewController: UIViewController {
             self.navigationItem.leftBarButtonItem?.target = revealController
             self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
         }
-    }
-    
-    @objc func cartAction(_ sender:UIBarButtonItem!){
-        showCart()
-    }
-    
-    func showCart() {
-        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
-        navigationController?.pushViewController(cartVC, animated: true)
     }
 }
 
@@ -117,4 +110,17 @@ extension CategoryScreenViewController: PagingViewControllerSizeDelegate{
             return width
         }
     }
+}
+
+extension CategoryScreenViewController {
+    
+    @objc private func tappedCartButton(_ sender:UIBarButtonItem!){
+        
+        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
+        
+        cartVC.addProductArray = addProductArray
+        
+        navigationController?.pushViewController(cartVC, animated: true)
+    }
+    
 }

@@ -10,4 +10,12 @@ import UIKit
 
 class CartViewController: UIViewController{
     
+    var addProductArray: [Product]?
+    
+    var price: CFloat = 0.00
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
 }

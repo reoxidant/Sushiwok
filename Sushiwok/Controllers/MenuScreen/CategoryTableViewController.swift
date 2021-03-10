@@ -56,11 +56,11 @@ extension CategoryTableViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sushiItem = products[tableViewPage!][indexPath.row]
+        let product = products[tableViewPage!][indexPath.row]
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let vc = storyboard.instantiateViewController(withIdentifier: "DetailSushi") as? ProductViewController {
-            vc.setProductItem(item: sushiItem)
+            vc.setProductItem(item: product)
             self.navigationController?.pushViewController(vc, animated: true)
             self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
         }
