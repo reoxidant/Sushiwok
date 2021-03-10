@@ -32,6 +32,7 @@ class ProductViewController: UIViewController {
 //            cartButton.setNewValue(value: currentCountItems)
 //        }
 //    }
+
     
     private var selectedImageView: UIImage?
     private var selectedTitleLabel: String?
