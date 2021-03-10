@@ -18,19 +18,21 @@ class ProductViewController: UIViewController {
     
     private var currentCountItems = 0
     
-    let cartButton = CartBarButtonItem(systemName: "cart", count: "")
-    
-    @IBAction func deleteCartItemBtn(){
-        if currentCountItems > 1 {
-            currentCountItems -= 1
-        }
-    }
-    
-    @IBAction func addCartItemBtn(){
-        if currentCountItems < 100 {
-            currentCountItems += 1
-        }
-    }
+//    @IBAction func deleteCartItemBtn(){
+//        if currentCountItems > 1 {
+//            currentCountItems -= 1
+//            countCartItemsLabel.text = "\(currentCountItems)"
+//        }
+//    }
+//
+//    @IBAction func addCartItemBtn(){
+//        if currentCountItems < 100 {
+//            currentCountItems += 1
+//            countCartItemsLabel.text = "\(currentCountItems)"
+//            cartButton.setNewValue(value: currentCountItems)
+//        }
+//    }
+
     
     private var selectedImageView: UIImage?
     private var selectedTitleLabel: String?
@@ -39,8 +41,8 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cartButton.rightButton.addTarget(self, action: #selector(cartAction), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = cartButton
+//        cartButton.rightButton.addTarget(self, action: #selector(cartAction), for: .touchUpInside)
+//        navigationItem.rightBarButtonItem = cartButton
         
         if let imageToLoad = selectedImageView{
             productImageView.image = imageToLoad
@@ -71,12 +73,12 @@ class ProductViewController: UIViewController {
         selectedDescriptionLabel = item.description
     }
     
-    @objc func cartAction(_ sender:UIBarButtonItem!){
-        showCart()
-    }
-    
-    func showCart() {
-        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
-        navigationController?.pushViewController(cartVC, animated: true)
-    }
+//    @objc func cartAction(_ sender:UIBarButtonItem!){
+//        showCart()
+//    }
+//    
+//    func showCart() {
+//        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
+//        navigationController?.pushViewController(cartVC, animated: true)
+//    }
 }

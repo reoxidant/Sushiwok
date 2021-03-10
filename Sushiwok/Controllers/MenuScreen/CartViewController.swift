@@ -9,10 +9,13 @@
 import UIKit
 
 class CartViewController: UIViewController{
+  
+    var addProductArray: [Product]?
     
-    enum CartAction{
-        case add(product: Product)
-        case incrementProductCount(withProductId:Int)
-        case decrementProductCount(withProductId:Int)
+    var price: CFloat = 0.00
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
+  
 }
