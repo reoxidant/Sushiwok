@@ -37,19 +37,22 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         let revealViewController:SWRevealViewController = self.revealViewController()
         
         let mainStoryBoard:UIStoryboard = UIStoryboard(name:"Main",bundle: nil)
+        let shareStoryBoard:UIStoryboard = UIStoryboard(name: "Share", bundle: nil)
+        let favoritesStoryBoard:UIStoryboard = UIStoryboard(name: "Favorites", bundle: nil)
+        let mapStoryBoard:UIStoryboard = UIStoryboard(name: "Map", bundle: nil)
         
         switch cell.menuTitleLabel.text! {
         case "Menu":
             let menuListScreen = mainStoryBoard.instantiateViewController(withIdentifier: "MenuListScreen")
             newFrontViewController = UINavigationController.init(rootViewController: menuListScreen)
         case "Deals and Sales":
-            let shareViewController = mainStoryBoard.instantiateViewController(withIdentifier: "ShareViewController")
+            let shareViewController = shareStoryBoard.instantiateViewController(withIdentifier: "ShareViewController")
             newFrontViewController = UINavigationController.init(rootViewController:shareViewController)
         case "Favorites":
-            let favoritesViewController = mainStoryBoard.instantiateViewController(withIdentifier: "FavoritesViewController")
+            let favoritesViewController = favoritesStoryBoard.instantiateViewController(withIdentifier: "FavoritesViewController")
             newFrontViewController = UINavigationController.init(rootViewController: favoritesViewController)
         case "Our Shops":
-            let mapViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MapViewController")
+            let mapViewController = mapStoryBoard.instantiateViewController(withIdentifier: "MapViewController")
             newFrontViewController = UINavigationController.init(rootViewController: mapViewController)
         default:
             break
