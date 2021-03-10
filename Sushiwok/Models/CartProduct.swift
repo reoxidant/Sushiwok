@@ -9,11 +9,19 @@
 import Foundation
 
 struct CartProduct{
-    var count:Int
-    var name:String
     
-    init(count:Int, name:String){
-        self.count = count
-        self.name = name
+    private var items: [(product: Product, quantity: Int)] = []
+    
+    private init(){}
+    
+    mutating func addProduct(product: Product){
+        if let index = items.firstIndex(where: { $0.product.id == product.id }) {
+            items[index].quantity += 1
+            return
+        }
+        
+        let defaultQuantity = 1
+        let cartProduct = (product: product, quantity: defaultQuantity)
+        items.append(cartProduct)
     }
 }
