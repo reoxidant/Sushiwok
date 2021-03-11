@@ -28,8 +28,6 @@ class ProductViewController: UIViewController {
     
     var product: Product? = nil
     
-    private var quantity = 1
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,14 +35,22 @@ class ProductViewController: UIViewController {
         cartButton.rightButton.addTarget(self, action: #selector(addProductToCart), for: .touchUpInside)
         navigationItem.rightBarButtonItem = cartButton
         
-        setupLayout()
+        if product != nil {setupLayout()}
     }
     
     func setupLayout(){
         productImageView.image = UIImage(named: product?.image ?? "logo")
-        productTitleLabel.text = product?.title ?? "Product" + ", \(product?.grams ?? 0) gram"
+        
+        let productName = product?.title ?? "shushiwok"
+        let productGrams = product?.grams ?? 0
+        productTitleLabel.text = "\(productName), \(productGrams) г."
         productDescriptionLabel.text = product?.description
-        productPriceLabel.text = String(format: "Price: £%.f", product?.price ?? 0)
+        
+        let productPrice = product?.price ?? 0
+        productPriceLabel.text = String(format: "%.f ₽", productPrice)
+        
+        let quantity = CartProduct.shared.getQuantityProduct(product!)
+        quantityProduct.text = "\(quantity)"
     }
     
     @objc func addProductToCart(_ sender:UIBarButtonItem!){
