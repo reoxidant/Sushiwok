@@ -26,8 +26,15 @@ class CartProduct{
         }
     }
     
+    func findProduct(_ product: Product, returnQuantity: (Int) -> Int) -> Int{
+        if let index = items.firstIndex(where: { $0.product.id == product.id }) {
+            return returnQuantity(items[index].quantity)
+        }
+        return 0
+    }
+    
     func addProduct(_ product: Product){
-        findProduct(product){$0 + 1}
+        findProduct(product, changeQuantity: {$0 + 1})
         
         let defaultQuantity = 1
         let cartProduct = (product: product, quantity: defaultQuantity)
@@ -49,5 +56,9 @@ class CartProduct{
             case .remove:
                 remove(product)
         }
+    }
+    
+    func getQuantityProduct(_ product: Product) -> Int{
+        return findProduct(product){$0}
     }
 }
