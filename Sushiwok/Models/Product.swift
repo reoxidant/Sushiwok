@@ -16,7 +16,7 @@ struct Product: Codable {
     let title:String?
     let description:String?
     let grams:Int?
-    let price:Int?
+    let price:Double?
 }
 
 class ProductApi{

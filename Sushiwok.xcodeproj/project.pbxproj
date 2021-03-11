@@ -21,7 +21,7 @@
 		449CB72525BB4A190064DCC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449CB72325BB4A190064DCC8 /* Main.storyboard */; };
 		449CB72725BB4A1C0064DCC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449CB72625BB4A1C0064DCC8 /* Assets.xcassets */; };
 		449CB72A25BB4A1C0064DCC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449CB72825BB4A1C0064DCC8 /* LaunchScreen.storyboard */; };
-		449CB73225BB51EE0064DCC8 /* CategoryScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73125BB51EE0064DCC8 /* CategoryScreenViewController.swift */; };
+		449CB73225BB51EE0064DCC8 /* MenuScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73125BB51EE0064DCC8 /* MenuScreenViewController.swift */; };
 		449CB73425BB597C0064DCC8 /* CategoryTablePagingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73325BB597C0064DCC8 /* CategoryTablePagingCell.swift */; };
 		449CB73625BB5B2B0064DCC8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CB73525BB5B2B0064DCC8 /* Product.swift */; };
 		44A41E8A25F9669E0042CB8B /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A41E8925F9669E0042CB8B /* Cart.storyboard */; };
@@ -53,7 +53,7 @@
 		449CB72625BB4A1C0064DCC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		449CB72925BB4A1C0064DCC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		449CB72B25BB4A1C0064DCC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		449CB73125BB51EE0064DCC8 /* CategoryScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScreenViewController.swift; sourceTree = "<group>"; };
+		449CB73125BB51EE0064DCC8 /* MenuScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenViewController.swift; sourceTree = "<group>"; };
 		449CB73325BB597C0064DCC8 /* CategoryTablePagingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTablePagingCell.swift; sourceTree = "<group>"; };
 		449CB73525BB5B2B0064DCC8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		44A41E8925F9669E0042CB8B /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				4453B30D25BF5D3A00D35952 /* SideMenuViewController.swift */,
-				449CB73125BB51EE0064DCC8 /* CategoryScreenViewController.swift */,
+				449CB73125BB51EE0064DCC8 /* MenuScreenViewController.swift */,
 				44FFD95225E18EE600D8AED8 /* CategoryTableViewController.swift */,
 				44429AAA25BBF51400400332 /* ProductViewController.swift */,
 				44D8C8FF25EEBAD3000A613F /* CartViewController.swift */,
@@ -340,7 +340,7 @@
 				4453B31625BF712600D35952 /* FavoritesScreenViewController.swift in Sources */,
 				449CB73625BB5B2B0064DCC8 /* Product.swift in Sources */,
 				4453B30C25BF5D2000D35952 /* MapScreenViewController.swift in Sources */,
-				449CB73225BB51EE0064DCC8 /* CategoryScreenViewController.swift in Sources */,
+				449CB73225BB51EE0064DCC8 /* MenuScreenViewController.swift in Sources */,
 				44F6171425EBA0D100A186E6 /* CategoryMenuPagingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

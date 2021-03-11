@@ -10,7 +10,7 @@ import UIKit
 import SWRevealViewController
 import Parchment
 
-class CategoryScreenViewController: UIViewController {
+class MenuScreenViewController: UIViewController {
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
@@ -29,7 +29,7 @@ class CategoryScreenViewController: UIViewController {
         
         navigationItem.titleView = CategoryTitleStackView(image: #imageLiteral(resourceName: "logo"), title:"SUSHIWOK")
         
-        let cartButton = CartBarButtonItem(systemName: "cart", count: 0)
+        let cartButton = CartBarButtonItem(systemName: "cart")
         cartButton.rightButton.addTarget(self, action: #selector(tappedCartButton), for: .touchUpInside)
         navigationItem.rightBarButtonItem = cartButton
         
@@ -72,7 +72,7 @@ class CategoryScreenViewController: UIViewController {
     }
 }
 
-extension CategoryScreenViewController: PagingViewControllerDataSource{
+extension MenuScreenViewController: PagingViewControllerDataSource{
     func numberOfViewControllers(in pagingViewController: PagingViewController) -> Int {
         return categoryMenuList.count
     }
@@ -89,7 +89,7 @@ extension CategoryScreenViewController: PagingViewControllerDataSource{
     }
 }
 
-extension CategoryScreenViewController: PagingViewControllerSizeDelegate{
+extension MenuScreenViewController: PagingViewControllerSizeDelegate{
     func pagingViewController(_ pagingViewController : PagingViewController, widthForPagingItem pagingItem: PagingItem, isSelected: Bool) -> CGFloat {
         guard let item = pagingItem as? PagingIndexItem else {return 0}
         
@@ -112,7 +112,7 @@ extension CategoryScreenViewController: PagingViewControllerSizeDelegate{
     }
 }
 
-extension CategoryScreenViewController {
+extension MenuScreenViewController {
     
     @objc private func tappedCartButton(_ sender:UIBarButtonItem!){
         

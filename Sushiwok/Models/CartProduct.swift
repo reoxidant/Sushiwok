@@ -8,20 +8,46 @@
 
 import Foundation
 
-struct CartProduct{
+enum CartActions{
+    case increase
+    case decrease
+    case remove
+}
+
+class CartProduct{
+    
+    static let shared = CartProduct()
     
     private var items: [(product: Product, quantity: Int)] = []
     
-    private init(){}
-    
-    mutating func addProduct(product: Product){
+    func findProduct(_ product: Product, changeQuantity: (Int) -> Int){
         if let index = items.firstIndex(where: { $0.product.id == product.id }) {
-            items[index].quantity += 1
-            return
+            items[index].quantity = changeQuantity(items[index].quantity)
         }
+    }
+    
+    func addProduct(_ product: Product){
+        findProduct(product){$0 + 1}
         
         let defaultQuantity = 1
         let cartProduct = (product: product, quantity: defaultQuantity)
         items.append(cartProduct)
+    }
+    
+    func remove(_ product: Product){
+        items.removeAll(where: {$0.product.id == product.id})
+    }
+    
+    func doActionWith(product:Product, cartActions: CartActions){
+        switch cartActions {
+            case .increase:
+                addProduct(product)
+            case .decrease:
+                findProduct(product, changeQuantity: {quantity -> Int in
+                    return (quantity > 1) ? quantity - 1 : quantity
+                })
+            case .remove:
+                remove(product)
+        }
     }
 }

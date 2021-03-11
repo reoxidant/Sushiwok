@@ -59,8 +59,8 @@ extension CategoryTableViewController: UITableViewDataSource, UITableViewDelegat
         let product = products[tableViewPage!][indexPath.row]
         
         let storyboard = UIStoryboard(name: "Product", bundle: nil)
-        if let vc = storyboard.instantiateViewController(withIdentifier: "DetailSushi") as? ProductViewController {
-            vc.setProductItem(item: product)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "ProductDetails") as? ProductViewController {
+            vc.product = product
             self.navigationController?.pushViewController(vc, animated: true)
             self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
         }

@@ -11,7 +11,7 @@
         <!--Product View Controller-->
         <scene sceneID="wRN-uO-3bI">
             <objects>
-                <viewController storyboardIdentifier="DetailSushi" id="cYd-86-b1f" customClass="ProductViewController" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetails" id="cYd-86-b1f" customClass="ProductViewController" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AYn-CA-LmK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,6 +67,9 @@
                                                                 <rect key="frame" x="296" y="30.5" width="86" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <state key="normal" title="В корзину"/>
+                                                                <connections>
+                                                                    <action selector="didTapAddToCardButton" destination="cYd-86-b1f" eventType="touchUpInside" id="Evp-df-cZH"/>
+                                                                </connections>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGF-1h-5E6">
                                                                 <rect key="frame" x="16" y="32.5" width="95" height="30"/>
@@ -101,14 +104,25 @@
                                                                     <constraint firstAttribute="height" constant="30" id="2gs-0v-F40"/>
                                                                 </constraints>
                                                             </stackView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7N-hB-abh">
+                                                                <rect key="frame" x="174" y="37" width="50" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="50" id="EKr-NF-0aw"/>
+                                                                    <constraint firstAttribute="height" constant="21" id="XT6-50-jKC"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstItem="fCO-9k-gm5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QGF-1h-5E6" secondAttribute="trailing" constant="8" symbolic="YES" id="2LL-pG-lo9"/>
                                                             <constraint firstItem="fCO-9k-gm5" firstAttribute="centerY" secondItem="gNb-Bn-CF5" secondAttribute="centerY" id="5ey-Rc-aaE"/>
                                                             <constraint firstAttribute="trailing" secondItem="fCO-9k-gm5" secondAttribute="trailing" constant="16" id="Pkb-24-F36"/>
+                                                            <constraint firstItem="t7N-hB-abh" firstAttribute="centerX" secondItem="gNb-Bn-CF5" secondAttribute="centerX" id="hvZ-u0-3m0"/>
                                                             <constraint firstItem="QGF-1h-5E6" firstAttribute="leading" secondItem="gNb-Bn-CF5" secondAttribute="leading" constant="16" id="l4Z-Hf-GYn"/>
                                                             <constraint firstItem="QGF-1h-5E6" firstAttribute="centerY" secondItem="gNb-Bn-CF5" secondAttribute="centerY" id="thk-B9-pKC"/>
+                                                            <constraint firstItem="t7N-hB-abh" firstAttribute="centerY" secondItem="gNb-Bn-CF5" secondAttribute="centerY" id="uF8-4M-sg9"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -128,10 +142,11 @@
                         <viewLayoutGuide key="safeArea" id="eAa-ve-V7z"/>
                     </view>
                     <connections>
-                        <outlet property="countCartItemsLabel" destination="MfR-2c-0pk" id="SvM-Zw-hge"/>
                         <outlet property="productDescriptionLabel" destination="M7J-QX-7ll" id="sUQ-6u-LOC"/>
                         <outlet property="productImageView" destination="U8a-Mi-bFO" id="2Yx-co-vKC"/>
+                        <outlet property="productPriceLabel" destination="t7N-hB-abh" id="dEn-3e-K4J"/>
                         <outlet property="productTitleLabel" destination="g58-F2-h7c" id="19Z-p8-bNP"/>
+                        <outlet property="quantityProduct" destination="MfR-2c-0pk" id="SvM-Zw-hge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfU-yl-Kwu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

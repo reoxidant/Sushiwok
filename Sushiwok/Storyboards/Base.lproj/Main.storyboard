@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="290" y="874"/>
         </scene>
-        <!--Category Screen View Controller-->
+        <!--Menu Screen View Controller-->
         <scene sceneID="lHE-aH-Do3">
             <objects>
-                <viewController storyboardIdentifier="CategoryScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iFg-3W-x3T" customClass="CategoryScreenViewController" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iFg-3W-x3T" customClass="MenuScreenViewController" customModule="Sushiwok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mkT-Gf-UCm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
