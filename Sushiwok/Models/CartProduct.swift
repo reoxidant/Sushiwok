@@ -16,6 +16,8 @@ enum CartActions{
 
 class CartProduct{
     
+    static let shared = CartProduct()
+    
     private var items: [(product: Product, quantity: Int)] = []
     
     func findProduct(_ product: Product, changeQuantity: (Int) -> Int){
