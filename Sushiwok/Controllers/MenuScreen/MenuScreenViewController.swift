@@ -63,6 +63,12 @@ class MenuScreenViewController: UIViewController {
             self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
         }
     }
+    
+    @objc private func tappedCartButton(_ sender:UIBarButtonItem!){
+        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
+        cartVC.addProductArray = addProductArray
+        navigationController?.pushViewController(cartVC, animated: true)
+    }
 }
 
 extension MenuScreenViewController: PagingViewControllerDataSource{
@@ -102,18 +108,6 @@ extension MenuScreenViewController: PagingViewControllerSizeDelegate{
         }else {
             return width
         }
-    }
-}
-
-extension MenuScreenViewController {
-    
-    @objc private func tappedCartButton(_ sender:UIBarButtonItem!){
-        
-        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
-        
-        cartVC.addProductArray = addProductArray
-        
-        navigationController?.pushViewController(cartVC, animated: true)
     }
 }
 
