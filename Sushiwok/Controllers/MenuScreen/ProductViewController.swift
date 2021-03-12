@@ -16,6 +16,8 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var quantityProduct: UILabel!
     
+    var product: Product? = nil
+    
     @IBAction func votePressed(_ sender: UIButton) {
         
     }
@@ -29,8 +31,6 @@ class ProductViewController: UIViewController {
     @IBAction func didTapShowOrderHistoryButton(){
         showOrderHistoryButtonPress()
     }
-    
-    var product: Product? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()

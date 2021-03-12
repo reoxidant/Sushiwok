@@ -99,6 +99,7 @@
 		44429AAD25BC1D4A00400332 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4453B30D25BF5D3A00D35952 /* SideMenuViewController.swift */,
 				44A2274825ED8A8100240EDF /* MenuScreen */,
 				4453B30925BF5D1500D35952 /* ShareScreenViewController.swift */,
 				4453B31525BF712600D35952 /* FavoritesScreenViewController.swift */,
@@ -179,11 +180,10 @@
 		44A2274825ED8A8100240EDF /* MenuScreen */ = {
 			isa = PBXGroup;
 			children = (
-				4453B30D25BF5D3A00D35952 /* SideMenuViewController.swift */,
+				44D8C8FF25EEBAD3000A613F /* CartViewController.swift */,
 				449CB73125BB51EE0064DCC8 /* MenuScreenViewController.swift */,
 				44FFD95225E18EE600D8AED8 /* CategoryTableViewController.swift */,
 				44429AAA25BBF51400400332 /* ProductViewController.swift */,
-				44D8C8FF25EEBAD3000A613F /* CartViewController.swift */,
 			);
 			path = MenuScreen;
 			sourceTree = "<group>";
