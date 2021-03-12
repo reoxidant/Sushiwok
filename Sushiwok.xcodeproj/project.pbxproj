@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A6A95427023DF77A242AFAC /* Pods_Sushiwok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2ADD44CC6F4803A3949701 /* Pods_Sushiwok.framework */; };
+		44080ED125FBD50600F92A7C /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44080ED025FBD50600F92A7C /* PagingView.swift */; };
 		440EE06825F6899D00BEF9E7 /* CartProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440EE06725F6899D00BEF9E7 /* CartProduct.swift */; };
 		44429AAB25BBF51400400332 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44429AAA25BBF51400400332 /* ProductViewController.swift */; };
 		4443FE8725F6002500D2E0BF /* CartBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4443FE8625F6002500D2E0BF /* CartBarButtonItem.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44080ED025FBD50600F92A7C /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
 		440EE06725F6899D00BEF9E7 /* CartProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProduct.swift; sourceTree = "<group>"; };
 		44429AAA25BBF51400400332 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		4443FE8625F6002500D2E0BF /* CartBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartBarButtonItem.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				449CB73325BB597C0064DCC8 /* CategoryTablePagingCell.swift */,
 				44BD97ED25F4F63500D7A0DA /* CategoryTitleStackView.swift */,
 				4443FE8625F6002500D2E0BF /* CartBarButtonItem.swift */,
+				44080ED025FBD50600F92A7C /* PagingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				44FFD95325E18EE600D8AED8 /* CategoryTableViewController.swift in Sources */,
 				44C55ABB25C0BEF40013B76E /* SideMenuTableViewCell.swift in Sources */,
 				44429AAB25BBF51400400332 /* ProductViewController.swift in Sources */,
+				44080ED125FBD50600F92A7C /* PagingView.swift in Sources */,
 				449CB72025BB4A190064DCC8 /* SceneDelegate.swift in Sources */,
 				44D8C90025EEBAD3000A613F /* CartViewController.swift in Sources */,
 				44BD97EE25F4F63500D7A0DA /* CategoryTitleStackView.swift in Sources */,

@@ -26,19 +26,23 @@ class ProductViewController: UIViewController {
         }
     }
     
+    @IBAction func didTapShowOrderHistoryButton(){
+        showOrderHistoryButtonPress()
+    }
+    
     var product: Product? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let cartButton = CartBarButtonItem(systemName: "cart")
-        cartButton.rightButton.addTarget(self, action: #selector(addProductToCart), for: .touchUpInside)
+        cartButton.rightButton.addTarget(self, action: #selector(addToCartButtonPress), for: .touchUpInside)
         navigationItem.rightBarButtonItem = cartButton
         
         if product != nil {setupLayout()}
     }
     
-    func setupLayout(){
+    private func setupLayout(){
         productImageView.image = UIImage(named: product?.image ?? "logo")
         
         let productName = product?.title ?? "shushiwok"
@@ -53,9 +57,15 @@ class ProductViewController: UIViewController {
         quantityProduct.text = "\(quantity)"
     }
     
-    @objc func addProductToCart(_ sender:UIBarButtonItem!){
+    @objc private func addToCartButtonPress(){
         let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
         navigationController?.pushViewController(cartVC, animated: true)
+    }
+    
+    private func showOrderHistoryButtonPress(){
+        print("show order history button press")
+//        let orderHistoryVC = storyboard?.instantiateViewController(identifier: "OrderHistoryViewController") as! OrderHistoryViewController
+//        navigationController?.pushViewController(orderHistoryVC, animated: true)
     }
 
 }
