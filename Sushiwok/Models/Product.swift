@@ -12,11 +12,11 @@ import Foundation
 
 struct Product: Codable {
     let id: String
-    let image:String?
-    let title:String?
-    let description:String?
-    let grams:Int?
-    let price:Double?
+    let image:String
+    let title:String
+    let description:String
+    let grams:Int
+    let price:Double
 }
 
 class ProductApi{

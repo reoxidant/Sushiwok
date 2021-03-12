@@ -27,14 +27,23 @@ class MenuScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationBar()
+        setupPagingVC()
+        setupSWRevealVC()
+    }
+    
+    private func setupNavigationBar(){
         navigationItem.titleView = CategoryTitleStackView(image: #imageLiteral(resourceName: "logo"), title:"SUSHIWOK")
         
         let cartButton = CartBarButtonItem(systemName: "cart")
         cartButton.rightButton.addTarget(self, action: #selector(tappedCartButton), for: .touchUpInside)
         navigationItem.rightBarButtonItem = cartButton
-        
+    }
+    
+    private func setupPagingVC(){
         let pagingViewController = PagingViewController()
         pagingViewController.register(CategoryMenuPagingCell.self, for: PagingIndexItem.self)
+        
         pagingViewController.dataSource = self
         pagingViewController.sizeDelegate = self
         
@@ -44,22 +53,6 @@ class MenuScreenViewController: UIViewController {
         configurePagingViewController(PVC: pagingViewController)
         
         pagingViewController.didMove(toParent: self)
-        
-        setupSWRevealVC()
-    }
-    
-    private func configurePagingViewController(PVC: PagingViewController){
-        PVC.indicatorOptions = .hidden
-        PVC.menuInsets = .init(top: 0, left: 8, bottom: 0, right: 8)
-        PVC.menuItemSpacing = 8
-        PVC.borderColor = .clear
-        PVC.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            PVC.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            PVC.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            PVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            PVC.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
-        ])
     }
     
     private func setupSWRevealVC(){
@@ -121,6 +114,23 @@ extension MenuScreenViewController {
         cartVC.addProductArray = addProductArray
         
         navigationController?.pushViewController(cartVC, animated: true)
+    }
+}
+
+extension MenuScreenViewController {
+    
+    private func configurePagingViewController(PVC: PagingViewController){
+        PVC.indicatorOptions = .hidden
+        PVC.menuInsets = .init(top: 0, left: 8, bottom: 0, right: 8)
+        PVC.menuItemSpacing = 8
+        PVC.borderColor = .clear
+        PVC.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            PVC.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            PVC.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            PVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            PVC.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+        ])
     }
     
 }

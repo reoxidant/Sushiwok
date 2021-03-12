@@ -69,21 +69,11 @@ class CategoryTablePagingCell: UITableViewCell {
         didSet{
             guard let item = categoryItem else {return}
             
-            if let title = item.title{
-                itemTitleLabel.text = title
-            }
-            if let image = item.image{
-                itemImageView.image = UIImage(named: image)
-            }
-            if let description = item.description{
-                itemDescription.text = description
-            }
-            if let grams = item.grams{
-                itemGrams.text = "\(grams) г."
-            }
-            if let price = item.price{
-                itemPrice.text = "\(price) ₽"
-            }
+            itemTitleLabel.text = item.title
+            itemImageView.image = UIImage(named: item.image)
+            itemDescription.text = item.description
+            itemGrams.text = "\(item.grams) г."
+            itemPrice.text = "\(item.price) ₽"
         }
     }
     
