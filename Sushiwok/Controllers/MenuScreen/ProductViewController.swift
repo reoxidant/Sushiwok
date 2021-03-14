@@ -58,7 +58,8 @@ class ProductViewController: UIViewController {
     }
     
     @objc private func addToCartButtonPress(){
-        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
+        let storyboard = UIStoryboard(name: "Cart", bundle: nil)
+        let cartVC = storyboard.instantiateViewController(identifier: "CartViewController") as! CartViewController
         navigationController?.pushViewController(cartVC, animated: true)
     }
     

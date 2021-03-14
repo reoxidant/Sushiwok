@@ -15,10 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="rY3-cl-AwS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="rY3-cl-AwS">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5j-Vp-lpA" userLabel="Content View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5j-Vp-lpA" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZH-ov-e8I" userLabel="Products Container">
@@ -74,22 +74,21 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="g5j-Vp-lpA" firstAttribute="height" secondItem="rY3-cl-AwS" secondAttribute="height" priority="250" id="Tmr-71-xsd"/>
                                     <constraint firstAttribute="trailing" secondItem="g5j-Vp-lpA" secondAttribute="trailing" id="UUn-4x-pBd"/>
                                     <constraint firstItem="g5j-Vp-lpA" firstAttribute="leading" secondItem="rY3-cl-AwS" secondAttribute="leading" id="VhN-rD-d9h"/>
                                     <constraint firstItem="g5j-Vp-lpA" firstAttribute="top" secondItem="rY3-cl-AwS" secondAttribute="top" id="WXs-Gi-eVQ"/>
                                     <constraint firstItem="g5j-Vp-lpA" firstAttribute="width" secondItem="rY3-cl-AwS" secondAttribute="width" id="aq7-hW-9Vb"/>
                                     <constraint firstAttribute="bottom" secondItem="g5j-Vp-lpA" secondAttribute="bottom" id="kiR-8n-gvH"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="fuG-Vw-hlg"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="2Ih-RC-qKX"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rY3-cl-AwS" firstAttribute="top" secondItem="y6o-JG-aYs" secondAttribute="top" id="DCd-p2-fr3"/>
                             <constraint firstAttribute="bottom" secondItem="rY3-cl-AwS" secondAttribute="bottom" id="WKs-FZ-GRK"/>
-                            <constraint firstItem="rY3-cl-AwS" firstAttribute="leading" secondItem="y6o-JG-aYs" secondAttribute="leading" id="evs-fK-AIk"/>
-                            <constraint firstItem="rY3-cl-AwS" firstAttribute="trailing" secondItem="y6o-JG-aYs" secondAttribute="trailing" id="l3I-Ip-bPA"/>
+                            <constraint firstItem="rY3-cl-AwS" firstAttribute="leading" secondItem="WJb-BK-DX1" secondAttribute="leading" id="evs-fK-AIk"/>
+                            <constraint firstItem="rY3-cl-AwS" firstAttribute="trailing" secondItem="WJb-BK-DX1" secondAttribute="trailing" id="l3I-Ip-bPA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y6o-JG-aYs"/>
                     </view>
