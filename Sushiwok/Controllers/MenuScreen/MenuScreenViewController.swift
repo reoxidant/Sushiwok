@@ -65,7 +65,8 @@ class MenuScreenViewController: UIViewController {
     }
     
     @objc private func tappedCartButton(_ sender:UIBarButtonItem!){
-        let cartVC = storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
+        let storyboard = UIStoryboard(name: "Cart", bundle: nil)
+        let cartVC = storyboard.instantiateViewController(identifier: "CartViewController") as! CartViewController
         cartVC.addProductArray = addProductArray
         navigationController?.pushViewController(cartVC, animated: true)
     }
