@@ -22,8 +22,6 @@ class MenuScreenViewController: UIViewController {
         PagingIndexItem(index: 4, title: "Pizza")
     ]
     
-    private var addProductArray = [Product]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,7 +65,6 @@ class MenuScreenViewController: UIViewController {
     @objc private func tappedCartButton(_ sender:UIBarButtonItem!){
         let storyboard = UIStoryboard(name: "Cart", bundle: nil)
         let cartVC = storyboard.instantiateViewController(identifier: "CartViewController") as! CartViewController
-        cartVC.addProductArray = addProductArray
         navigationController?.pushViewController(cartVC, animated: true)
     }
 }

@@ -115,6 +115,7 @@
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="prizeTableView" destination="6IY-67-nKS" id="Ut2-xW-zsX"/>
+                        <outlet property="productTableView" destination="hID-BJ-DyZ" id="JL7-LB-lqZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgg-VC-vAN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

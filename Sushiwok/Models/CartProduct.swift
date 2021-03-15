@@ -61,4 +61,15 @@ class CartProduct{
     func getQuantityProduct(_ product: Product) -> Int{
         return findProduct(product){$0}
     }
+    
+    func getAllProducts() -> [Product]{
+        
+        var products = [Product]()
+        
+        for item in items{
+            products.append(item.product)
+        }
+        
+        return products
+    }
 }
