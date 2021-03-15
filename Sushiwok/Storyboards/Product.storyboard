@@ -59,7 +59,6 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="votePressed" destination="cYd-86-b1f" eventType="touchUpInside" id="FaI-VN-Lcm"/>
-                                                                            <action selector="votePressed:" destination="cYd-86-b1f" eventType="touchUpInside" id="PTL-Ja-Tu4"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
