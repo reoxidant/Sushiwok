@@ -16,6 +16,10 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var quantityProduct: UILabel!
     
+    var defaultQuantity = 1
+    
+    var productPrice:Int?
+    
     var product: Product? = nil
     
     @IBAction func votePressed(_ sender: UIButton) {
@@ -24,7 +28,7 @@ class ProductViewController: UIViewController {
     
     @IBAction func didTapAddToCardButton() {
         if let product = product{
-             CartProduct.shared.addProduct(product)
+            CartProduct.shared.addProduct(product)
         }
     }
     
@@ -33,13 +37,13 @@ class ProductViewController: UIViewController {
     }
     
     @IBAction func increseProductButton() {
-        CartProduct.shared.doActionWith(product: product!, cartActions: .increase)
-       setProductQantity(product: product!)
+        defaultQuantity = defaultQuantity > 0 ? defaultQuantity + 1 : defaultQuantity
+        displayProductInfo()
     }
     
     @IBAction func decreaseProductButton() {
-        CartProduct.shared.doActionWith(product: product!, cartActions: .decrease)
-        setProductQantity(product: product!)
+        defaultQuantity = defaultQuantity > 1 ? defaultQuantity - 1 : defaultQuantity
+        displayProductInfo()
     }
     
     override func viewDidLoad() {
@@ -52,8 +56,6 @@ class ProductViewController: UIViewController {
         guard product != nil else {return}
         
         setupLayout()
-        
-        setProductQantity(product: product!)
     }
     
     private func setupLayout(){
@@ -64,8 +66,15 @@ class ProductViewController: UIViewController {
         productTitleLabel.text = "\(productName), \(productGrams) г."
         productDescriptionLabel.text = product?.description
         
-        let productPrice = product?.price ?? 0
-        productPriceLabel.text = String(format: "%.f ₽", productPrice)
+        productPrice = product?.price ?? 0
+        productPriceLabel.text = "\(productPrice!) ₽"
+        
+        quantityProduct.text = "\(defaultQuantity)"
+    }
+    
+    private func displayProductInfo(){
+        quantityProduct.text = "\(defaultQuantity)"
+        productPriceLabel.text = "\(productPrice! * defaultQuantity) ₽"
     }
     
     @objc private func addToCartButtonPress(){
@@ -76,12 +85,7 @@ class ProductViewController: UIViewController {
     
     private func showOrderHistoryButtonPress(){
         print("show order history button press")
-//        let orderHistoryVC = storyboard?.instantiateViewController(identifier: "OrderHistoryViewController") as! OrderHistoryViewController
-//        navigationController?.pushViewController(orderHistoryVC, animated: true)
-    }
-
-    private func setProductQantity(product:Product){
-        let quantity = CartProduct.shared.getQuantityProduct(product)
-        quantityProduct.text = "\(quantity)"
+        //        let orderHistoryVC = storyboard?.instantiateViewController(identifier: "OrderHistoryViewController") as! OrderHistoryViewController
+        //        navigationController?.pushViewController(orderHistoryVC, animated: true)
     }
 }

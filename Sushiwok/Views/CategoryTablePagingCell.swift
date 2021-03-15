@@ -54,7 +54,7 @@ class CategoryTablePagingCell: UITableViewCell {
     
     private let choseButton:UIButton = {
         let button = UIButton()
-        button.isEnabled = false
+        button.isEnabled = true
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
         button.setTitle("Выбрать", for: .normal)
