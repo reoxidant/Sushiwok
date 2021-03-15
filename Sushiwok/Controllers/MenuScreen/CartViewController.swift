@@ -14,8 +14,27 @@ class CartViewController: UIViewController{
     
     var price: CFloat = 0.00
     
+    @IBOutlet weak var prizeTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+    }
+}
+
+extension CartViewController {
+    private func setupTableView(){
+        prizeTableView.delegate = self
+        prizeTableView.dataSource = self
+    }
+}
+
+extension CartViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }

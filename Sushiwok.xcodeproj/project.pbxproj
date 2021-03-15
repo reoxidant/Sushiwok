@@ -35,6 +35,7 @@
 		44C55ABD25C0C4E50013B76E /* SideMenuTableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C55ABC25C0C4E50013B76E /* SideMenuTableList.swift */; };
 		44D8C90025EEBAD3000A613F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D8C8FF25EEBAD3000A613F /* CartViewController.swift */; };
 		44F6171425EBA0D100A186E6 /* CategoryMenuPagingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F6171325EBA0D100A186E6 /* CategoryMenuPagingCell.swift */; };
+		44FCA54C25FF4F45002838D2 /* PrizeTableViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCA54B25FF4F45002838D2 /* PrizeTableViewData.swift */; };
 		44FFD95325E18EE600D8AED8 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FFD95225E18EE600D8AED8 /* CategoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		44C55ABC25C0C4E50013B76E /* SideMenuTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableList.swift; sourceTree = "<group>"; };
 		44D8C8FF25EEBAD3000A613F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		44F6171325EBA0D100A186E6 /* CategoryMenuPagingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuPagingCell.swift; sourceTree = "<group>"; };
+		44FCA54B25FF4F45002838D2 /* PrizeTableViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeTableViewData.swift; sourceTree = "<group>"; };
 		44FFD95225E18EE600D8AED8 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		4E2ADD44CC6F4803A3949701 /* Pods_Sushiwok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sushiwok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E695AE9C38D1D480D9D4EB4 /* Pods-Sushiwok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sushiwok.release.xcconfig"; path = "Target Support Files/Pods-Sushiwok/Pods-Sushiwok.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				449CB73525BB5B2B0064DCC8 /* Product.swift */,
 				44C55ABC25C0C4E50013B76E /* SideMenuTableList.swift */,
 				440EE06725F6899D00BEF9E7 /* CartProduct.swift */,
+				44FCA54B25FF4F45002838D2 /* PrizeTableViewData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				449CB73425BB597C0064DCC8 /* CategoryTablePagingCell.swift in Sources */,
 				4453B30A25BF5D1500D35952 /* ShareScreenViewController.swift in Sources */,
 				4443FE8725F6002500D2E0BF /* CartBarButtonItem.swift in Sources */,
+				44FCA54C25FF4F45002838D2 /* PrizeTableViewData.swift in Sources */,
 				4453B31625BF712600D35952 /* FavoritesScreenViewController.swift in Sources */,
 				449CB73625BB5B2B0064DCC8 /* Product.swift in Sources */,
 				4453B30C25BF5D2000D35952 /* MapScreenViewController.swift in Sources */,

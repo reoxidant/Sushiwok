@@ -21,7 +21,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5j-Vp-lpA" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZH-ov-e8I" userLabel="Products Container">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZH-ov-e8I" userLabel="Order Container">
                                                 <rect key="frame" x="16" y="24" width="382" height="219"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВАШ ЗАКАЗ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecs-4K-OYX">
@@ -56,20 +56,40 @@
                                                     <constraint firstItem="ecs-4K-OYX" firstAttribute="leading" secondItem="bZH-ov-e8I" secondAttribute="leading" constant="16" id="yMs-Up-0A6"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВАШИ ПОДАРКИ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wt-OR-mjD">
-                                                <rect key="frame" x="16" y="263" width="137" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qY-bX-wZD" userLabel="Prize Container">
+                                                <rect key="frame" x="16" y="263" width="382" height="150"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВАШИ ПОДАРКИ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wt-OR-mjD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="137" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6IY-67-nKS">
+                                                        <rect key="frame" x="0.0" y="37" width="382" height="113"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </tableView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="6IY-67-nKS" firstAttribute="top" secondItem="1Wt-OR-mjD" secondAttribute="bottom" constant="16" id="10s-o6-Adu"/>
+                                                    <constraint firstItem="1Wt-OR-mjD" firstAttribute="leading" secondItem="9qY-bX-wZD" secondAttribute="leading" id="GnQ-nB-G3z"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6IY-67-nKS" secondAttribute="trailing" id="M0b-mN-2QW"/>
+                                                    <constraint firstAttribute="height" constant="150" id="M7t-Pd-Vd4"/>
+                                                    <constraint firstItem="6IY-67-nKS" firstAttribute="leading" secondItem="9qY-bX-wZD" secondAttribute="leading" id="QLB-jw-Vzb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6IY-67-nKS" secondAttribute="bottom" id="iT1-HK-wgf"/>
+                                                    <constraint firstItem="1Wt-OR-mjD" firstAttribute="top" secondItem="9qY-bX-wZD" secondAttribute="top" id="iTm-94-YpN"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="bZH-ov-e8I" firstAttribute="top" secondItem="g5j-Vp-lpA" secondAttribute="top" constant="24" id="1Ma-jq-q0b"/>
-                                            <constraint firstItem="1Wt-OR-mjD" firstAttribute="leading" secondItem="g5j-Vp-lpA" secondAttribute="leading" constant="16" id="8Yw-o8-BYM"/>
-                                            <constraint firstItem="1Wt-OR-mjD" firstAttribute="top" secondItem="bZH-ov-e8I" secondAttribute="bottom" constant="20" id="Agx-nZ-UD6"/>
+                                            <constraint firstAttribute="trailing" secondItem="9qY-bX-wZD" secondAttribute="trailing" constant="16" id="GmK-jM-zlt"/>
                                             <constraint firstAttribute="trailing" secondItem="bZH-ov-e8I" secondAttribute="trailing" constant="16" id="Nnr-TT-cO0"/>
                                             <constraint firstItem="bZH-ov-e8I" firstAttribute="leading" secondItem="g5j-Vp-lpA" secondAttribute="leading" constant="16" id="cRi-cg-GaB"/>
+                                            <constraint firstItem="9qY-bX-wZD" firstAttribute="leading" secondItem="g5j-Vp-lpA" secondAttribute="leading" constant="16" id="joG-xM-j4y"/>
+                                            <constraint firstItem="9qY-bX-wZD" firstAttribute="top" secondItem="bZH-ov-e8I" secondAttribute="bottom" constant="20" id="we5-3r-yJC"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -93,6 +113,9 @@
                         <viewLayoutGuide key="safeArea" id="y6o-JG-aYs"/>
                     </view>
                     <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="prizeTableView" destination="6IY-67-nKS" id="Ut2-xW-zsX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgg-VC-vAN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
