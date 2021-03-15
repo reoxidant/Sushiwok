@@ -15,21 +15,44 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var productDescriptionLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var quantityProduct: UILabel!
+    @IBOutlet weak var favoriteProductButton: UIButton!
+    
+    var defaultQuantity = 1
+    
+    var productPrice:Int?
     
     var product: Product? = nil
     
-    @IBAction func votePressed(_ sender: UIButton) {
-        
+    @IBAction func votePressed() {
+        product?.isFavorite = !product!.isFavorite
+    
+        if product!.isFavorite {
+            favoriteProductButton.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+            favoriteProductButton.setTitle("В избраном", for: .normal)
+        } else {
+            favoriteProductButton.backgroundColor = #colorLiteral(red: 0.6689890623, green: 0.8319805861, blue: 0.02307102457, alpha: 1)
+            favoriteProductButton.setTitle("Добавить в избранное", for: .normal)
+        }
     }
     
     @IBAction func didTapAddToCardButton() {
         if let product = product{
-             CartProduct.shared.addProduct(product)
+            CartProduct.shared.addProduct(product)
         }
     }
     
     @IBAction func didTapShowOrderHistoryButton(){
         showOrderHistoryButtonPress()
+    }
+    
+    @IBAction func increseProductButton() {
+        defaultQuantity = defaultQuantity > 0 ? defaultQuantity + 1 : defaultQuantity
+        displayProductInfo()
+    }
+    
+    @IBAction func decreaseProductButton() {
+        defaultQuantity = defaultQuantity > 1 ? defaultQuantity - 1 : defaultQuantity
+        displayProductInfo()
     }
     
     override func viewDidLoad() {
@@ -39,7 +62,9 @@ class ProductViewController: UIViewController {
         cartButton.rightButton.addTarget(self, action: #selector(addToCartButtonPress), for: .touchUpInside)
         navigationItem.rightBarButtonItem = cartButton
         
-        if product != nil {setupLayout()}
+        guard product != nil else {return}
+        
+        setupLayout()
     }
     
     private func setupLayout(){
@@ -50,11 +75,15 @@ class ProductViewController: UIViewController {
         productTitleLabel.text = "\(productName), \(productGrams) г."
         productDescriptionLabel.text = product?.description
         
-        let productPrice = product?.price ?? 0
-        productPriceLabel.text = String(format: "%.f ₽", productPrice)
+        productPrice = product?.price ?? 0
+        productPriceLabel.text = "\(productPrice!) ₽"
         
-        let quantity = CartProduct.shared.getQuantityProduct(product!)
-        quantityProduct.text = "\(quantity)"
+        quantityProduct.text = "\(defaultQuantity)"
+    }
+    
+    private func displayProductInfo(){
+        quantityProduct.text = "\(defaultQuantity)"
+        productPriceLabel.text = "\(productPrice! * defaultQuantity) ₽"
     }
     
     @objc private func addToCartButtonPress(){
@@ -65,8 +94,7 @@ class ProductViewController: UIViewController {
     
     private func showOrderHistoryButtonPress(){
         print("show order history button press")
-//        let orderHistoryVC = storyboard?.instantiateViewController(identifier: "OrderHistoryViewController") as! OrderHistoryViewController
-//        navigationController?.pushViewController(orderHistoryVC, animated: true)
+        //        let orderHistoryVC = storyboard?.instantiateViewController(identifier: "OrderHistoryViewController") as! OrderHistoryViewController
+        //        navigationController?.pushViewController(orderHistoryVC, animated: true)
     }
-
 }
