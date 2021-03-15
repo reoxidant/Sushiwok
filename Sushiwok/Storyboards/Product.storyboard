@@ -58,6 +58,7 @@
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
+                                                                            <action selector="votePressed" destination="cYd-86-b1f" eventType="touchUpInside" id="FaI-VN-Lcm"/>
                                                                             <action selector="votePressed:" destination="cYd-86-b1f" eventType="touchUpInside" id="PTL-Ja-Tu4"/>
                                                                         </connections>
                                                                     </button>
@@ -192,6 +193,7 @@
                         <viewLayoutGuide key="safeArea" id="eAa-ve-V7z"/>
                     </view>
                     <connections>
+                        <outlet property="favoriteProductButton" destination="PAL-tu-O6c" id="O9h-dh-Fu5"/>
                         <outlet property="productDescriptionLabel" destination="M7J-QX-7ll" id="sUQ-6u-LOC"/>
                         <outlet property="productImageView" destination="U8a-Mi-bFO" id="2Yx-co-vKC"/>
                         <outlet property="productPriceLabel" destination="t7N-hB-abh" id="dEn-3e-K4J"/>

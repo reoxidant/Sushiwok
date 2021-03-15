@@ -17,6 +17,7 @@ struct Product: Codable {
     let description:String
     let grams:Int
     let price:Int
+    var isFavorite:Bool = false
 }
 
 class ProductApi{
