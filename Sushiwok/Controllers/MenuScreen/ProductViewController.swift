@@ -32,6 +32,16 @@ class ProductViewController: UIViewController {
         showOrderHistoryButtonPress()
     }
     
+    @IBAction func increseProductButton() {
+        CartProduct.shared.doActionWith(product: product!, cartActions: .increase)
+       setProductQantity(product: product!)
+    }
+    
+    @IBAction func decreaseProductButton() {
+        CartProduct.shared.doActionWith(product: product!, cartActions: .decrease)
+        setProductQantity(product: product!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +49,11 @@ class ProductViewController: UIViewController {
         cartButton.rightButton.addTarget(self, action: #selector(addToCartButtonPress), for: .touchUpInside)
         navigationItem.rightBarButtonItem = cartButton
         
-        if product != nil {setupLayout()}
+        guard product != nil else {return}
+        
+        setupLayout()
+        
+        setProductQantity(product: product!)
     }
     
     private func setupLayout(){
@@ -52,9 +66,6 @@ class ProductViewController: UIViewController {
         
         let productPrice = product?.price ?? 0
         productPriceLabel.text = String(format: "%.f ₽", productPrice)
-        
-        let quantity = CartProduct.shared.getQuantityProduct(product!)
-        quantityProduct.text = "\(quantity)"
     }
     
     @objc private func addToCartButtonPress(){
@@ -69,4 +80,8 @@ class ProductViewController: UIViewController {
 //        navigationController?.pushViewController(orderHistoryVC, animated: true)
     }
 
+    private func setProductQantity(product:Product){
+        let quantity = CartProduct.shared.getQuantityProduct(product)
+        quantityProduct.text = "\(quantity)"
+    }
 }

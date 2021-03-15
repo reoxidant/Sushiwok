@@ -42,6 +42,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="150" id="bmO-9t-tVU"/>
                                                         </constraints>
+                                                        <sections/>
                                                     </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
