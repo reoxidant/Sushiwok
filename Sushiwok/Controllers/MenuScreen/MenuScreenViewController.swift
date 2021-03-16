@@ -33,9 +33,15 @@ class MenuScreenViewController: UIViewController {
     private func setupNavigationBar(){
         navigationItem.titleView = CategoryTitleStackView(image: #imageLiteral(resourceName: "logo"), title:"SUSHIWOK")
         
-        let cartButton = CartBarButtonItem(systemName: "cart")
+        let cartButton = CartBarButtonItem()
         cartButton.rightButton.addTarget(self, action: #selector(tappedCartButton), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = cartButton
+        let orderButton = UIBarButtonItem(image: #imageLiteral(resourceName: "orders"), style: .plain, target: self, action: #selector(tappedOrderButton))
+        
+        navigationItem.rightBarButtonItems = [cartButton, orderButton]
+    }
+    
+    override func viewWillAppear(_ animated: Bool){
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
     private func setupPagingVC(){
@@ -66,6 +72,12 @@ class MenuScreenViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Cart", bundle: nil)
         let cartVC = storyboard.instantiateViewController(identifier: "CartViewController") as! CartViewController
         navigationController?.pushViewController(cartVC, animated: true)
+    }
+    
+    @objc private func tappedOrderButton(){
+        let storyboard = UIStoryboard(name: "Orders", bundle: nil)
+        let ordersVC = storyboard.instantiateViewController(identifier: "OrdersViewController") as! OrdersViewController
+        present(ordersVC, animated: true, completion: nil)
     }
 }
 

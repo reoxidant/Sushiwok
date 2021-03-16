@@ -30,9 +30,9 @@ class CartBarButtonItem: UIBarButtonItem {
         return button
     }()
     
-    init(systemName: String, quantity:Int) {
+    init(quantity:Int) {
         super.init()
-        rightButton.setBackgroundImage(UIImage(systemName: systemName), for: .normal)
+        rightButton.setBackgroundImage(UIImage(systemName: "cart", withConfiguration: UIImage.SymbolConfiguration(weight: .thin)), for: .normal)
         if quantity > 0 {
             badgeCount.text = "\(quantity)"
             rightButton.addSubview(badgeCount)
@@ -40,8 +40,8 @@ class CartBarButtonItem: UIBarButtonItem {
         customView = rightButton
     }
     
-    convenience init(systemName:String?, quantity:Int? = 0) {
-        self.init(systemName: systemName ?? "", quantity:quantity ?? 4)
+    convenience init(quantity:Int? = 0) {
+        self.init(quantity:quantity ?? 4)
     }
     
     

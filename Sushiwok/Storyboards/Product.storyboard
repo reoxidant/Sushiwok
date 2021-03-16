@@ -58,7 +58,7 @@
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="votePressed" destination="cYd-86-b1f" eventType="touchUpInside" id="FaI-VN-Lcm"/>
+                                                                            <action selector="favoriteButtonPress" destination="cYd-86-b1f" eventType="touchUpInside" id="FaI-VN-Lcm"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>

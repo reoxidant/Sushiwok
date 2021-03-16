@@ -17,13 +17,12 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var quantityProduct: UILabel!
     @IBOutlet weak var favoriteButton: FavoriteButton!
     
-    var defaultQuantity = 1
-    
-    var productPrice:Int?
-    
     var product: Product? = nil
     
-    @IBAction func votePressed() {
+    private var defaultQuantity = 1
+    private var productPrice:Int?
+    
+    @IBAction func favoriteButtonPress() {
         if favoriteButton.isFavorite {
             FavoriteProduct.shared.removeBy(id: product!.id)
             favoriteButton.isFavorite = false
@@ -39,10 +38,6 @@ class ProductViewController: UIViewController {
         }
     }
     
-    @IBAction func didTapShowOrderHistoryButton(){
-        showOrderHistoryButtonPress()
-    }
-    
     @IBAction func increseProductButton() {
         defaultQuantity = defaultQuantity > 0 ? defaultQuantity + 1 : defaultQuantity
         displayProductInfo()
@@ -56,7 +51,7 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let cartButton = CartBarButtonItem(systemName: "cart")
+        let cartButton = CartBarButtonItem()
         cartButton.rightButton.addTarget(self, action: #selector(addToCartButtonPress), for: .touchUpInside)
         navigationItem.rightBarButtonItem = cartButton
         
@@ -92,11 +87,5 @@ class ProductViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Cart", bundle: nil)
         let cartVC = storyboard.instantiateViewController(identifier: "CartViewController") as! CartViewController
         navigationController?.pushViewController(cartVC, animated: true)
-    }
-    
-    private func showOrderHistoryButtonPress(){
-        print("show order history button press")
-        //        let orderHistoryVC = storyboard?.instantiateViewController(identifier: "OrderHistoryViewController") as! OrderHistoryViewController
-        //        navigationController?.pushViewController(orderHistoryVC, animated: true)
     }
 }
