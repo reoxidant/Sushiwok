@@ -15,14 +15,13 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var productDescriptionLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var quantityProduct: UILabel!
+    @IBOutlet weak var favoriteButton: FavoriteButton!
     
     var defaultQuantity = 1
     
     var productPrice:Int?
     
     var product: Product? = nil
-    
-    var favoriteButton = FavoriteButton()
     
     @IBAction func votePressed() {
         if favoriteButton.isFavorite {

@@ -192,6 +192,7 @@
                         <viewLayoutGuide key="safeArea" id="eAa-ve-V7z"/>
                     </view>
                     <connections>
+                        <outlet property="favoriteButton" destination="PAL-tu-O6c" id="Xsv-Ym-vSs"/>
                         <outlet property="productDescriptionLabel" destination="M7J-QX-7ll" id="sUQ-6u-LOC"/>
                         <outlet property="productImageView" destination="U8a-Mi-bFO" id="2Yx-co-vKC"/>
                         <outlet property="productPriceLabel" destination="t7N-hB-abh" id="dEn-3e-K4J"/>
