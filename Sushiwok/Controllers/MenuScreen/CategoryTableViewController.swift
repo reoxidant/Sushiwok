@@ -14,7 +14,7 @@ class CategoryTableViewController: UIViewController{
     
     private var products: [[Product]]{
         get{
-            return ProductApi.shared.getProductList()
+            return ProductApi.shared.products
         }
     }
     
@@ -61,7 +61,6 @@ extension CategoryTableViewController: UITableViewDataSource, UITableViewDelegat
         let storyboard = UIStoryboard(name: "Product", bundle: nil)
         if let vc = storyboard.instantiateViewController(withIdentifier: "ProductDetails") as? ProductViewController {
             vc.product = product
-            vc.tableViewPage = tableViewPage!
             self.navigationController?.pushViewController(vc, animated: true)
             self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.6156862745, green: 0.8039215686, blue: 0.168627451, alpha: 1)
         }

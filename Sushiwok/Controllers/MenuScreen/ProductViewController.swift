@@ -15,7 +15,6 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var productDescriptionLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var quantityProduct: UILabel!
-    @IBOutlet weak var favoriteProductButton: UIButton!
     
     var defaultQuantity = 1
     
@@ -23,23 +22,16 @@ class ProductViewController: UIViewController {
     
     var product: Product? = nil
     
-    var tableViewPage:Int = 0
-    
-    var isFavorite: Bool = false {
-        didSet {
-            if isFavorite == true{
-                favoriteProductButton.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
-                favoriteProductButton.setTitle("В избраном", for: .normal)
-            } else {
-                favoriteProductButton.backgroundColor = #colorLiteral(red: 0.6689890623, green: 0.8319805861, blue: 0.02307102457, alpha: 1)
-                favoriteProductButton.setTitle("Добавить в избранное", for: .normal)
-            }
-        }
-    }
+    var favoriteButton = FavoriteButton()
     
     @IBAction func votePressed() {
-        isFavorite = !product!.isFavorite
-        ProductApi.shared.getProductBy(page: tableViewPage, productId: product!.id)
+        if favoriteButton.isFavorite {
+            FavoriteProduct.shared.removeBy(id: product!.id)
+            favoriteButton.isFavorite = false
+        } else {
+            FavoriteProduct.shared.add(product!)
+            favoriteButton.isFavorite = true
+        }
     }
     
     @IBAction func didTapAddToCardButton() {
@@ -87,7 +79,9 @@ class ProductViewController: UIViewController {
         
         quantityProduct.text = "\(defaultQuantity)"
         
-        isFavorite = product!.isFavorite
+        if let _ = FavoriteProduct.shared.getIndexProductBy(id: product!.id){
+            favoriteButton.isFavorite = true
+        }
     }
     
     private func displayProductInfo(){

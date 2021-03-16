@@ -30,6 +30,8 @@
 		44A41E8E25F967200042CB8B /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A41E8D25F967200042CB8B /* Map.storyboard */; };
 		44A41E9025F9677A0042CB8B /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A41E8F25F9677A0042CB8B /* Favorites.storyboard */; };
 		44A41E9225F967B90042CB8B /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A41E9125F967B90042CB8B /* Share.storyboard */; };
+		44B138BF2600BA7200084660 /* FavoriteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B138BE2600BA7200084660 /* FavoriteProduct.swift */; };
+		44B138C12600C34800084660 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B138C02600C34800084660 /* FavoriteButton.swift */; };
 		44BD97EE25F4F63500D7A0DA /* CategoryTitleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BD97ED25F4F63500D7A0DA /* CategoryTitleStackView.swift */; };
 		44C55ABB25C0BEF40013B76E /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C55ABA25C0BEF40013B76E /* SideMenuTableViewCell.swift */; };
 		44C55ABD25C0C4E50013B76E /* SideMenuTableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C55ABC25C0C4E50013B76E /* SideMenuTableList.swift */; };
@@ -63,6 +65,8 @@
 		44A41E8D25F967200042CB8B /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		44A41E8F25F9677A0042CB8B /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		44A41E9125F967B90042CB8B /* Share.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Share.storyboard; sourceTree = "<group>"; };
+		44B138BE2600BA7200084660 /* FavoriteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProduct.swift; sourceTree = "<group>"; };
+		44B138C02600C34800084660 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		44BD97ED25F4F63500D7A0DA /* CategoryTitleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTitleStackView.swift; sourceTree = "<group>"; };
 		44C55ABA25C0BEF40013B76E /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		44C55ABC25C0C4E50013B76E /* SideMenuTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableList.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				449CB73525BB5B2B0064DCC8 /* Product.swift */,
 				44C55ABC25C0C4E50013B76E /* SideMenuTableList.swift */,
 				440EE06725F6899D00BEF9E7 /* CartProduct.swift */,
+				44B138BE2600BA7200084660 /* FavoriteProduct.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				44BD97ED25F4F63500D7A0DA /* CategoryTitleStackView.swift */,
 				4443FE8625F6002500D2E0BF /* CartBarButtonItem.swift */,
 				44080ED025FBD50600F92A7C /* PagingView.swift */,
+				44B138C02600C34800084660 /* FavoriteButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -331,9 +337,11 @@
 				4476322925F4303C00A93B1E /* SideMenuHeaderView.swift in Sources */,
 				4453B30E25BF5D3A00D35952 /* SideMenuViewController.swift in Sources */,
 				44C55ABD25C0C4E50013B76E /* SideMenuTableList.swift in Sources */,
+				44B138BF2600BA7200084660 /* FavoriteProduct.swift in Sources */,
 				44FFD95325E18EE600D8AED8 /* CategoryTableViewController.swift in Sources */,
 				44C55ABB25C0BEF40013B76E /* SideMenuTableViewCell.swift in Sources */,
 				44429AAB25BBF51400400332 /* ProductViewController.swift in Sources */,
+				44B138C12600C34800084660 /* FavoriteButton.swift in Sources */,
 				44080ED125FBD50600F92A7C /* PagingView.swift in Sources */,
 				449CB72025BB4A190064DCC8 /* SceneDelegate.swift in Sources */,
 				44D8C90025EEBAD3000A613F /* CartViewController.swift in Sources */,
